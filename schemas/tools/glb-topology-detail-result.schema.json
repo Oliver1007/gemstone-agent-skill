@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema:glb-topology-detail-result:1.0.0",
+  "title": "GLB Topology Detail Diagnostic Result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "diagnostic_id",
+    "diagnostic_version",
+    "read_only",
+    "mutation_state",
+    "accepted_as_evidence",
+    "evidence_admission_status",
+    "knowledge_impact",
+    "input_identity",
+    "diagnostic_identity",
+    "definitions",
+    "glb_structure",
+    "primitives",
+    "limitations"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "diagnostic_id": {"const": "diagnostic:glb-topology-detail-audit:v1"},
+    "diagnostic_version": {"const": "1.0.0"},
+    "read_only": {"const": true},
+    "mutation_state": {"const": "NONE"},
+    "accepted_as_evidence": {"const": false},
+    "evidence_admission_status": {"const": "NOT_ADMITTED"},
+    "knowledge_impact": {"const": "NONE"},
+    "input_identity": {
+      "type": "object",
+      "required": ["artifact_id", "sha256", "bytes"],
+      "properties": {
+        "artifact_id": {"const": "artifact:wave-4:synthetic-neutral-bead-v1"},
+        "sha256": {"pattern": "^[A-F0-9]{64}$"},
+        "bytes": {"type": "integer", "minimum": 1}
+      }
+    },
+    "diagnostic_identity": {
+      "type": "object",
+      "required": ["source_locator", "source_sha256", "output_schema"],
+      "properties": {
+        "source_locator": {"const": "integration/tools/glb-topology-detail-audit-v1.py"},
+        "source_sha256": {"pattern": "^[A-F0-9]{64}$"},
+        "output_schema": {"const": "schemas/tools/glb-topology-detail-result.schema.json"}
+      }
+    },
+    "definitions": {"type": "object"},
+    "glb_structure": {
+      "type": "object",
+      "required": ["asset", "mesh_count", "primitive_count", "buffer_count", "buffer_view_count", "accessor_count"]
+    },
+    "primitives": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["mesh", "primitive", "mode", "vertex_count", "triangle_count", "indexed_topology", "geometric_weld_projection", "boundary_analysis", "triangle_quality", "serialization"]
+      }
+    },
+    "limitations": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+  }
+}

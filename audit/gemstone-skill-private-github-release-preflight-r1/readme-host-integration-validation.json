@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "document": "README.md",
+  "sections": [
+    "A. Repository/Skill exploration",
+    "B. Formal runtime execution",
+    "Host integration"
+  ],
+  "requiredTextPresent": true
+}

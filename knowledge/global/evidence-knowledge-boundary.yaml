@@ -1,0 +1,26 @@
+schema_version: "1.1.0"
+knowledge_id: "knowledge:global:evidence-knowledge-boundary"
+object_revision: "2"
+type: "GLOBAL_RULE"
+claim: "Tool Result is not Evidence, Evidence is not Knowledge, and Case parameters are not Family defaults."
+claim_state: "SUPPORTED"
+governance_origin: "ACCEPTED_FROZEN_CONSTITUTION"
+scope:
+  mechanisms: ["governance", "knowledge_promotion"]
+  applies_to: ["all_cases", "all_families", "all_features"]
+mechanism:
+  promotion_path: ["Observation", "Hypothesis", "Evidence", "Decision", "Result", "Case Finding", "Knowledge Candidate", "Validation", "Approval"]
+parameter_regime: "NOT_APPLICABLE"
+geometry_assumptions: []
+environment_assumptions: []
+engine_dependency:
+  required: false
+provenance:
+  - source: "constitution:C11,C12,C18,C28"
+    authority: "ACCEPTED_FROZEN"
+exceptions: []
+does_not_validate:
+  - "automatic Evidence acceptance"
+  - "automatic Knowledge promotion"
+  - "universal parameter defaults"
+loading_level: "SUMMARY"

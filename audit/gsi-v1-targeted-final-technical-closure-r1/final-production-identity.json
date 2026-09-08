@@ -1,0 +1,22 @@
+{
+  "currentProductionSourceFingerprint": "302E5918CE5FA536167E8DCCBE08613CFADEE9729455058EE4386E0E6D49BFD1",
+  "historicalPreCausalExportSourceFingerprint": "09665C7105EB4531ADBD1C37822B2785D2940E753C063223D98441A1A7982DDF",
+  "relationalSemanticFingerprint": "0BE545B708F48334534D27E7FB148713ECB6F58801B9A8B745C7D036BFD63210",
+  "meanings": "Non-semantic export changed source identity, not semantic composite identity. Historical identities are not overwritten.",
+  "components": {
+    "instanceRealizationQuality": "1.0.0",
+    "depthLocalization": "1.0.0",
+    "relationalDescriptor": "1.0.0",
+    "rayCarrier": "1.0.0",
+    "relationalConsumer": "1.0.0",
+    "presentationBinding": "1.0.0",
+    "hierarchySupportReconstructionA1": "1.0.0",
+    "relationalOpticalMapping": "1.0.0",
+    "luminanceHierarchyResponse": "1.0.0",
+    "materialColorCompositionCol2": "1.0.0",
+    "packetResponse": "1.0.0",
+    "relationalUnion": "1.0.0",
+    "fa3Fa7Bindings": "1.0.0",
+    "p1Binding": "1.0.0"
+  }
+}

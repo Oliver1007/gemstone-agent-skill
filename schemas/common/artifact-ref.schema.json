@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:artifact-ref:1.0.0",
+  "title": "Portable artifact reference",
+  "type": "object",
+  "required": ["artifact_id", "workspace_alias", "relative_locator", "verification_state"],
+  "properties": {
+    "artifact_id": {"type": "string"},
+    "workspace_alias": {"type": "string"},
+    "relative_locator": {"type": "string", "not": {"pattern": "^[A-Za-z]:\\\\"}},
+    "sha256": {"type": ["string", "null"], "pattern": "^[A-Fa-f0-9]{64}$"},
+    "source_revision": {"type": ["string", "null"]},
+    "verification_state": {"enum": ["VERIFIED", "PARTIALLY_VERIFIED", "UNVERIFIED", "UNKNOWN", "NOT_RESOLVED"]}
+  },
+  "additionalProperties": false
+}

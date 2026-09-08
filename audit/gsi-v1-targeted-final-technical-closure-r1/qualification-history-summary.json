@@ -1,0 +1,136 @@
+{
+  "earlierTargetedTransfer": "PASS_UNDER_EARLIER_PROTOCOL",
+  "postProductionClosureCanonicalReview": "FAIL",
+  "canonicalV2InitialResult": "INDETERMINATE",
+  "adjudicationV1": "INVALID_EVIDENCE",
+  "outcomeOnlyAdjudicationV1_1": "DETERMINATE_FAIL_TO_QUALIFY",
+  "sourceRecords": {
+    "earlier": {
+      "schemaVersion": "1.0.0",
+      "wave": "gsi-v1-final-assembly-union-remediated-targeted-transfer-requalification-r1",
+      "capabilityStatus": "TARGETED_TRANSFER_REQUALIFICATION",
+      "qualificationEvidence": true,
+      "status": "PASS",
+      "relationalVisibility": "READABLE",
+      "majorClusters": 2,
+      "views": {
+        "front": {
+          "opaqueAlias": "blind-3dc10b48c9e3c0e8.png",
+          "majorClusterCount": 2,
+          "clusterA": {
+            "coreLocalization": "READABLE",
+            "lobeVisibility": "READABLE",
+            "subordination": "READABLE",
+            "hierarchy": "READABLE"
+          },
+          "clusterB": {
+            "coreLocalization": "READABLE",
+            "lobeVisibility": "READABLE",
+            "subordination": "READABLE",
+            "hierarchy": "READABLE"
+          },
+          "relationalVisibility": "READABLE",
+          "dominantArtifact": "SOFT_LEGITIMATE_OVERLAP",
+          "materialCharacter": "ACCEPTABLE"
+        },
+        "right": {
+          "opaqueAlias": "blind-d26fd38a11a140cb.png",
+          "majorClusterCount": 2,
+          "clusterA": {
+            "coreLocalization": "READABLE",
+            "lobeVisibility": "READABLE",
+            "subordination": "READABLE",
+            "hierarchy": "READABLE"
+          },
+          "clusterB": {
+            "coreLocalization": "READABLE",
+            "lobeVisibility": "READABLE",
+            "subordination": "READABLE",
+            "hierarchy": "READABLE"
+          },
+          "relationalVisibility": "READABLE",
+          "dominantArtifact": "SOFT_LEGITIMATE_OVERLAP",
+          "materialCharacter": "ACCEPTABLE"
+        },
+        "back": {
+          "opaqueAlias": "blind-cca956441e3776ba.png",
+          "majorClusterCount": 2,
+          "clusterA": {
+            "coreLocalization": "READABLE",
+            "lobeVisibility": "READABLE",
+            "subordination": "READABLE",
+            "hierarchy": "READABLE"
+          },
+          "clusterB": {
+            "coreLocalization": "READABLE",
+            "lobeVisibility": "READABLE",
+            "subordination": "READABLE",
+            "hierarchy": "READABLE"
+          },
+          "relationalVisibility": "READABLE",
+          "dominantArtifact": "SOFT_LEGITIMATE_OVERLAP",
+          "materialCharacter": "ACCEPTABLE"
+        },
+        "left": {
+          "opaqueAlias": "blind-31c73e1f6cdd9108.png",
+          "majorClusterCount": 2,
+          "clusterA": {
+            "coreLocalization": "READABLE",
+            "lobeVisibility": "READABLE",
+            "subordination": "READABLE",
+            "hierarchy": "READABLE"
+          },
+          "clusterB": {
+            "coreLocalization": "READABLE",
+            "lobeVisibility": "READABLE",
+            "subordination": "READABLE",
+            "hierarchy": "READABLE"
+          },
+          "relationalVisibility": "READABLE",
+          "dominantArtifact": "SOFT_LEGITIMATE_OVERLAP",
+          "materialCharacter": "ACCEPTABLE"
+        }
+      }
+    },
+    "post": {
+      "schemaVersion": "1.0.0",
+      "wave": "gsi-v1-production-integrated-relational-path-post-closure-requalification-r1",
+      "capabilityStatus": "POST_CLOSURE_TARGETED_REQUALIFICATION",
+      "status": "FAIL",
+      "contract": "ORIGINAL_SEMANTIC_VISUAL_FINAL_PRESENTATION_CONTRACT",
+      "finalPresentationRelationalVisibility": "PARTIAL",
+      "productionQualificationFinalMajorClusters": 0,
+      "suggestedConcentrationsPerView": 2,
+      "readableMajorClusterDefinitionSatisfied": false,
+      "reproductionDoesNotSubstituteSemanticPass": true
+    },
+    "v2": {
+      "status": "INDETERMINATE",
+      "visibility": "PARTIAL",
+      "minimumCount": "INDETERMINATE",
+      "countsA": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "countsB": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "note": "An INDETERMINATE overall result is not proof of visual failure; agreed counts are reported separately."
+    },
+    "v1": {
+      "status": "STOP_INVALID_EVIDENCE",
+      "overall": "GSI_V1_CANONICAL_V2_ADJUDICATION_INVALID_EVIDENCE",
+      "technicalValidation": "PASS",
+      "protocolMutations": 0,
+      "sourceProtection": "PASS",
+      "next": "AUTHORIZE_OR_DECLINE_CANONICAL_SEMANTIC_EVIDENCE_RECONSTRUCTION_REVIEW"
+    }
+  },
+  "historicalRewrite": false,
+  "precedence": "Earlier PASS does not override governing Canonical V2 outcome-only result."
+}

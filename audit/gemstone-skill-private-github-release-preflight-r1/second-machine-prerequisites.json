@@ -1,0 +1,12 @@
+{
+  "os": "Windows",
+  "node": ">=24 <25",
+  "pnpmTested": "11.19.0",
+  "lockfile": 9,
+  "powershell": "7, pwsh.exe on PATH; no policy bypass",
+  "browser": "Explicit installed Chromium-family executable",
+  "git": true,
+  "codex": "instruction/host usage only",
+  "python": "not required by normal runtime; optional host skill validation only",
+  "thirdParty": "normal package installation; no vendoring"
+}

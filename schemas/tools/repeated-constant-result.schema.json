@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:repeated-constant-result:1.0.0",
+  "type": "object",
+  "required": ["comparison_scope", "detection_method", "repeated_constants", "authority_boundary"],
+  "properties": {
+    "comparison_scope": {"type": "array", "minItems": 2},
+    "detection_method": {"const": "STRUCTURAL_PATH_AND_TYPED_VALUE_GROUPING"},
+    "repeated_constants": {"type": "array"},
+    "authority_boundary": {"const": "POSSIBLE_GENERATOR_DEFAULT_NOT_VALIDATED_CONSTANT"}
+  },
+  "additionalProperties": true
+}

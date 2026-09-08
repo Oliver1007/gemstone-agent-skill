@@ -1,0 +1,8 @@
+{
+  "authorization": "PRIVATE_GITHUB_RELEASE_CHECKPOINT_AND_SECOND_MACHINE_VALIDATION_PREPARATION",
+  "scope": "release checkpoint and external validation preparation",
+  "runtimeRedesign": false,
+  "qualification": false,
+  "promotion": false,
+  "gitPush": false
+}

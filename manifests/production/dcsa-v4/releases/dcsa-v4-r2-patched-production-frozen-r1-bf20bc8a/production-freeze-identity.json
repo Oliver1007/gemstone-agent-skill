@@ -1,0 +1,13 @@
+{
+  "engineSha256": "bf20bc8abbb2a9a864139b48d779290ecc2c056f358600310806c692dba1c119",
+  "exactRgbIdentity": "8230c4c7b2807ca595de271b7d2c7e974d87a88bb54f6950127bfcccd0fa4f7d",
+  "finalValidationSha256": "637efa2d1349b73ed69f050a249d24fc8aca35028490fec5307098fff4f7f885",
+  "frozenRecordIdentity": "f8a23db184d096437f8593dee151402da04f474a82fa468ad23dc5a7b24814c9",
+  "manifestSha256": "e22adfd753a82935c56044a748cd2ebe50e1ac40f174b6b0a2ac707db121a377",
+  "moderateResultIdentity": "d9098ff62b4f44baa2e9c9a76a5b076d82a7de6a3615c06ad9357d81f6b55589",
+  "qualificationChainIdentity": "27fe1de330a072a161cb6da46338fcdb7da2d8eacb7d9e275b45904f5e7ce0fc",
+  "qualificationReportSha256": "0491d2b79f7c6c384e2f0f1d08986d62c74bc3b9ec17f439978a481b476e5919",
+  "releaseId": "dcsa-v4-r2-patched-production-frozen-r1-bf20bc8a",
+  "schemaVersion": "dcsa-v4-production-freeze-identity-v1",
+  "semanticIdentity": "c547c69b65dbb94417fb88e097e4a7fcc7b0ecbd36d884847d702eecd531252d"
+}

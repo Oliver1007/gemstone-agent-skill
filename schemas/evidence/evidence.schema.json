@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:evidence:1.0.0",
+  "type": "object",
+  "required": ["schema_version", "evidence_id", "object_revision", "source_tool_result_ref", "protocol_ref", "target_ref", "acceptance_decision", "validity"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "evidence_id": {"type": "string"},
+    "object_revision": {"type": "string"},
+    "source_tool_result_ref": {"type": "string"},
+    "protocol_ref": {"type": "string"},
+    "target_ref": {"type": "string"},
+    "acceptance_decision": {"enum": ["ACCEPTED", "REJECTED", "PARTIAL", "PENDING"]},
+    "validity": {"type": "object"},
+    "physical_values": {"type": "array", "items": {"type": "object", "required": ["value", "unit", "semantic_role"]}}
+  },
+  "additionalProperties": true
+}

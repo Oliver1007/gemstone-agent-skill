@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema:integration:engine-aggregate-manifest-v1",
+  "title": "Engine Aggregate Canonical Manifest V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "contract_id", "root_identity", "entries"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "contract_id": {"const": "engine-aggregate-canonicalization-v1"},
+    "root_identity": {"type": "string", "minLength": 1},
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["path", "sha256", "bytes"],
+        "properties": {
+          "path": {"type": "string", "minLength": 1},
+          "sha256": {"type": "string", "pattern": "^[A-F0-9]{64}$"},
+          "bytes": {"type": "integer", "minimum": 0}
+        }
+      }
+    }
+  }
+}

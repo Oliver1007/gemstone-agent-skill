@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:case-finding:1.0.0",
+  "type": "object",
+  "required": ["schema_version", "finding_id", "object_revision", "case_ref", "case_finding_state", "claim", "evidence_refs", "scope"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "finding_id": {"type": "string"},
+    "object_revision": {"type": "string"},
+    "case_ref": {"type": "string"},
+    "case_finding_state": {"$ref": "urn:gemstone-material-agent:schema:state-axes:1.0.0#/$defs/case_finding_state"},
+    "claim": {"type": "string"},
+    "evidence_refs": {"type": "array"},
+    "scope": {"type": "object", "minProperties": 1}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,9 @@
+{
+  "causalObservationExportV1": "IMPLEMENTED",
+  "exportClass": "NON_SEMANTIC",
+  "productionSemanticChange": false,
+  "harnessSemanticLogic": 0,
+  "qualificationModeRequired": false,
+  "retainedForFutureDiagnostics": true,
+  "existingValidation": "PASS"
+}

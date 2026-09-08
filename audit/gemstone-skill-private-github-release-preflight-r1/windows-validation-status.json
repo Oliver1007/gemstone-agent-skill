@@ -1,0 +1,7 @@
+{
+  "status": "PASS_CARRIED_FORWARD_IDENTICAL_RUNTIME",
+  "evidence": "audit/gemstone-skill-portable-runtime-packaging-implementation-r1/final-snapshot-validation.json",
+  "fullSmokeEvidence": "audit/gemstone-skill-portable-runtime-packaging-implementation-r1/final-clean-clone-smoke.json",
+  "scope": "local Windows relocated clone; last .gitattributes-only snapshot did not repeat render",
+  "newRenderThisWave": false
+}

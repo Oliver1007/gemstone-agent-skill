@@ -1,0 +1,25 @@
+{
+  "status": "INCONSISTENT",
+  "topLevel": "FAIL",
+  "childFields": {
+    "schemaVersion": "1.0.0",
+    "wave": "gsi-v1-production-final-presentation-runtime-closure-implementation-r1",
+    "capabilityStatus": "PRODUCTION_RUNTIME_CLOSURE_IMPLEMENTATION",
+    "status": "FAIL",
+    "requiredArtifactCount": 50,
+    "requiredArtifactsPresent": 50,
+    "missingArtifacts": [],
+    "jsonValidation": "50/50_PASS",
+    "productionTests": "63/63_PASS",
+    "focusedClosureTests": "35/35_PASS",
+    "semanticEquivalence": "9/9_PASS",
+    "renderHashValidation": "4/4_PASS",
+    "sourceProtection": "PASS",
+    "skillValidation": {
+      "gemstone-agent-skill": "PASS",
+      "gemstone-material-skill-v2": "PASS"
+    }
+  },
+  "missingRequired": [],
+  "explanation": "Zero missing required artifacts with passing subfields conflicts with top-level FAIL because the aggregate condition rejects zero missing."
+}

@@ -1,0 +1,5 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "urn:gemstone-material-agent:schema:mutation-result:1.0.0", "type": "object",
+  "required": ["schema_version", "mutation_result_id", "request_ref", "plan_ref", "tool_result_ref", "staged_output_refs", "write_set_verification", "postconditions", "candidate_creation", "rollback_or_quarantine", "evidence_admitted", "knowledge_promoted", "authority_state"],
+  "properties": {"schema_version": {"const": "1.0.0"}, "mutation_result_id": {"type": "string"}, "request_ref": {"type": "string"}, "plan_ref": {"type": "string"}, "tool_result_ref": {"type": ["string", "null"]}, "staged_output_refs": {"type": "array"}, "write_set_verification": {"type": "string"}, "postconditions": {"type": "array"}, "candidate_creation": {"enum": ["NOT_ATTEMPTED", "NOT_COMMITTED", "NEW_CANDIDATE_CREATED"]}, "rollback_or_quarantine": {"type": "string"}, "evidence_admitted": {"const": false}, "knowledge_promoted": {"const": false}, "authority_state": {"const": "CANDIDATE_MAXIMUM"}}, "additionalProperties": false
+}

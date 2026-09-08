@@ -1,0 +1,33 @@
+schema_version: "1.1.0"
+knowledge_id: "knowledge:global:polished-surface-body-response-separation"
+object_revision: "1"
+type: "GLOBAL_RULE"
+knowledge_role: "MECHANISM_KNOWLEDGE_CANDIDATE"
+claim: "A polished gemstone may benefit from a sharp surface-reflection response that is perceptually separable from the broader body/material roughness response; one roughness control should not automatically be assumed to represent both."
+claim_state: "CANDIDATE"
+scope:
+  materials: ["polished gemstone representations"]
+  decision_function: "separate functional surface-polish and body-response controls when comparative evidence warrants"
+supporting_source_refs:
+  - "external-source:barcelona-bear-4-glb:55fc42968ed3"
+observation_basis:
+  - "All four presets encode clearcoatFactor 1.0 with material-specific clearcoat roughness."
+  - "For every preset, clearcoat roughness is lower than the decoded ORM roughness range, separating a sharper surface lobe from broader texture-driven body roughness."
+contradicting_sources: []
+duplicate_status: "NEW_CLAIM"
+inference_boundary: "Comparative source implementation supports functional separation, not a mandatory Clearcoat technology."
+provenance:
+  - source: "external-comparison:barcelona-bear-4-glb:2026-08-21"
+    authority: "EXTERNAL_COMPARATIVE_SOURCE"
+    evidence_status: "SOURCE_OBSERVATION_NOT_AUTO_EVIDENCE"
+engine_dependency:
+  required: false
+  firewall: "Does not require KHR_materials_clearcoat or change current Engine Capability."
+does_not_validate:
+  - "an exact Clearcoat model"
+  - "a physical coating layer"
+  - "a universal two-lobe architecture"
+  - "exact roughness values"
+  - "that every gemstone needs Clearcoat"
+loading_level: "DECISION"
+

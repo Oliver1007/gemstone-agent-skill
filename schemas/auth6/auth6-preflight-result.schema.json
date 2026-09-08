@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:auth6-preflight-result:1.0.0",
+  "type": "object",
+  "required": ["schema_version", "result_id", "request_id", "status", "checks", "execution_authorized", "writes_performed"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "result_id": {"type": "string"},
+    "request_id": {"type": "string"},
+    "status": {"enum": ["READY_FOR_AUTH6_HUMAN_REVIEW", "HUMAN_CASE_SELECTION_REQUIRED", "CASE_IDENTITY_UNRESOLVED", "PROFILE_BINDING_UNRESOLVED", "REFERENCE_IDENTITY_UNRESOLVED", "ENGINE_IDENTITY_UNRESOLVED", "RENDER_SAFETY_NOT_READY", "QA_PROTOCOL_NOT_READY", "REGRESSION_PLAN_NOT_READY", "STEP11B_ENTRY_NOT_READY", "ARCHITECTURE_REVIEW_REQUIRED"]},
+    "checks": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["check", "ready", "failure_code"], "properties": {"check": {"type": "string"}, "ready": {"type": "boolean"}, "failure_code": {"type": ["string", "null"]}, "detail": {"type": "string"}}}},
+    "execution_authorized": {"const": false},
+    "writes_performed": {"const": 0},
+    "authorization_note": {"const": "PREFLIGHT_NEVER_GRANTS_AUTH6"}
+  },
+  "additionalProperties": false
+}

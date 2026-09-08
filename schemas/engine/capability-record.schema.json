@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:capability-record:1.1.0",
+  "type": "object",
+  "required": ["schema_version", "capability_id", "object_revision", "authority_role", "engine_source_ref", "verification_state", "engine_module_maturity"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "capability_id": {"type": "string"},
+    "object_revision": {"type": "string"},
+    "authority_role": {"const": "SKILL_REFERENCE_NOT_ENGINE_TRUTH"},
+    "engine_source_ref": {"type": ["string", "null"]},
+    "verification_state": {"enum": ["UNVERIFIED", "UNKNOWN", "NOT_RESOLVED", "VERIFIED_SNAPSHOT"]},
+    "engine_module_maturity": {"$ref": "urn:gemstone-material-agent:schema:state-axes:1.0.0#/$defs/engine_module_maturity"}
+  },
+  "additionalProperties": true
+}

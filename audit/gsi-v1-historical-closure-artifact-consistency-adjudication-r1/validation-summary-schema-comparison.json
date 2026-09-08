@@ -1,0 +1,8 @@
+{
+  "sameSchemaVersion": "1.0.0",
+  "targetExpression": "finalPass&&missing.length===1&&missing[0]==='validation-summary.json'",
+  "nearbyPath": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\staging\\gsi-v1-production-integrated-relational-path-post-closure-requalification-r1\\finalize.mjs",
+  "nearbyExpression": "status:missing.length===0&&sourceFinalPass?'PASS':'FAIL'",
+  "conclusion": "Nearby post-closure generator excludes summary from missing then accepts zero missing. Supports aggregation bug, not an inverted runtime test or default FAIL template.",
+  "externalSources": 0
+}

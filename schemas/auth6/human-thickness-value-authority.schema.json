@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:auth6:human-thickness-value-authority:1.0.0",
+  "title": "Human Thickness Value Authority Event",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "record_id", "event_type", "wave", "case_id", "atomic_single", "materialization_attempt", "event", "result"],
+  "properties": {
+    "schema_version": {"const":"1.0.0"},
+    "record_id": {"type":"string","minLength":1},
+    "event_type": {"const":"HUMAN_PROFILE_INPUT_VALUE_AUTHORITY"},
+    "wave": {"const":"IMPLEMENTATION_WAVE_4.3I"},
+    "case_id": {"const":"case:citrine"},
+    "atomic_single": {"const":true},
+    "materialization_attempt": {"const":1},
+    "event": {
+      "type":"object",
+      "additionalProperties":false,
+      "required":["authority_event_id","human_authorization_ref","schema","field_id","authorized_value","canonical_unit","value_representation","display_equivalent","approximation_disposition","authority_effective_utc","authority_basis","historical_profile_value_authority","historical_provenance_change","authoritative_derivation_rule","physical_thickness_claim","geometry_derived_truth","future_use_scope","current_engine_mapping","current_engine_revalidation","range_validation","validated_range","profile_creation_authority","case_binding_authority","auth6_authority","lineage"],
+      "properties": {
+        "authority_event_id":{"const":"authority-event:citrine:material-volume-thickness:wave-4.3i"},
+        "human_authorization_ref":{"type":"object"},
+        "schema":{"type":"object"},
+        "field_id":{"const":"material.volume.thickness"},
+        "authorized_value":{"const":0.0002},
+        "canonical_unit":{"const":"METRE_ENGINE_WORLD_LENGTH"},
+        "value_representation":{"const":"DECIMAL_METRE_ENGINE_WORLD_LENGTH"},
+        "display_equivalent":{"type":"object"},
+        "approximation_disposition":{"type":"object"},
+        "authority_effective_utc":{"type":"string","format":"date-time"},
+        "authority_basis":{"const":"EXPLICIT_CURRENT_HUMAN_THICKNESS_VALUE_DECISION"},
+        "historical_profile_value_authority":{"const":"NOT_CLAIMED"},
+        "historical_provenance_change":{"const":"NONE"},
+        "authoritative_derivation_rule":{"const":"NOT_FOUND"},
+        "physical_thickness_claim":{"const":"NONE"},
+        "geometry_derived_truth":{"const":"NOT_CLAIMED"},
+        "future_use_scope":{"const":"FUTURE_CITRINE_PROFILE_INPUT_ONLY"},
+        "current_engine_mapping":{"const":"PARTIAL"},
+        "current_engine_revalidation":{"const":"REQUIRED"},
+        "range_validation":{"const":"NOT_PERFORMED"},
+        "validated_range":{"type":"null"},
+        "profile_creation_authority":{"const":false},
+        "case_binding_authority":{"const":false},
+        "auth6_authority":{"const":false},
+        "lineage":{"type":"array","minItems":5,"items":{"type":"string","minLength":1}}
+      }
+    },
+    "result": {"const":"PASS_THICKNESS_HUMAN_VALUE_AUTHORITY_MATERIALIZED"}
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "qualification": "FAIL",
+  "governingResult": "DETERMINATE_FAIL_TO_QUALIFY",
+  "failureClass": "FAIL_TO_QUALIFY",
+  "provenGlobalSemanticAbsence": false,
+  "reviews": [
+    {
+      "review": "A",
+      "alias": "IMAGE_A",
+      "view": "RIGHT",
+      "recorded": 0,
+      "recomputed": 0,
+      "localFlagsValid": true,
+      "localGroupCount": 2,
+      "sealedAt": "2026-09-08T08:34:15.209Z",
+      "unblindedAt": "2026-09-08T08:41:31.272Z"
+    },
+    {
+      "review": "A",
+      "alias": "IMAGE_B",
+      "view": "LEFT",
+      "recorded": 0,
+      "recomputed": 0,
+      "localFlagsValid": true,
+      "localGroupCount": 2,
+      "sealedAt": "2026-09-08T08:34:15.209Z",
+      "unblindedAt": "2026-09-08T08:41:31.272Z"
+    },
+    {
+      "review": "A",
+      "alias": "IMAGE_C",
+      "view": "FRONT",
+      "recorded": 1,
+      "recomputed": 1,
+      "localFlagsValid": true,
+      "localGroupCount": 2,
+      "sealedAt": "2026-09-08T08:34:15.209Z",
+      "unblindedAt": "2026-09-08T08:41:31.272Z"
+    },
+    {
+      "review": "A",
+      "alias": "IMAGE_D",
+      "view": "BACK",
+      "recorded": 0,
+      "recomputed": 0,
+      "localFlagsValid": true,
+      "localGroupCount": 2,
+      "sealedAt": "2026-09-08T08:34:15.209Z",
+      "unblindedAt": "2026-09-08T08:41:31.272Z"
+    },
+    {
+      "review": "B",
+      "alias": "IMAGE_A",
+      "view": "RIGHT",
+      "recorded": 0,
+      "recomputed": 0,
+      "localFlagsValid": true,
+      "localGroupCount": 2,
+      "sealedAt": "2026-09-08T08:38:21.626Z",
+      "unblindedAt": "2026-09-08T08:41:31.272Z"
+    },
+    {
+      "review": "B",
+      "alias": "IMAGE_B",
+      "view": "LEFT",
+      "recorded": 0,
+      "recomputed": 0,
+      "localFlagsValid": true,
+      "localGroupCount": 2,
+      "sealedAt": "2026-09-08T08:38:21.626Z",
+      "unblindedAt": "2026-09-08T08:41:31.272Z"
+    },
+    {
+      "review": "B",
+      "alias": "IMAGE_C",
+      "view": "FRONT",
+      "recorded": 0,
+      "recomputed": 0,
+      "localFlagsValid": true,
+      "localGroupCount": 2,
+      "sealedAt": "2026-09-08T08:38:21.626Z",
+      "unblindedAt": "2026-09-08T08:41:31.272Z"
+    },
+    {
+      "review": "B",
+      "alias": "IMAGE_D",
+      "view": "BACK",
+      "recorded": 0,
+      "recomputed": 0,
+      "localFlagsValid": true,
+      "localGroupCount": 2,
+      "sealedAt": "2026-09-08T08:38:21.626Z",
+      "unblindedAt": "2026-09-08T08:41:31.272Z"
+    }
+  ],
+  "unanimousPositiveEvidenceUpperBound": "0_PER_VIEW",
+  "claimLimit": "Not qualified is not proof zero morphology exists, all roots unreadable, or global semantic absence."
+}

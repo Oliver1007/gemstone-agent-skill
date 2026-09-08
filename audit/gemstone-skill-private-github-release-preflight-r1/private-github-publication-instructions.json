@@ -1,0 +1,15 @@
+{
+  "document": "PRIVATE_GITHUB_PUBLICATION.md",
+  "visibility": "PRIVATE",
+  "ownerSteps": [
+    "finish local commit if blocked",
+    "create empty private repository",
+    "copy URL without credentials",
+    "inspect/add origin manually",
+    "verify release ID",
+    "separately authorize and push only intended release branch",
+    "grant collaborators explicit access",
+    "second-machine checklist"
+  ],
+  "executed": false
+}

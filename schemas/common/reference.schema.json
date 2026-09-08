@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:reference:1.0.0",
+  "title": "Logical object reference",
+  "type": "object",
+  "required": ["target_id", "verification_state"],
+  "properties": {
+    "target_id": {"type": ["string", "null"]},
+    "target_revision": {"type": ["string", "null"]},
+    "verification_state": {"enum": ["VERIFIED", "PARTIALLY_VERIFIED", "UNVERIFIED", "UNKNOWN", "NOT_RESOLVED", "NOT_APPLICABLE"]},
+    "reason": {"type": "string"}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "urn:gemstone-material-agent:schema:mutation-diff:1.1.0", "type": "object",
+  "required": ["schema_version", "diff_id", "request_ref", "items"],
+  "properties": {"schema_version": {"const": "1.1.0"}, "diff_id": {"type": "string"}, "request_ref": {"type": "string"}, "items": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["field_path", "old_value_ref", "new_value_ref", "change_type", "reason", "decision_source", "scope", "expected_effect", "forbidden_collateral_changes"], "properties": {"field_path": {"type": "string"}, "old_value_ref": {"type": ["string", "null"]}, "new_value_ref": {"type": "string"}, "change_type": {"const": "CREATE"}, "reason": {"type": "string"}, "decision_source": {"type": "string"}, "scope": {"const": "CANDIDATE_ONLY"}, "expected_effect": {"type": "string"}, "forbidden_collateral_changes": {"type": "array", "minItems": 1, "items": {"type": "string"}}, "additionalProperties": false}}},
+  "additionalProperties": false}, "additionalProperties": false
+}

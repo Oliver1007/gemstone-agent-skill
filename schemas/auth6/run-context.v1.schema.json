@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:run-context:1.0.0",
+  "title": "Governed AUTH-6 Run Context V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "schema_ref", "run_context_ref", "authority_class",
+    "case_ref", "profile_ref", "candidate_lineage_ref", "entry_request_ref",
+    "human_authority_ref", "preflight_result_ref", "created_at", "updated_at",
+    "revision", "lifecycle_state", "phase_routing", "evidence_refs",
+    "frozen_scope", "next_action", "review_flags", "temporary_candidate_refs",
+    "rollback_ref"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "schema_ref": {"const": "urn:gemstone-material-agent:schema:run-context:1.0.0"},
+    "run_context_ref": {"type": "string", "pattern": "^runctx:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?:[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"},
+    "authority_class": {"const": "EXECUTION_STATE_NON_AUTHORITATIVE"},
+    "case_ref": {"type": "string", "pattern": "^case:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$"},
+    "profile_ref": {"type": "string", "pattern": "^profile:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?@[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "candidate_lineage_ref": {"type": "string", "pattern": "^candidate:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?@[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "entry_request_ref": {"type": "string", "minLength": 1},
+    "human_authority_ref": {"type": "string", "minLength": 1},
+    "preflight_result_ref": {"type": "string", "minLength": 1},
+    "created_at": {"type": "string", "format": "date-time"},
+    "updated_at": {"type": "string", "format": "date-time"},
+    "revision": {"type": "integer", "minimum": 1},
+    "lifecycle_state": {"enum": ["ACTIVE", "COMPLETED", "ABORTED", "BLOCKED"]},
+    "phase_routing": {"$ref": "#/$defs/phaseRouting"},
+    "evidence_refs": {"type": "array", "items": {"$ref": "#/$defs/evidenceRef"}},
+    "frozen_scope": {"type": "array", "items": {"$ref": "#/$defs/frozenScopeEntry"}},
+    "next_action": {"$ref": "#/$defs/nextAction"},
+    "review_flags": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
+    "temporary_candidate_refs": {"type": "array", "items": {"type": "string", "pattern": "^candidate:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?@[0-9]+\\.[0-9]+\\.[0-9]+$"}, "uniqueItems": true},
+    "rollback_ref": {"type": ["string", "null"]}
+  },
+  "$defs": {
+    "phaseRouting": {
+      "type": "object", "additionalProperties": false,
+      "required": ["persisted_case_phase_basis", "earliest_valid_resume_phase", "routing_reason"],
+      "properties": {
+        "persisted_case_phase_basis": {"type": "string", "pattern": "^P[0-9]+$"},
+        "earliest_valid_resume_phase": {"type": "string", "pattern": "^P[0-9]+$"},
+        "routing_reason": {"type": "string", "minLength": 1}
+      }
+    },
+    "evidenceRef": {
+      "type": "object", "additionalProperties": false,
+      "required": ["evidence_ref", "state"],
+      "properties": {
+        "evidence_ref": {"type": "string", "minLength": 1},
+        "state": {"enum": ["CURRENT", "STALE", "REVALIDATION_REQUIRED", "SUPERSEDED", "REJECTED", "HISTORICAL"]}
+      }
+    },
+    "frozenScopeEntry": {
+      "type": "object", "additionalProperties": false,
+      "required": ["subject_ref", "state"],
+      "properties": {
+        "subject_ref": {"type": "string", "minLength": 1},
+        "state": {"enum": ["PROTECTED", "MUTABLE_WITH_AUTHORITY", "READ_ONLY_REVIEW", "REVALIDATION_REQUIRED"]}
+      }
+    },
+    "nextAction": {
+      "type": "object", "additionalProperties": false,
+      "required": ["action", "technically_permitted", "human_authorized", "executable_now"],
+      "properties": {
+        "action": {"type": "string", "minLength": 1},
+        "technically_permitted": {"type": "boolean"},
+        "human_authorized": {"type": "boolean"},
+        "executable_now": {"type": "boolean"}
+      }
+    }
+  }
+}

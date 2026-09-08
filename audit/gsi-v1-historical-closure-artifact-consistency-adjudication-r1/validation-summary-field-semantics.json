@@ -1,0 +1,10 @@
+{
+  "classification": "C_SUMMARY_AGGREGATION_ERROR",
+  "expression": "finalPass&&missing.length===1&&missing[0]==='validation-summary.json'",
+  "generatorPath": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\staging\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\finalize.mjs",
+  "line": 96,
+  "meaning": "Conjunction of finalPass and first-write-only missing-file predicate, NOT reduction of child test statuses.",
+  "explanation": "If summary already exists and all artifacts exist, missing=[]; predicate yields FAIL even when finalPass=true. Historical present=50 and missingArtifacts=[] match this path.",
+  "caution": "Exact number/time of historical executions is not recoverable; repeated finalization is inferred from code/state, not claimed from mtime alone.",
+  "differentQualificationScope": false
+}

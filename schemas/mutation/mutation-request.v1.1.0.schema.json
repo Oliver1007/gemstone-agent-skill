@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:mutation-request:1.1.0",
+  "type": "object",
+  "required": ["schema_version", "request_id", "operation_id", "tool_identity", "authorization", "target_class", "target_ref", "target_identity", "parent_candidate_identity", "input_artifacts", "engine_behavior", "mutation_intent", "frozen_scope", "allowed_fields", "forbidden_fields", "requested_outputs", "expected_write_set_ref", "approval_ref", "run_context_ref", "fallback_policy", "requested_post_state", "protected_effects"],
+  "properties": {
+    "schema_version": {"const": "1.1.0"},
+    "request_id": {"type": "string", "minLength": 1},
+    "operation_id": {"type": "string", "minLength": 1},
+    "tool_identity": {"type": "object", "required": ["tool_ref", "tool_hash", "implementation_version", "contract_version"], "properties": {"tool_ref": {"type": "string"}, "tool_hash": {"type": "string", "pattern": "^[A-F0-9]{64}$"}, "implementation_version": {"type": "string"}, "contract_version": {"type": "string"}}, "additionalProperties": false},
+    "authorization": {"type": "object", "required": ["required_level", "state", "scope"], "properties": {"required_level": {"const": "AUTH-5"}, "state": {"const": "NOT_GRANTED_STATIC_PREFLIGHT_ONLY"}, "scope": {"const": "NEW_INTEGRATION_CANDIDATE_ONLY"}}, "additionalProperties": false},
+    "target_class": {"type": "string"},
+    "target_ref": {"type": "string"},
+    "target_identity": {"type": "object", "required": ["object_id", "object_type", "logical_workspace_ref", "artifact_ref", "sha256", "schema_id", "schema_version", "expected_state"], "properties": {"object_id": {"type": "string"}, "object_type": {"type": "string"}, "logical_workspace_ref": {"type": "string"}, "artifact_ref": {"type": ["string", "null"]}, "sha256": {"type": ["string", "null"], "pattern": "^[A-F0-9]{64}$"}, "schema_id": {"type": "string"}, "schema_version": {"type": "string"}, "expected_state": {"const": "ABSENT"}}, "additionalProperties": false},
+    "parent_candidate_identity": {"type": "object", "required": ["candidate_ref", "candidate_id", "sha256", "schema_version"], "properties": {"candidate_ref": {"type": "string"}, "candidate_id": {"type": "string"}, "sha256": {"type": "string", "pattern": "^[A-F0-9]{64}$"}, "schema_version": {"type": "string"}}, "additionalProperties": false},
+    "input_artifacts": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["artifact_ref", "sha256", "schema_id", "schema_version"], "properties": {"artifact_ref": {"type": "string"}, "sha256": {"type": "string", "pattern": "^[A-F0-9]{64}$"}, "schema_id": {"type": "string"}, "schema_version": {"type": "string"}}, "additionalProperties": false}},
+    "engine_behavior": {"type": "object", "required": ["behavior_ref", "fingerprint"], "properties": {"behavior_ref": {"type": "string"}, "fingerprint": {"type": "string", "pattern": "^[A-F0-9]{64}$"}}, "additionalProperties": false},
+    "mutation_intent": {"type": "string", "minLength": 1},
+    "frozen_scope": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+    "allowed_fields": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+    "forbidden_fields": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+    "requested_outputs": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+    "expected_write_set_ref": {"type": "string"},
+    "approval_ref": {"type": "string"},
+    "run_context_ref": {"type": "string"},
+    "fallback_policy": {"const": "FAIL_CLOSED"},
+    "requested_post_state": {"const": "CANDIDATE"},
+    "protected_effects": {"type": "object", "required": ["profile_mutation", "case_pointer_mutation", "golden_mutation", "source_mutation", "certification_mutation", "knowledge_promotion", "evidence_admission"], "properties": {"profile_mutation": {"const": false}, "case_pointer_mutation": {"const": false}, "golden_mutation": {"const": false}, "source_mutation": {"const": false}, "certification_mutation": {"const": false}, "knowledge_promotion": {"const": false}, "evidence_admission": {"const": false}}, "additionalProperties": false}
+  },
+  "additionalProperties": false
+}

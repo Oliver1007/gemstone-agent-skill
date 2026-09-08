@@ -1,0 +1,15 @@
+{
+  "branch": "codex/private-distribution-v1",
+  "strategy": "Independent temporary Git index and parentless snapshot commit; leave current HEAD/index/worktree intact",
+  "blanketAdd": false,
+  "existingTrackedExcluded": [
+    "tmp/dcsa-v4-exact-gen8-to-8192-checkpoint-recovery-r1/checkpoint-barrier-tests.mjs",
+    "tmp/dcsa-v4-exact-gen8-to-8192-checkpoint-recovery-r1/checkpoint-barrier.mjs",
+    "tmp/dcsa-v4-exact-gen8-to-8192-checkpoint-recovery-r1/common.mjs",
+    "tmp/dcsa-v4-exact-gen8-to-8192-checkpoint-recovery-r1/exact-generation9-commit.mjs",
+    "tmp/dcsa-v4-exact-gen8-to-8192-checkpoint-recovery-r1/prepare-recovery.mjs"
+  ],
+  "historyNotIncluded": true,
+  "remoteMutation": false,
+  "requiresAuthorIdentity": true
+}

@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:mutation-request:1.0.0",
+  "type": "object",
+  "required": ["schema_version", "request_id", "operation_id", "tool_identity", "authorization", "mutation_kind", "target", "protected_effects"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "request_id": {"type": "string", "minLength": 1},
+    "operation_id": {"type": "string", "minLength": 1},
+    "tool_identity": {
+      "type": "object",
+      "required": ["tool_id", "source_locator", "source_sha256"],
+      "properties": {
+        "tool_id": {"type": "string"},
+        "source_locator": {"type": "string"},
+        "source_sha256": {"type": "string", "pattern": "^[A-Fa-f0-9]{64}$"}
+      },
+      "additionalProperties": false
+    },
+    "authorization": {
+      "type": "object",
+      "required": ["required_level", "state", "scope_ref"],
+      "properties": {
+        "required_level": {"const": "AUTH-5"},
+        "state": {"enum": ["NOT_GRANTED_STATIC_PREFLIGHT_ONLY", "GRANTED"]},
+        "scope_ref": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "mutation_kind": {"const": "CREATE_NEW_IMMUTABLE_CANDIDATE"},
+    "target": {
+      "type": "object",
+      "required": ["case_ref", "candidate_id", "parent_candidate_ref", "initial_candidate", "target_root", "expected_state"],
+      "properties": {
+        "case_ref": {"type": "string"},
+        "candidate_id": {"type": "string", "pattern": "^candidate:[a-z0-9][a-z0-9._-]*$"},
+        "parent_candidate_ref": {"type": ["string", "null"]},
+        "initial_candidate": {"type": "boolean"},
+        "target_root": {"type": "string"},
+        "expected_state": {"const": "ABSENT"}
+      },
+      "additionalProperties": false
+    },
+    "protected_effects": {
+      "type": "object",
+      "required": ["profile_mutation", "active_case_pointer_mutation", "golden_mutation", "engine_source_mutation", "external_source_mutation"],
+      "properties": {
+        "profile_mutation": {"const": false},
+        "active_case_pointer_mutation": {"const": false},
+        "golden_mutation": {"const": false},
+        "engine_source_mutation": {"const": false},
+        "external_source_mutation": {"const": false}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

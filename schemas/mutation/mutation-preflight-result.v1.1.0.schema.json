@@ -1,0 +1,5 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "urn:gemstone-material-agent:schema:mutation-preflight-result:1.1.0", "type": "object",
+  "required": ["schema_version", "status", "execution_allowed", "authorization_granted", "checks", "errors", "authority_boundary"],
+  "properties": {"schema_version": {"const": "1.1.0"}, "status": {"enum": ["STRUCTURALLY_CONFORMANT_AUTHORIZATION_REQUIRED", "REJECTED"]}, "execution_allowed": {"const": false}, "authorization_granted": {"const": false}, "checks": {"type": "array", "items": {"type": "string"}}, "errors": {"type": "array", "items": {"type": "object", "required": ["code", "message"], "properties": {"code": {"type": "string"}, "message": {"type": "string"}}, "additionalProperties": false}}, "authority_boundary": {"const": "AUTH_4_MAINTENANCE_STATIC_RECOVERY_ONLY"}}, "additionalProperties": false
+}

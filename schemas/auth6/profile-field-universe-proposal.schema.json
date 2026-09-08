@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:profile-field-universe-proposal:1.0.0",
+  "type": "object",
+  "required": ["schema_version", "proposal_id", "status", "authority_flags", "semantic_basis", "scope", "fields", "excluded_boundaries", "range_policy", "versioning_policy", "engine_compatibility_policy", "migration_notes", "human_decisions_required"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "proposal_id": {"pattern": "^proposal:profile-schema:"},
+    "status": {"const": "NONAUTHORITATIVE_DRAFT"},
+    "authority_flags": {"type": "object"},
+    "semantic_basis": {"type": "array", "minItems": 1},
+    "scope": {"type": "object"},
+    "fields": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["field_id", "schema_path", "class", "human_meaning", "engine_meaning", "owner", "type", "unit", "requiredness", "m01_applicability", "feature_condition", "null_semantics", "missing_semantics", "inherit_semantics", "default_semantics", "candidate_override_policy", "semantic_authority", "version_introduced", "deprecation_state", "numeric_range_requirement", "result"], "additionalProperties": false}},
+    "excluded_boundaries": {"type": "object"},
+    "range_policy": {"type": "object"},
+    "versioning_policy": {"type": "object"},
+    "engine_compatibility_policy": {"type": "object"},
+    "migration_notes": {"type": "array"},
+    "human_decisions_required": {"type": "array", "minItems": 1}
+  },
+  "additionalProperties": false
+}

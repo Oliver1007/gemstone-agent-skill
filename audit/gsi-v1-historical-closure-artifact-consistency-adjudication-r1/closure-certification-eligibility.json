@@ -1,0 +1,8 @@
+{
+  "status": "ELIGIBLE",
+  "requiredChildren": "PASS",
+  "integrationGate": "PASS",
+  "report": "PASS",
+  "hiddenRequiredFailureFound": false,
+  "scope": "Frozen required artifact set, not an assertion about unrecorded execution logs."
+}

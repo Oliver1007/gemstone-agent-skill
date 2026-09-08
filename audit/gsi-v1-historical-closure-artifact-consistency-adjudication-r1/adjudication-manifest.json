@@ -1,0 +1,353 @@
+{
+  "authorization": "HISTORICAL_CLOSURE_ARTIFACT_CONSISTENCY_ADJUDICATION",
+  "result": "GSI_V1_TARGETED_TECHNICAL_CLOSURE_CERTIFIED_AFTER_ARTIFACT_RECONCILIATION",
+  "evidence": [
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\a1-production-contract.json",
+      "bytes": 403,
+      "sha256": "E27FA601CED93E292D4BA86F2FE94878D6244DB671DF701875A92940F96C1DCB",
+      "mtime": "2026-09-08T07:28:38.346Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\a1-production-transitive-closure-validation.json",
+      "bytes": 458,
+      "sha256": "9CF2CD6E65C72391F515A848EA9C792BACD23F1BF9F4F5FAF22F097EB0BACCE7",
+      "mtime": "2026-09-08T07:28:38.354Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\atomic-runtime-bundle-validation.json",
+      "bytes": 308,
+      "sha256": "D4DB6E8528D02F7D2466F53CBFB178CFE465818E544B82EF05B2456EAC588921",
+      "mtime": "2026-09-08T07:28:38.364Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\authorized-runtime-closure-diff-manifest.json",
+      "bytes": 906,
+      "sha256": "FD23EC3B9F75B6891519005538EF63CCDAED188CB7FDA8AFB809C9414796B3BA",
+      "mtime": "2026-09-08T07:28:38.325Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\cache-identity-validation.json",
+      "bytes": 591,
+      "sha256": "3E3038169D9F47B768EC13B8634C45747017B83F0C2EA67612DD58951DD7BDCF",
+      "mtime": "2026-09-08T07:28:38.362Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\case-specific-runtime-guard.json",
+      "bytes": 1442,
+      "sha256": "0F2FE9FC5A034571143DC5F4F0BD9FEEC4DBB66E9A40BC9E54E5D2BCB7EBB63D",
+      "mtime": "2026-09-08T07:28:38.382Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\col2-production-contract.json",
+      "bytes": 374,
+      "sha256": "5935B56728D1DDBBE062E76D99A45DC358F5451062858A041592975184BBBE43",
+      "mtime": "2026-09-08T07:28:38.352Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\component-mixing-rejection.json",
+      "bytes": 581,
+      "sha256": "9E1273A40E3AA64AF8D49DB0C8D2779888C97BB2CAADCF659F0FD2E0E01E56E4",
+      "mtime": "2026-09-08T07:28:38.366Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\component-version-registry.json",
+      "bytes": 818,
+      "sha256": "F64447D9610D39946FC0C7AED44DB611D59BE87181B7C3905AA7066B2FDC812E",
+      "mtime": "2026-09-08T07:28:38.359Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\composite-runtime-fingerprint.json",
+      "bytes": 1030,
+      "sha256": "84A401C02A8959224579CE9E4FC5CF9775DD2D9B9370E2777D51AC89ECCAAD60",
+      "mtime": "2026-09-08T07:28:38.360Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\depth-localization-production-contract.json",
+      "bytes": 441,
+      "sha256": "82BC3137CA445C8DB19C0DD963A8B51C6EB360F5E7FF6ED12481954073CDB3EB",
+      "mtime": "2026-09-08T07:28:38.341Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\fa3-fa7-p1-freeze-validation.json",
+      "bytes": 350,
+      "sha256": "E33104D42AAEE47D0B37FD344F207E2D3F5FF694BFDE162121E83659F88C481E",
+      "mtime": "2026-09-08T07:28:38.358Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\harness-semantic-logic-guard.json",
+      "bytes": 542,
+      "sha256": "CA4AE84B5CD0F5A7DE37A88A6187EF23C86A9B4AB9917C4B5EBCD37B6D12A1BE",
+      "mtime": "2026-09-08T07:28:38.371Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\hpr1-freeze-validation.json",
+      "bytes": 296,
+      "sha256": "DA8132C2E28C85E754E12E18869F70E65DB950D3F6C2E867187FFD887193DCB5",
+      "mtime": "2026-09-08T07:28:38.356Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\implementation-manifest.json",
+      "bytes": 1800,
+      "sha256": "68728DE4617F780371DF96A5B864201DECB6A97F8365A9E5A229F14A63F506E7",
+      "mtime": "2026-09-08T07:28:38.399Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\integration-final-gate.json",
+      "bytes": 2079,
+      "sha256": "528A93C95A28D6B665E099DDC80BDC76CC32EEF973D4C21877EDF17F9CB23622",
+      "mtime": "2026-09-08T07:28:38.398Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\legacy-authoritative-regression.json",
+      "bytes": 336,
+      "sha256": "3B012CAFC6A60CC62E2FB94DD32FD5EB28611344A60585287AC157406F1FFE01",
+      "mtime": "2026-09-08T07:28:38.388Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\luminance-hierarchy-production-contract.json",
+      "bytes": 381,
+      "sha256": "07EE26669E81283456C81ED93D44F9B04FE0033B754F1AE7B72E06146C4C7416",
+      "mtime": "2026-09-08T07:28:38.349Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\material-character-regression.json",
+      "bytes": 455,
+      "sha256": "D70B2A11ADE0BCE2E387822E18654D23A52BDF03213A2DD99D3296DAE2442A3E",
+      "mtime": "2026-09-08T07:28:38.384Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\morphology-ray-carrier-production-contract.json",
+      "bytes": 358,
+      "sha256": "06E4AB1602082839FDC810FA70F3E53E81476D1A3C90E0F05FA801CF474F6273",
+      "mtime": "2026-09-08T07:28:38.343Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\n-root-validation.json",
+      "bytes": 419,
+      "sha256": "75F0294A705C0D2B34AE308352F866B1CB7F661265AD4B3BBAAC4D57F90FC705",
+      "mtime": "2026-09-08T07:28:38.379Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\new-random-stream-validation.json",
+      "bytes": 1434,
+      "sha256": "6B7F1D8AFCFAFB65BB96AF2D0A89053B677BAFE77FAFC19113146B0541B9153A",
+      "mtime": "2026-09-08T07:28:38.383Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\non-floral-regression-validation.json",
+      "bytes": 399,
+      "sha256": "6E4C435A980C09BE00C2F6B4C395DBF1AFE4B9E3765123B6AF84484CC9A929C7",
+      "mtime": "2026-09-08T07:28:38.381Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\performance-boundary-analysis.json",
+      "bytes": 556,
+      "sha256": "397383D2E49C45C19E288ED1B43FA601F8E639DD6FE139DFCC6B8D80FF83A5C3",
+      "mtime": "2026-09-08T07:28:38.392Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\presentation-artifact-regression.json",
+      "bytes": 320,
+      "sha256": "D2AFABF80591A49E4DE4A5551422015C88F4F6AEA164F41B8B316C2212EA5BB8",
+      "mtime": "2026-09-08T07:28:38.384Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\presentation-binding-production-contract.json",
+      "bytes": 368,
+      "sha256": "45C7D7AAD66BE8859333122C8757E361C3BC404F6AFA4DFA23850C0ED2FDA47E",
+      "mtime": "2026-09-08T07:28:38.345Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\production-only-render-manifest.json",
+      "bytes": 3646,
+      "sha256": "4CE4A78CAB2C838B2FAF648DB2B7A7B5118CD76A7AEC79F07FD904478E1B3905",
+      "mtime": "2026-09-08T07:28:29.067Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\production-only-render-preflight.json",
+      "bytes": 506,
+      "sha256": "F4C85AD0EF7829CD165673B24203FA1CFC47ACEB90201450CDB673DB4A12A2DF",
+      "mtime": "2026-09-08T07:28:38.367Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\production-only-targeted-render-reproduction.json",
+      "bytes": 2478,
+      "sha256": "D8F762A534C73B3A4F7AF42B07A042ABF5DD0C79C0BE500E23D29489E718CD70",
+      "mtime": "2026-09-08T07:28:38.372Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\production-runtime-closure-source-diff-audit.json",
+      "bytes": 6319,
+      "sha256": "06DEF9F32BB0F7A605160CDED2ADC17CF5797ADACD915EFBADF7B89B5FAA782A",
+      "mtime": "2026-09-08T07:28:38.327Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\production-runtime-closure-source-snapshot-final.json",
+      "bytes": 16402,
+      "sha256": "D4A39191C929C54B0F576B8E942A43BB6D03090894F821DBEB5B1B35FD389508",
+      "mtime": "2026-09-08T07:28:38.397Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\production-runtime-closure-source-snapshot-start.json",
+      "bytes": 16450,
+      "sha256": "E72AE642B014F4924D21F37ED29AD60C15D5DB2AC5B4D060D93B0F086FE42310",
+      "mtime": "2026-09-08T06:52:02.701Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\production-runtime-owner-inventory.json",
+      "bytes": 5776,
+      "sha256": "C1320C39F63F74249F1FC49F1868C41D5B6F43063E14F6E2B65D80BEA23C375D",
+      "mtime": "2026-09-08T07:28:38.340Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\qualification-runtime-readiness.json",
+      "bytes": 547,
+      "sha256": "DB5C7D90363AAA6B1ECDB83CEC976DC3D54F1A3E272C16A0CDDB783C2DE67541",
+      "mtime": "2026-09-08T07:28:38.395Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\relational-consumer-production-contract.json",
+      "bytes": 399,
+      "sha256": "944F72FFA4FBB3CF6DE0EDA68E1DA5BEB7D209FF195735504B2DD4595B5FF320",
+      "mtime": "2026-09-08T07:28:38.344Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\relational-descriptor-production-contract.json",
+      "bytes": 409,
+      "sha256": "017DDCF406D663FB0D9F8A71FCE54B70D7C6BFEFAD66E4781ABF27528CBDCC35",
+      "mtime": "2026-09-08T07:28:38.342Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\relational-optical-production-contract.json",
+      "bytes": 379,
+      "sha256": "BB13B8E98F7C9F011A0E246E9427533D5CDEEE4015ED02A2163E064E42A39F10",
+      "mtime": "2026-09-08T07:28:38.347Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\render-manifest.json",
+      "bytes": 3646,
+      "sha256": "4CE4A78CAB2C838B2FAF648DB2B7A7B5118CD76A7AEC79F07FD904478E1B3905",
+      "mtime": "2026-09-08T07:28:38.374Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\rollback-validation.json",
+      "bytes": 452,
+      "sha256": "4150EB4EECC37BCBFB0D275CDAA9C65DA4ECC4FBA7AE29A55A7EB3C3B3D351DD",
+      "mtime": "2026-09-08T07:28:38.391Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\root-order-invariance-validation.json",
+      "bytes": 361,
+      "sha256": "43A5AF3F8B0D2B5306331FF038A43B46CA4E4EC21FC257988009F6A5612A1B47",
+      "mtime": "2026-09-08T07:28:38.380Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\root0-historical-control.json",
+      "bytes": 413,
+      "sha256": "102C80DFB09EC8EB274A39C28C293F6346B380CB02DE2DC3B0791576E4E83FFA",
+      "mtime": "2026-09-08T07:28:38.377Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\root1-pass-through-validation.json",
+      "bytes": 364,
+      "sha256": "15F3CBD6D553F1BC7160B93B19F6580C799EED7BE2EC0BE088036F3B0FE2FC18",
+      "mtime": "2026-09-08T07:28:38.376Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\runtime-closure-transitive-dependency-graph.json",
+      "bytes": 2329,
+      "sha256": "538F68A1E7BB2B18EF6D8D4721CF0E6EBB0433D12E70028B8F0EF5480564D85B",
+      "mtime": "2026-09-08T07:28:38.336Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\runtime-version-lock-validation.json",
+      "bytes": 352,
+      "sha256": "6EE98AB77284F9A4712F8A8110BE1A7DAA275EE97BBA5711C0B278D8E3B88E94",
+      "mtime": "2026-09-08T07:28:38.363Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\shadow-mode-validation.json",
+      "bytes": 2044,
+      "sha256": "6057BC9B096C709BC4398A35C9BAD29849CF2C76EA38EA8D02BF7C8EBCDF7333",
+      "mtime": "2026-09-08T07:28:38.385Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\stage-by-stage-semantic-equivalence.json",
+      "bytes": 3087,
+      "sha256": "FFDEB94864757C0EA3660911B5EBB2B8AB91B05FD07A3D777FCED918E3B4B40E",
+      "mtime": "2026-09-08T07:25:52.210Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\staging-runtime-import-guard.json",
+      "bytes": 1443,
+      "sha256": "2ED9520828B98294B5AF60716D6903D241083FF07613486A06D952164146DA2E",
+      "mtime": "2026-09-08T07:28:38.369Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\staging-to-production-runtime-semantic-mapping.json",
+      "bytes": 5762,
+      "sha256": "032A13553920E5F04C6AAD1F0BAA7ADB8BA9A9705ECE806EE1FC52A1CBD05818",
+      "mtime": "2026-09-08T07:28:38.338Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\u1-freeze-validation.json",
+      "bytes": 295,
+      "sha256": "63B5C3C430B07C745EE6060381D116A10E3FD29EAD64CE7D6E8F620E8E6867E5",
+      "mtime": "2026-09-08T07:28:38.357Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\validation-summary.json",
+      "bytes": 611,
+      "sha256": "AD0496813214520BF4EBDB4240DDC42103DC82D4CC81B67D57FFC79EAB833C2E",
+      "mtime": "2026-09-08T07:30:23.986Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\wave-final-report.md",
+      "bytes": 1888,
+      "sha256": "159B9A61B0850E03C1E8F18F1B179947BB09FD6429CF5B862FA4955AF8841B39",
+      "mtime": "2026-09-08T07:30:21.453Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\staging\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\finalize.mjs",
+      "bytes": 28531,
+      "sha256": "1C11B41A6DF17529319155B11DD4DC35D1185F4CB56EA781ADF3A0FC72339305",
+      "mtime": "2026-09-08T07:30:18.485Z"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\staging\\gsi-v1-production-integrated-relational-path-post-closure-requalification-r1\\finalize.mjs",
+      "bytes": 16462,
+      "sha256": "DA9B2F8E036DD1046FE11B77E39945DE97AD4FC6A9085CAC6B164418D5668D19",
+      "mtime": "2026-09-08T07:51:48.456Z"
+    },
+    {
+      "path": "C:/Users/79433/.codex/attachments/ce38876c-b977-4dbc-bc00-b5c160e4b5af/pasted-text.txt",
+      "bytes": 33428,
+      "sha256": "1E22CBE4F4AE9F8F65539933BC29C70A17127D9C84DCBC2A1DED2B3D7758C1A1",
+      "mtime": "2026-09-08T06:47:04.718Z"
+    }
+  ],
+  "scope": "AUDIT_ONLY",
+  "newTestRuns": 0,
+  "newRenders": 0,
+  "newQualificationRuns": 0,
+  "filesCreated": [
+    "artifact-generation-order-analysis.json",
+    "artifact-hash-reference-analysis.json",
+    "closure-certification-eligibility.json",
+    "conflicting-artifact-inventory.json",
+    "discrepancy-classification.json",
+    "historical-artifact-freeze.json",
+    "historical-child-validation-reconstruction.json",
+    "historical-runtime-closure-artifact-reconciliation.json",
+    "integration-final-gate-dependency-analysis.json",
+    "source-protection-final.json",
+    "source-protection-start.json",
+    "targeted-technical-closure-certification.json",
+    "validation-summary-field-semantics.json",
+    "validation-summary-internal-consistency.json",
+    "validation-summary-schema-comparison.json",
+    "wave-final-report-provenance-analysis.json",
+    "wave-final-report.md"
+  ]
+}

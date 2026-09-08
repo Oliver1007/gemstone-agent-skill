@@ -1,0 +1,36 @@
+schema_version: "1.0.0"
+family_id: "family:m01-transparent-crystal"
+object_revision: "2"
+name: "M01 Transparent Crystal"
+claim_state: "SUPPORTED"
+family_maturity: "PROTOTYPE"
+governance_origin: "ACCEPTED_FAMILY_CONTRACT"
+authority_role: "SCOPED_FAMILY_KNOWLEDGE_NOT_PARAMETER_PRESET"
+entrypoints:
+  summary: "knowledge/families/m01-transparent-crystal/summary.md"
+  qa: "knowledge/families/m01-transparent-crystal/qa.yaml"
+  failures: "knowledge/families/m01-transparent-crystal/failures.yaml"
+loading:
+  default: ["manifest", "summary"]
+  decision: ["qa", "failures"]
+  deep: []
+scope:
+  base_mechanisms:
+    - "transparent host"
+    - "interface refraction"
+    - "path-length-dependent absorption"
+  composition_supported: true
+  parameter_defaults: false
+golden_coverage_refs:
+  - "coverage:smoky-quartz:reference-final"
+engine_dependency:
+  capability_refs:
+    - "capability:transparent-volume-optics"
+  verification_state: "UNVERIFIED"
+does_not_validate:
+  - "all transparent gemstones"
+  - "near-zero absorption regimes"
+  - "strong bulk scattering"
+  - "chatoyancy"
+  - "iridescence"
+  - "banded chalcedony"

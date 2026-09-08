@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:real-case-target-selection:1.0.0",
+  "type": "object",
+  "required": ["schema_version", "selection_id", "selection_state", "case_id", "human_approval_ref", "authorizes_execution"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "selection_id": {"type": "string", "minLength": 1},
+    "selection_state": {"enum": ["HUMAN_SELECTION_REQUIRED", "HUMAN_SELECTED"]},
+    "case_id": {"type": "string", "minLength": 1},
+    "human_approval_ref": {"type": "string", "minLength": 1},
+    "selection_timestamp": {"type": ["string", "null"]},
+    "authorizes_execution": {"const": false},
+    "notes": {"type": "array", "items": {"type": "string"}}
+  },
+  "allOf": [
+    {"if": {"properties": {"selection_state": {"const": "HUMAN_SELECTION_REQUIRED"}}}, "then": {"properties": {"case_id": {"const": "PENDING_HUMAN_SELECTION"}, "human_approval_ref": {"const": "PENDING_HUMAN_AUTHORIZATION"}, "selection_timestamp": {"type": "null"}}}}
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,53 @@
+schema_version: "1.0.0"
+addendum_id: "requirements:wave-3:external-material-diagnostics:2026-08-21"
+object_revision: "1"
+record_type: "FUTURE_DIAGNOSTIC_REQUIREMENTS_ADDENDUM"
+authorization_required: "AUTH-4"
+current_execution_authorized: false
+source_context_ref: "external-source:barcelona-bear-4-glb:55fc42968ed3"
+requirements:
+  - diagnostic: "GLB_MATERIAL_METADATA_AUDIT"
+    purpose: "Extract generator, geometry/material identities, KHR extensions, scalar material values, texture roles, and embedded image identities."
+    read_only: true
+    target: "pinned GLB or comparison bundle"
+    input: ["artifact identity", "binary bytes"]
+    output: ["source facts", "parse limitations", "identity hashes"]
+    source_fact_or_inference: "SOURCE_FACT_WITH_EXPLICIT_CLASSIFICATION"
+    auto_evidence: false
+    auto_knowledge: false
+    auth_4_value: "Replaces ad hoc parsing with a governed, provenance-bound result."
+  - diagnostic: "REPEATED_PRESET_CONSTANT_DETECTION"
+    purpose: "Identify unchanged parameter values across materially distinct presets and emit POSSIBLE_GENERATOR_DEFAULT."
+    read_only: true
+    target: "comparative material metadata set"
+    input: ["two or more parsed preset records"]
+    output: ["parameter", "value", "materials", "count", "material diversity", "possible physical explanation", "POSSIBLE_GENERATOR_DEFAULT"]
+    source_fact_or_inference: "REPETITION_IS_SOURCE_FACT; DEFAULT LABEL_IS_BOUNDED_INFERENCE"
+    auto_evidence: false
+    auto_knowledge: false
+    auth_4_value: "Prevents preset constants from leaking into Family or Engine authority."
+  - diagnostic: "REPRESENTATION_TYPE_CLASSIFICATION"
+    purpose: "Classify visible-feature storage as SURFACE_TEXTURE, NORMAL_MAP, GEOMETRY, VOLUME, HYBRID, or UNKNOWN."
+    read_only: true
+    target: "GLB material, texture, and geometry structure"
+    input: ["parsed GLB structure"]
+    output: ["representation class", "supporting source locations", "unknowns"]
+    source_fact_or_inference: "SOURCE-STRUCTURE CLASSIFICATION; NOT PHYSICAL CERTIFICATION"
+    auto_evidence: false
+    auto_knowledge: false
+    auth_4_value: "Makes fallback and approximation disclosure repeatable."
+  - diagnostic: "INCLUSION_REPRESENTATION_CLASSIFICATION"
+    purpose: "Distinguish surface-texture, normal-map, explicit geometry, explicit volume, hybrid, and unknown inclusion encodings."
+    read_only: true
+    target: "apparent inclusion-bearing material"
+    input: ["GLB material/texture/geometry structure"]
+    output: ["encoding class", "true-depth-explicit flag", "parallax authority", "host-refraction authority"]
+    source_fact_or_inference: "STRUCTURAL OBSERVATION PLUS DISCLOSED LIMITS"
+    auto_evidence: false
+    auto_knowledge: false
+    auth_4_value: "Prevents a baked visual trick from being labeled volumetric inclusion physics."
+knowledge_impact:
+  default: "NONE_AUTOMATIC"
+  promotion_requires: ["independent Evidence", "Knowledge governance", "human approval when required"]
+implementation_status: "REQUIREMENTS_ONLY_NOT_IMPLEMENTED"
+

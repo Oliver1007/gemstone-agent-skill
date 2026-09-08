@@ -1,0 +1,33 @@
+schema_version: "1.0.0"
+baseline_id: "implementation-baseline:gemstone-material-agent:wave-1:2026-08-21"
+object_revision: "1"
+immutable_audit_record: true
+event:
+  type: "IMPLEMENTATION_BASELINE_LOCK"
+  timestamp: "2026-08-21T17:03:45.0536171-04:00"
+  actor: "Codex"
+workspace_ref: "workspace:gemstone-material-agent"
+skill_version: "1.0.0-rc2"
+release_state: "V1_CANDIDATE_DESIGN_VALIDATED"
+entrypoint_revision: "RC2"
+module_revisions:
+  runtime:phase-contracts: "RC2"
+  runtime:qa-certification-golden: "RC2"
+  runtime:knowledge-loading: "RC1"
+  runtime:tool-object-governance: "RC1"
+  runtime:response-audit: "RC1"
+evaluation:
+  step_11a: "PASS"
+  step_11_1: "PASS"
+  step_11b: "NOT_EXECUTED"
+authorization:
+  levels: ["AUTH-1", "AUTH-2"]
+  authorized_waves: ["IMP-0", "IMP-1", "IMP-2", "IMP-3", "IMP-4"]
+  forbidden_waves: ["IMP-5", "IMP-6", "IMP-7", "IMP-8", "IMP-9"]
+  write_target: "workspace:gemstone-material-agent"
+  source_projects: "READ_ONLY"
+prohibited_claims:
+  - "PRODUCTION_READY"
+  - "FROZEN_RELEASE"
+  - "STEP_11B_PASS"
+source_contract_ref: "contract-baseline:gemstone-material-agent:rc2"

@@ -1,0 +1,25 @@
+{
+  "sequence": [
+    "Downstream isolation insufficient",
+    "Observability review required full root-local transport and stage taps",
+    "First run stopped for qualification-mode provenance violation; excluded as causal evidence",
+    "Non-semantic production causal export implemented and validated",
+    "Clean restart completed",
+    "Structural-to-material evidence review inconclusive"
+  ],
+  "currentExecutionCompliant": true,
+  "firstRunViolationNotErased": true,
+  "latestBoundary": {
+    "reviewExecution": "PASS",
+    "causalIsolation": "UNRESOLVED",
+    "result": "GSI_V1_CANONICAL_V2_STRUCTURAL_MATERIAL_EVIDENCE_REVIEW_INCONCLUSIVE",
+    "productionIntegratedTargetedQualification": "FAIL",
+    "failureClass": "FAIL_TO_QUALIFY",
+    "defaultEnablement": "DISABLED",
+    "authoritativeOutput": "LEGACY",
+    "genericQualification": "BLOCKED",
+    "blueLaceQualification": "BLOCKED",
+    "productionPromotion": "BLOCKED",
+    "diagnosticReadoutIsQualificationEvidence": false
+  }
+}

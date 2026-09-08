@@ -1,0 +1,11 @@
+schema_version: "1.0.0"
+registry_id: "registry:goldens"
+object_revision: "1"
+authority_role: "DISCOVERY_AND_VERSION_RESOLUTION"
+entries:
+  - golden_id: "golden:smoky-quartz:reference-final"
+    series_id: "golden-series:smoky-quartz"
+    manifest: "golden/smoky-quartz/manifest.yaml"
+    immutable: true
+    source_access: "READ_ONLY"
+    verification_state: "PARTIALLY_VERIFIED"

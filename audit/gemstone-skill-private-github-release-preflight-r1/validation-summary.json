@@ -1,0 +1,12 @@
+{
+  "governance": "26/26 PASS",
+  "host": "8/8 PASS",
+  "outputs": {
+    "governance": "✔ normal-use asset is pinned and self-contained (32.2078ms)\n✔ canonical request binding deterministic and finite-only (1.6841ms)\n✔ untrusted host cannot dispatch (1.779ms)\n✔ reject grant mismatch operation_id (327.8206ms)\n✔ reject grant mismatch principal (291.7916ms)\n✔ reject grant mismatch session (307.2845ms)\n✔ reject grant mismatch run_id (273.9151ms)\n✔ reject grant mismatch binding_sha256 (252.4785ms)\n✔ reject grant mismatch production_path (265.9176ms)\n✔ reject grant mismatch expires_at (290.4346ms)\n✔ reject grant mismatch execution_budget (298.8434ms)\n✔ reject grant mismatch retry (263.0788ms)\n✔ missing approval fails without writes (151.0138ms)\n✔ weakest authority knowledge (257.9438ms)\n✔ weakest authority capability (273.656ms)\n✔ weakest authority confidence (266.5714ms)\n✔ weakest authority phase (295.6616ms)\n✔ weakest authority approval (296.7335ms)\n✔ weakest authority frozen_scope (279.9638ms)\n✔ old context cannot downgrade to profileless route (14.2991ms)\n✔ forged Profile rejected (286.1308ms)\n✔ build requires real Case not placeholder (413.2171ms)\n✔ input hash mismatch rejected (156.5936ms)\n✔ output escape rejected (12.8986ms)\n✔ consumed grant cannot dispatch or create run (1732.0365ms)\n✔ Windows read lease actually denies writes, not an attestation (1187.0416ms)\nℹ tests 26\nℹ suites 0\nℹ pass 26\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 8596.3367\n",
+    "host": "✔ unbound host rejects before request normalization or dispatch: undefined (2.6089ms)\n✔ unbound host rejects before request normalization or dispatch: {} (1.538ms)\n✔ unbound host rejects before request normalization or dispatch: {\"caller_class\":\"CODEX_SKILL_NORMAL_USE\"} (1.1382ms)\n✔ missing trusted callback fails before filesystem/dispatch: resolveAuthorization (2.3865ms)\n✔ missing trusted callback fails before filesystem/dispatch: resolveGovernance (0.939ms)\n✔ missing trusted callback fails before filesystem/dispatch: resolveCase (0.757ms)\n✔ missing trusted callback fails before filesystem/dispatch: resolveCandidate (1.0959ms)\n✔ missing trusted callback fails before filesystem/dispatch: resolveProfile (2.1135ms)\nℹ tests 8\nℹ suites 0\nℹ pass 8\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 339.0417\n",
+    "sources": "{\"status\":\"PASS\",\"files\":31,\"assets\":1,\"productionSemantics\":\"UNCHANGED\"}\n"
+  },
+  "qualification": false,
+  "newRender": false,
+  "productionMutations": 0
+}

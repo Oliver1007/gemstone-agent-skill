@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:operation-inventory:1.0.0",
+  "type": "object",
+  "required": ["schema_version", "inventory_id", "object_revision", "authority_role", "engine_behavior_ref", "operations"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "inventory_id": {"type": "string"},
+    "object_revision": {"type": "string"},
+    "authority_role": {"const": "SOURCE_DISCOVERY_NOT_EXECUTION_VALIDATION"},
+    "engine_behavior_ref": {"type": "string"},
+    "operations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["operation_id", "source_entry_ref", "operation_class", "read_only", "target_type", "apparent_inputs", "apparent_outputs", "candidate_impact", "artifact_impact", "engine_impact", "execution_validation_state", "auth_4_candidate", "limitations"],
+        "properties": {
+          "operation_id": {"type": "string"},
+          "source_entry_ref": {"type": "string"},
+          "operation_class": {"enum": ["READ_ONLY", "MUTATING", "UNKNOWN"]},
+          "read_only": {"type": "boolean"},
+          "target_type": {"type": "string"},
+          "apparent_inputs": {"type": "array"},
+          "apparent_outputs": {"type": "array"},
+          "candidate_impact": {"type": "string"},
+          "artifact_impact": {"type": "string"},
+          "engine_impact": {"type": "string"},
+          "execution_validation_state": {"const": "NOT_EXECUTED"},
+          "auth_4_candidate": {"type": "boolean"},
+          "limitations": {"type": "array"}
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

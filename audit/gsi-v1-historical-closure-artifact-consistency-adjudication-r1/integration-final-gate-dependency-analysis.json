@@ -1,0 +1,245 @@
+{
+  "legalContract": "Required validation failures would prohibit valid final implementation PASS.",
+  "sourceExpression": "unauthorized.length===0&&equivalence.status==='PASS'&&render.status==='PASS'&&guards.every(g=>!g.stagingImport&&!g.caseSpecificToken&&!g.newRandomStream)&&mixResults.every(x=>x==='PASS')&&JSON.stringify(root1)===JSON.stringify(legacyRoot1)&&JSON.stringify(legacyA.instances)===JSON.stringify(legacyB.instances)&&sh._internalRelationalShadow?.sideEffects===0",
+  "directComputedDependencies": [
+    "authorized diff",
+    "semantic equivalence",
+    "render equivalence",
+    "source import/case/random guards",
+    "component mixing",
+    "Root1 pass-through",
+    "legacy determinism",
+    "shadow side effects"
+  ],
+  "separatelyRecordedRequiredDependencies": [
+    {
+      "name": "production-runtime-closure-source-snapshot-final.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "authorized-runtime-closure-diff-manifest.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "production-runtime-closure-source-diff-audit.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "runtime-closure-transitive-dependency-graph.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "staging-to-production-runtime-semantic-mapping.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "production-runtime-owner-inventory.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "depth-localization-production-contract.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "relational-descriptor-production-contract.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "morphology-ray-carrier-production-contract.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "relational-consumer-production-contract.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "presentation-binding-production-contract.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "a1-production-contract.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "a1-production-transitive-closure-validation.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "relational-optical-production-contract.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "luminance-hierarchy-production-contract.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "col2-production-contract.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "hpr1-freeze-validation.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "u1-freeze-validation.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "fa3-fa7-p1-freeze-validation.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "component-version-registry.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "composite-runtime-fingerprint.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "cache-identity-validation.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "runtime-version-lock-validation.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "atomic-runtime-bundle-validation.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "component-mixing-rejection.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "production-only-render-preflight.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "staging-runtime-import-guard.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "harness-semantic-logic-guard.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "stage-by-stage-semantic-equivalence.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "production-only-targeted-render-reproduction.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "render-manifest.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "root1-pass-through-validation.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "root0-historical-control.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "n-root-validation.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "root-order-invariance-validation.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "non-floral-regression-validation.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "case-specific-runtime-guard.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "new-random-stream-validation.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "material-character-regression.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "presentation-artifact-regression.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "shadow-mode-validation.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "legacy-authoritative-regression.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "rollback-validation.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "performance-boundary-analysis.json",
+      "present": true,
+      "status": "PASS"
+    },
+    {
+      "name": "qualification-runtime-readiness.json",
+      "present": true,
+      "status": "PASS"
+    }
+  ],
+  "limitations": "finalPass is not a universal reducer: several fullPassCriteria are literal true, and test totals are literals. Therefore final gate alone is insufficient; frozen required records separately reconstructed.",
+  "summaryControlsFinalGate": false,
+  "reportControlsGate": false,
+  "requiredRecordsPass": true
+}

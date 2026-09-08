@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:tool-result:1.0.0",
+  "type": "object",
+  "required": ["schema_version", "tool_result_id", "object_revision", "target_ref", "status", "mutation_state", "accepted_as_evidence"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "tool_result_id": {"type": "string"},
+    "object_revision": {"type": "string"},
+    "target_ref": {"type": "string"},
+    "status": {"type": "string"},
+    "mutation_state": {"enum": ["NONE", "SUCCESS", "FAIL_NO_MUTATION", "FAIL_PARTIAL", "MUTATION_STATE_UNKNOWN"]},
+    "accepted_as_evidence": {"const": false}
+  },
+  "additionalProperties": true
+}

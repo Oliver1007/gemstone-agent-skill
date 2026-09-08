@@ -1,0 +1,360 @@
+{
+  "mode": "AGGREGATION_OF_EXISTING_RESULTS_NOT_FRESH_TESTS",
+  "runtimeClosure": {
+    "schemaVersion": "1.0.0",
+    "wave": "gsi-v1-production-final-presentation-runtime-closure-implementation-r1",
+    "capabilityStatus": "PRODUCTION_RUNTIME_CLOSURE_IMPLEMENTATION",
+    "status": "FAIL",
+    "requiredArtifactCount": 50,
+    "requiredArtifactsPresent": 50,
+    "missingArtifacts": [],
+    "jsonValidation": "50/50_PASS",
+    "productionTests": "63/63_PASS",
+    "focusedClosureTests": "35/35_PASS",
+    "semanticEquivalence": "9/9_PASS",
+    "renderHashValidation": "4/4_PASS",
+    "sourceProtection": "PASS",
+    "skillValidation": {
+      "gemstone-agent-skill": "PASS",
+      "gemstone-material-skill-v2": "PASS"
+    }
+  },
+  "runtimeFinalGate": "PASS",
+  "postExport": {
+    "status": "PASS",
+    "baseline": {
+      "status": "PASS",
+      "views": [
+        {
+          "view": "front",
+          "sha256": "64D5C69B23B5F8D2931A5472F2AD9070F9D4D9A71D49DE665606C45047BA04AC",
+          "status": "BYTE_IDENTICAL",
+          "tapsDisabledEnabled": "EXACT_NUMERIC_EQUAL"
+        },
+        {
+          "view": "right",
+          "sha256": "69BF370A30FA1F33EF9D782FC3C62924896BBA55A26BDEBEC27D24BE0EC1F90A",
+          "status": "BYTE_IDENTICAL",
+          "tapsDisabledEnabled": "EXACT_NUMERIC_EQUAL"
+        },
+        {
+          "view": "back",
+          "sha256": "B5840FF71655F4EA9049785BE78A5B5CF8AB0ABBC45C51CF5CECF0082562598C",
+          "status": "BYTE_IDENTICAL",
+          "tapsDisabledEnabled": "EXACT_NUMERIC_EQUAL"
+        },
+        {
+          "view": "left",
+          "sha256": "D68BC7C7F12E22C53C1EAB614816EB3ABA8EE73F218D3742290860BB50B1D194",
+          "status": "BYTE_IDENTICAL",
+          "tapsDisabledEnabled": "EXACT_NUMERIC_EQUAL"
+        }
+      ],
+      "rays": 61920,
+      "tapComparison": "All rendered rays; final record exact equality",
+      "qualificationModeEntered": false
+    },
+    "intermediate": {
+      "status": "PASS",
+      "samples": 9,
+      "comparisons": 117,
+      "stageMap": {
+        "PRE_DEPTH_MATRIX": "before",
+        "T2_POST_DEPTH_LOCALIZATION": "integrated",
+        "T4_RAY_CARRIER": "carried",
+        "T5_PER_ROOT_CONSUMER": "selected",
+        "T6_PRESENTATION_BINDING": "binding",
+        "T7_A1": "a1",
+        "T8_ROOT_LOCAL_OPTICAL_PRE_LUMINANCE": "optical",
+        "T9_LUMINANCE_RESPONSE": "luminance",
+        "T10_COL2_OUTPUT": "col2",
+        "T11_HPR1_INPUT": "luminance",
+        "T12_HPR1_OUTPUT": "packets",
+        "T16_POST_FA5": "presentation",
+        "FINAL_RGB_FLOAT": "finalColor"
+      },
+      "preSharedPackets": "EXACT",
+      "sharedDensity": "Identical per-sample inputs to unchanged accumulation code",
+      "transmittance": "EXACT_MATRIX_RECORD",
+      "U1": "EXACT",
+      "FA3": "EXACT",
+      "referencePolicy": "Historical numeric records used only as supporting equality evidence; fresh no-mode output also compared with pre-write ordinary SHADOW records. Not causal evidence."
+    },
+    "sourceDiffFiles": 2,
+    "productionSemanticChangeCount": 0,
+    "harnessSemanticLogic": 0,
+    "diagnosticRootRenders": 0,
+    "tests": "Nine-ray pre/post and tap controls; 648 target packet checks; invalid options; all no-mask pixel records; 117 intermediate object comparisons plus packet/U1/FA3 comparisons"
+  },
+  "regressions": {
+    "legacy-authoritative-regression": {
+      "status": "PASS",
+      "scope": "Three exact sample records and instances hash vs pre-write"
+    },
+    "shadow-regression": {
+      "status": "PASS",
+      "scope": "Nine full presentation ray records and metadata vs pre-write"
+    },
+    "stage-tap-side-effect-validation": {
+      "status": "PASS",
+      "raysPerCondition": 9,
+      "tapsDisabledEnabledAndDestructiveSnapshotObserverEqual": true
+    },
+    "semantic-owner-identity-validation": {
+      "status": "PASS",
+      "composite": "0BE545B708F48334534D27E7FB148713ECB6F58801B9A8B745C7D036BFD63210",
+      "unchangedOwnerBodies": true,
+      "unchangedOtherSourceFiles": 78,
+      "newInterfaceIdentitySeparate": true
+    },
+    "qualification-mode-isolation-validation": {
+      "status": "PASS",
+      "qualificationModeEntered": false,
+      "qualificationEvaluatorInvoked": false,
+      "qualificationDecisionEngineInvoked": false,
+      "proof": "Factory directly invokes existing private production field constructor with TEST_ONLY_DIAGNOSTIC_CONTEXT; no capability resolver call. Adapter only forwards to factory. Ordinary regression uses SHADOW, never QUALIFICATION.",
+      "runtimeImports": "No semantic reviewer/decision engine in added paths"
+    }
+  },
+  "rootInputFreeze": {
+    "status": "PASS",
+    "instancesSha256": "7981E56B0F9CC2218EA46646B91DA844C383C23BE0BFDD13EA3425D8B1D62089",
+    "instancesEndSha256": "7981E56B0F9CC2218EA46646B91DA844C383C23BE0BFDD13EA3425D8B1D62089",
+    "recreated": false,
+    "originalMultiRootSampler": true
+  },
+  "cleanDiagnostic": {
+    "status": "PASS_EXECUTION",
+    "semanticTransportFamilies": 3,
+    "completedViews": 12,
+    "rawFiles": 12,
+    "renderHashesVerified": 492,
+    "stagePairComparisons": 3744,
+    "baselinePng": "4/4",
+    "intermediate": {
+      "status": "PASS",
+      "samples": 9,
+      "comparisons": 117,
+      "stageMap": {
+        "PRE_DEPTH_MATRIX": "before",
+        "T2_POST_DEPTH_LOCALIZATION": "integrated",
+        "T4_RAY_CARRIER": "carried",
+        "T5_PER_ROOT_CONSUMER": "selected",
+        "T6_PRESENTATION_BINDING": "binding",
+        "T7_A1": "a1",
+        "T8_ROOT_LOCAL_OPTICAL_PRE_LUMINANCE": "optical",
+        "T9_LUMINANCE_RESPONSE": "luminance",
+        "T10_COL2_OUTPUT": "col2",
+        "T11_HPR1_INPUT": "luminance",
+        "T12_HPR1_OUTPUT": "packets",
+        "T16_POST_FA5": "presentation",
+        "FINAL_RGB_FLOAT": "finalColor"
+      },
+      "preSharedPackets": "EXACT",
+      "sharedDensity": "Identical per-sample inputs to unchanged accumulation code",
+      "transmittance": "EXACT_MATRIX_RECORD",
+      "U1": "EXACT",
+      "FA3": "EXACT",
+      "referencePolicy": "Historical numeric records used only as supporting equality evidence; fresh no-mode output also compared with pre-write ordinary SHADOW records. Not causal evidence."
+    },
+    "productionSourceMutations": 0,
+    "profileMutations": 0,
+    "skillMdMutations": 0,
+    "qualificationModeEntered": false,
+    "causalJudgment": "T_CAUSE_NOT_ISOLATED"
+  },
+  "adjudication": {
+    "status": "PASS",
+    "requiredArtifacts": 28,
+    "missing": [],
+    "jsonParsedBeforeSummary": 26,
+    "fixtures": 14,
+    "allPass": true,
+    "countChecks": 8,
+    "sourceProtection": "PASS",
+    "protocolMutations": 0,
+    "historicalMutations": 0,
+    "officialApplications": 1,
+    "pixelAccess": false,
+    "newVisualReviews": 0,
+    "newRenders": 0,
+    "groupInference": false
+  },
+  "determinants": {
+    "outcome-only-rule-engine-validation": {
+      "status": "PASS",
+      "fixtureCount": 14,
+      "allPassed": true,
+      "negativeOnly": true,
+      "modelCalls": 0,
+      "pixelAccess": false,
+      "groupMerging": false
+    },
+    "review-order-invariance-validation": {
+      "status": "PASS",
+      "scope": "Synthetic fixtures; sole official current call later",
+      "tests": [
+        {
+          "id": "zero_zero",
+          "repeat": true,
+          "swap": true
+        },
+        {
+          "id": "one_zero",
+          "repeat": true,
+          "swap": true
+        },
+        {
+          "id": "two_two_no_alignment",
+          "repeat": true,
+          "swap": true
+        },
+        {
+          "id": "three_two_no_alignment",
+          "repeat": true,
+          "swap": true
+        },
+        {
+          "id": "one_mandatory_view_impossible",
+          "repeat": true,
+          "swap": true
+        },
+        {
+          "id": "all_bounds_high_no_alignment",
+          "repeat": true,
+          "swap": true
+        },
+        {
+          "id": "missing_count",
+          "repeat": true,
+          "swap": true
+        },
+        {
+          "id": "inconsistent_count",
+          "repeat": true,
+          "swap": true
+        },
+        {
+          "id": "material_only_disagreement",
+          "repeat": true,
+          "swap": true
+        },
+        {
+          "id": "artifact_disagreement",
+          "repeat": true,
+          "swap": true
+        },
+        {
+          "id": "unsealed",
+          "repeat": true,
+          "swap": true
+        },
+        {
+          "id": "duplicate_view",
+          "repeat": true,
+          "swap": true
+        },
+        {
+          "id": "wrong_rule",
+          "repeat": true,
+          "swap": true
+        },
+        {
+          "id": "negative_count",
+          "repeat": true,
+          "swap": true
+        }
+      ]
+    },
+    "serialization-invariance-validation": {
+      "status": "PASS",
+      "tests": [
+        {
+          "id": "zero_zero",
+          "keyReorder": true,
+          "equivalentSerialization": true
+        },
+        {
+          "id": "one_zero",
+          "keyReorder": true,
+          "equivalentSerialization": true
+        },
+        {
+          "id": "two_two_no_alignment",
+          "keyReorder": true,
+          "equivalentSerialization": true
+        },
+        {
+          "id": "three_two_no_alignment",
+          "keyReorder": true,
+          "equivalentSerialization": true
+        },
+        {
+          "id": "one_mandatory_view_impossible",
+          "keyReorder": true,
+          "equivalentSerialization": true
+        },
+        {
+          "id": "all_bounds_high_no_alignment",
+          "keyReorder": true,
+          "equivalentSerialization": true
+        },
+        {
+          "id": "missing_count",
+          "keyReorder": true,
+          "equivalentSerialization": true
+        },
+        {
+          "id": "inconsistent_count",
+          "keyReorder": true,
+          "equivalentSerialization": true
+        },
+        {
+          "id": "material_only_disagreement",
+          "keyReorder": true,
+          "equivalentSerialization": true
+        },
+        {
+          "id": "artifact_disagreement",
+          "keyReorder": true,
+          "equivalentSerialization": true
+        },
+        {
+          "id": "unsealed",
+          "keyReorder": true,
+          "equivalentSerialization": true
+        },
+        {
+          "id": "duplicate_view",
+          "keyReorder": true,
+          "equivalentSerialization": true
+        },
+        {
+          "id": "wrong_rule",
+          "keyReorder": true,
+          "equivalentSerialization": true
+        },
+        {
+          "id": "negative_count",
+          "keyReorder": true,
+          "equivalentSerialization": true
+        }
+      ]
+    }
+  },
+  "conflicts": [
+    {
+      "id": "RUNTIME_CLOSURE_HISTORICAL_STATUS_CONFLICT",
+      "gate": "PASS",
+      "validationSummary": "FAIL",
+      "testFields": {
+        "productionTests": "63/63_PASS",
+        "focusedClosureTests": "35/35_PASS",
+        "semanticEquivalence": "9/9_PASS"
+      },
+      "meaning": "Same wave final gate PASS vs validation summary FAIL. Tests reported passing; this is not proof of implementation failure.",
+      "resolution": "UNRESOLVED_NO_HISTORICAL_REWRITE",
+      "needed": "Authoritative audit-only reconciliation of summary status and final gate; no semantic remediation."
+    }
+  ]
+}

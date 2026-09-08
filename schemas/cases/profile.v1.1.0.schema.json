@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:profile:1.1.0",
+  "title": "Authoritative M01 Material Profile Schema 1.1.0",
+  "allOf": [
+    {"$ref": "profile.schema.json"}
+  ],
+  "x-gemstone-authority": {
+    "authority_status": "AUTHORITATIVE_M01",
+    "effective_scope": "family:m01-transparent-crystal",
+    "profile_kind": "MATERIAL_PROFILE_M01_OVERLAY",
+    "schema_version": "1.1.0",
+    "human_authorization_ref": "IMPLEMENTATION_WAVE_4.3F-R_FRESH_HUMAN_PROFILE_SCHEMA_AUTHORIZATION",
+    "proposal_lineage_ref": "integration/auth6/citrine/profile-field-universe.proposal.wave-4.3e.json",
+    "materialization_record_ref": "integration/auth6/citrine/schema-authority-materialization.wave-4.3f-r.json",
+    "materialization_wave": "4.3F-R",
+    "proposal_sha256": "04BEFA080D9DE7CAC30336C5CDA8CB311CBC2B19989FE67A67F44EA669747FC8",
+    "semantic_fingerprint_sha256": "5AFB26CFB20D56672D95502E631D63A24C5A148FE3CC5B4C9A49756675E9E832",
+    "field_counts": {"total":15,"required":11,"optional":3,"conditional":1},
+    "normative_semantic_source": {
+      "ref": "integration/auth6/citrine/profile-field-universe.proposal.wave-4.3e.json",
+      "resolution": "HASH_PINNED_EXACT_CONTENT",
+      "field_universe_json_pointer": "/fields",
+      "excluded_boundaries_json_pointer": "/excluded_boundaries",
+      "range_policy_json_pointer": "/range_policy",
+      "versioning_policy_json_pointer": "/versioning_policy",
+      "engine_compatibility_policy_json_pointer": "/engine_compatibility_policy",
+      "case_values_included": false,
+      "semantic_copy_or_rewrite": false
+    },
+    "other_family_authority": "NONE",
+    "historical_profile_rebinding": "DENIED",
+    "profile_creation_authority": false,
+    "case_binding_authority": false
+  }
+}

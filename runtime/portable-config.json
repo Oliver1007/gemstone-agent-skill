@@ -1,0 +1,12 @@
+{
+  "schema_version":"1.0.0",
+  "entrypoint":"runtime/index.mjs#executeGovernedOperation",
+  "engine_root":"runtime/engine",
+  "production_root":"runtime/production",
+  "asset_root":"runtime/assets",
+  "path_base":"REPOSITORY_ROOT_DERIVED_FROM_IMPORT_META_URL",
+  "authoritative_output":"LEGACY",
+  "relational_path_v1":"DISABLED_BY_DEFAULT",
+  "host_authority":"EXPLICIT_TRUSTED_HOST_BINDING_REQUIRED",
+  "historical_v1_engine_records":"PROVENANCE_ONLY_NOT_NORMAL_OPERATION_RESOLVERS"
+}

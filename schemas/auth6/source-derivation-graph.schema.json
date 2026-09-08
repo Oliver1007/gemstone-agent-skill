@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:source-derivation-graph:1.0.0",
+  "type": "object",
+  "required": ["schema_version", "graph_id", "case_id", "nodes", "edges", "analysis"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "graph_id": {"type": "string"},
+    "case_id": {"const": "case:citrine"},
+    "nodes": {"type": "array", "minItems": 1},
+    "edges": {"type": "array", "minItems": 1},
+    "analysis": {"type": "object"}
+  },
+  "additionalProperties": false
+}

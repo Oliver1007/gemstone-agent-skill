@@ -1,0 +1,20 @@
+{
+  "CERTIFIED": true,
+  "TECHNICAL_CLOSURE": "COMPLETE",
+  "CLOSURE_CERTIFICATION_BASIS": "HISTORICAL_ARTIFACT_RECONCILIATION",
+  "NO_NEW_TEST_EXECUTION": "YES",
+  "NO_HISTORICAL_ARTIFACT_MUTATION": "YES",
+  "result": "GSI_V1_TARGETED_TECHNICAL_CLOSURE_CERTIFIED_AFTER_ARTIFACT_RECONCILIATION",
+  "priorClosure": "audit/gsi-v1-targeted-final-technical-closure-r1",
+  "priorClosureResultPreserved": true,
+  "targetedDevelopmentState": "TECHNICALLY_COMPLETE_NOT_QUALIFIED",
+  "canonicalV2TargetedQualification": "FAIL",
+  "failureClass": "FAIL_TO_QUALIFY",
+  "causalRootCause": "NOT_ISOLATED",
+  "additionalRemediation": "NOT_JUSTIFIED_IN_CURRENT_CYCLE",
+  "genericQualification": "BLOCKED_NOT_RUN",
+  "blueLaceQualification": "BLOCKED_NOT_RUN",
+  "promotion": "BLOCKED",
+  "defaultEnablement": "DISABLED",
+  "authoritativeOutput": "LEGACY"
+}

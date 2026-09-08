@@ -1,0 +1,132 @@
+{
+  "auditMetadata": {
+    "createdAt": "2026-09-01T19:11:27.453Z",
+    "timestampExcludedFromSemanticIdentity": true
+  },
+  "authorizedSemanticHistory": [
+    "EXACT_FRESNEL_CORRECTION",
+    "SIGNED_INCIDENT_COSINE_MAGNITUDE_NORMALIZATION_FIX"
+  ],
+  "authorizedSourceEvolutionHistory": [
+    "PRIMARY_HIT_NORMALIZATION_RECOMPUTATION_ASYMMETRY_PATCH"
+  ],
+  "controls": {
+    "regressions": 0
+  },
+  "darkWedge": {
+    "brokenR2": 48.27007354458868,
+    "patchedR2": 33.25657829663178,
+    "preR2": 33.24154027718932,
+    "r2InducedRegression": "ELIMINATED"
+  },
+  "energyUpperBound": "SOUND",
+  "engineSha256": "bf20bc8abbb2a9a864139b48d779290ecc2c056f358600310806c692dba1c119",
+  "exactRgbIdentity": "8230c4c7b2807ca595de271b7d2c7e974d87a88bb54f6950127bfcccd0fa4f7d",
+  "freezeWaveNewOpticalSemanticMutations": 0,
+  "frozenRecordIdentity": "f8a23db184d096437f8593dee151402da04f474a82fa468ad23dc5a7b24814c9",
+  "grazingQualification": "INHERITED_VALIDATED_NOT_RERUN",
+  "hardPairs": {
+    "indeterminate": 0,
+    "materiallyRegressed": 1,
+    "nonRegressed": 8,
+    "passCompatible": 11,
+    "required": 10,
+    "strictlyImproved": 3,
+    "total": 12
+  },
+  "knownLimitations": [
+    "KNOWN_UPPER_WEDGE_PHYSICAL_RESIDUAL",
+    "DARK_WEDGE_PATCHED_R2_SLIGHTLY_ABOVE_PRE_R2_BUT_BROKEN_R2_REGRESSION_ELIMINATED"
+  ],
+  "moderateResultIdentity": "d9098ff62b4f44baa2e9c9a76a5b076d82a7de6a3615c06ad9357d81f6b55589",
+  "parentProductionRelease": "pre-r2-v4-qualified-baseline",
+  "productionStatus": "R2_PATCHED_PRODUCTION_BASELINE",
+  "publication": {
+    "immutable": true,
+    "mode": "ATOMIC_STAGING_DIRECTORY_RENAME_NO_OVERWRITE"
+  },
+  "qualificationArtifacts": {
+    "accepted-source-protection": {
+      "path": "tmp/dcsa-v4-r2-patched-engine-moderate-requalification-resume-validated-prefix-r1/source-protection-final.json",
+      "sha256": "386bb14d9b41976dd9ad92d09601cb91851390b9b8bfaaf8e447c79edf23521c"
+    },
+    "controls": {
+      "path": "tmp/dcsa-v4-r2-patched-engine-moderate-requalification-resume-validated-prefix-r1/control-regressions.json",
+      "sha256": "099433f5e8234fb28c03871a4fcb51b1d32d1414f0d450811bd740bc821883fc"
+    },
+    "dark-wedge": {
+      "path": "tmp/dcsa-v4-r2-patched-engine-moderate-requalification-resume-validated-prefix-r1/dark-wedge.json",
+      "sha256": "c489ef52cae3d0244cc3c9ef7b9e05d49f0ba0a6f675270a76dacbba74648cab"
+    },
+    "energy": {
+      "path": "tmp/dcsa-v4-r2-patched-engine-moderate-requalification-resume-validated-prefix-r1/energy-upper-bound.json",
+      "sha256": "ea3f262ed4128580e942e19bf493843f6793ca0fcaa3080c6a8e993fe18e2896"
+    },
+    "engine-identity": {
+      "path": "C:/Users/79433/Documents/ChatGPT/3d model builder/direct-continuous-surface-architecture-v3.mjs",
+      "sha256": "bf20bc8abbb2a9a864139b48d779290ecc2c056f358600310806c692dba1c119"
+    },
+    "frozen-records": {
+      "path": "tmp/dcsa-v4-r2-patched-engine-moderate-requalification-recovery-exact-frozen-record-inputs-r1/frozen-record-completeness.json",
+      "sha256": "9dc0d3698dd5bbfdb43c63fb29b52d3a72f406d8f6b86b3525a151320dda11f7"
+    },
+    "grazing-qualification": {
+      "path": "tmp/dcsa-v4-grazing-state-c-requalification-against-qualified-state-a-r1/grazing-state-c-qualification.json",
+      "sha256": "bdf99bcf0834d90dab00aaeb7f40c20e1936a490aebc1c8c4bc48d2700ee0dbb"
+    },
+    "hard-pairs": {
+      "path": "tmp/dcsa-v4-r2-patched-engine-moderate-requalification-resume-validated-prefix-r1/hard-pairs.json",
+      "sha256": "419169f7ed52326d065d16e48a72a4098f60fcc287bd3c2c997ae3562f102a94"
+    },
+    "moderate-input-replay": {
+      "path": "tmp/dcsa-v4-r2-patched-engine-moderate-requalification-resume-validated-prefix-r1/moderate-authoritative-input-replay.json",
+      "sha256": "327cf7783953524a097f852e0b5507495d7144e60459238066c305cb7bed957d"
+    },
+    "moderate-qualification": {
+      "path": "tmp/dcsa-v4-r2-patched-engine-moderate-requalification-resume-validated-prefix-r1/moderate-qualification.json",
+      "sha256": "b9617d67eca085d0391f443d719f720b1724f219348999a76e6734fd7e2e7df3"
+    },
+    "moderate-rgb": {
+      "path": "tmp/dcsa-v4-r2-patched-engine-moderate-requalification-resume-validated-prefix-r1/moderate-rgb-replay.json",
+      "sha256": "8230c4c7b2807ca595de271b7d2c7e974d87a88bb54f6950127bfcccd0fa4f7d"
+    },
+    "radiance": {
+      "path": "tmp/dcsa-v4-r2-patched-engine-moderate-requalification-resume-validated-prefix-r1/radiance-accounting.json",
+      "sha256": "b4d86b7141d7bd1bbd8628c60404c735cb09fb02d0c23d4492700825874e0a7c"
+    },
+    "static-qualification": {
+      "path": "tmp/dcsa-v4-r2-patched-engine-moderate-requalification-resume-validated-prefix-r1/static-qualification-preservation.json",
+      "sha256": "5a2b23d45dc1be89ee092f4f11e3fe30ecaa26b22e22219caeb0d9cb5179b9cb"
+    },
+    "strong-qualification": {
+      "path": "tmp/dcsa-v4-strong-state-c-requalification-against-patched-state-a-r1/strong-state-c-qualification.json",
+      "sha256": "26bde78a6ddf70186962c12230158b33b7b50e049e9d7c1d10c4176a66ff403b"
+    },
+    "targeted-sanity": {
+      "path": "tmp/dcsa-v4-r2-patched-engine-moderate-requalification-resume-validated-prefix-r1/targeted-sanity-preservation.json",
+      "sha256": "40154b67ac44c2dbaf3516d1887d0d76109f73a87d4b1f3f350bb365c3affd34"
+    },
+    "upper-wedge": {
+      "path": "tmp/dcsa-v4-r2-patched-engine-moderate-requalification-resume-validated-prefix-r1/upper-wedge.json",
+      "sha256": "f33ded72505e61b3d786af3ceaae2e1c045f5f019f9c5b4426559879c741e6fe"
+    },
+    "visual-qa": {
+      "path": "tmp/dcsa-v4-r2-patched-engine-moderate-requalification-resume-validated-prefix-r1/visual-qa.json",
+      "sha256": "0ad4e09c6d1bd002ca103cd6b03947461af3c9f2335c8663f223edf0e718ff78"
+    }
+  },
+  "qualificationChainIdentity": "27fe1de330a072a161cb6da46338fcdb7da2d8eacb7d9e275b45904f5e7ce0fc",
+  "qualificationOverallResult": "PASS_DCSA_V4_R2_PATCHED_ENGINE_MODERATE_REQUALIFIED_FROM_VALIDATED_PREFIX_R1",
+  "qualificationWaveId": "dcsa-v4-r2-patched-engine-moderate-requalification-resume-validated-prefix-r1",
+  "radianceAccounting": "CLOSED",
+  "releaseId": "dcsa-v4-r2-patched-production-frozen-r1-bf20bc8a",
+  "schemaVersion": "dcsa-v4-production-freeze-semantic-v1",
+  "semanticIdentity": "c547c69b65dbb94417fb88e097e4a7fcc7b0ecbd36d884847d702eecd531252d",
+  "strongQualification": "INHERITED_VALIDATED_NOT_RERUN",
+  "upperWedge": {
+    "knownPhysicalResidual": "PRESERVED",
+    "regionGate": "PASS",
+    "value": 14
+  },
+  "visualQa": "PASS"
+}

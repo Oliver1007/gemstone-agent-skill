@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:citrine-auth6-preflight-result:1.0.0",
+  "type": "object",
+  "required": ["schema_version", "result_id", "request_id", "status", "checks", "execution_authorized", "writes_performed"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "result_id": {"type": "string"},
+    "request_id": {"type": "string"},
+    "status": {"enum": ["READY_FOR_AUTH6_HUMAN_REVIEW", "CITRINE_CASE_DISAMBIGUATION_REQUIRED", "CANDIDATE_IDENTITY_UNRESOLVED", "PROFILE_BINDING_UNRESOLVED", "REFERENCE_IDENTITY_UNRESOLVED", "RUN_CONTEXT_UNRESOLVED", "ENGINE_COMPATIBILITY_REVALIDATION_REQUIRED", "RENDER_SAFETY_NOT_READY", "MEASUREMENT_PROTOCOL_NOT_READY", "QA_PROTOCOL_NOT_READY", "REGRESSION_PLAN_NOT_READY", "STEP11B_ENTRY_NOT_READY", "MULTIPLE_BLOCKERS"]},
+    "checks": {"type": "array", "minItems": 1},
+    "execution_authorized": {"const": false},
+    "writes_performed": {"const": 0}
+  },
+  "additionalProperties": true
+}

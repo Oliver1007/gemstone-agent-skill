@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "cases": 8,
+  "output": "✔ unbound host rejects before request normalization or dispatch: undefined (2.6089ms)\n✔ unbound host rejects before request normalization or dispatch: {} (1.538ms)\n✔ unbound host rejects before request normalization or dispatch: {\"caller_class\":\"CODEX_SKILL_NORMAL_USE\"} (1.1382ms)\n✔ missing trusted callback fails before filesystem/dispatch: resolveAuthorization (2.3865ms)\n✔ missing trusted callback fails before filesystem/dispatch: resolveGovernance (0.939ms)\n✔ missing trusted callback fails before filesystem/dispatch: resolveCase (0.757ms)\n✔ missing trusted callback fails before filesystem/dispatch: resolveCandidate (1.0959ms)\n✔ missing trusted callback fails before filesystem/dispatch: resolveProfile (2.1135ms)\nℹ tests 8\nℹ suites 0\nℹ pass 8\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 339.0417\n",
+  "currentCodes": [
+    "UNAUTHORIZED_OPERATION",
+    "INVALID_REQUEST for malformed configuration"
+  ],
+  "equivalentTo": [
+    "HOST_AUTHORIZATION_PROVIDER_REQUIRED",
+    "OBJECT_RESOLVER_REQUIRED"
+  ],
+  "dispatchReached": false,
+  "testFallback": false,
+  "method": "unbound host with poison request; missing callbacks with invalid paths; early rejection before either is accessed"
+}

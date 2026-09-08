@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:profile-creation-readiness:1.0.0",
+  "type": "object",
+  "required": ["schema_version", "record_id", "case_id", "proposal_ref", "gates", "status", "blockers", "authoritative_profile_created", "case_binding_changed", "auth6_authorized"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "record_id": {"type": "string"},
+    "case_id": {"const": "case:citrine"},
+    "proposal_ref": {"type": "string"},
+    "gates": {"type": "array", "minItems": 1},
+    "status": {"enum": ["READY_FOR_HUMAN_PROFILE_CREATION_AUTHORIZATION", "NOT_READY"]},
+    "blockers": {"type": "array"},
+    "authoritative_profile_created": {"const": false},
+    "case_binding_changed": {"const": false},
+    "auth6_authorized": {"const": false}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:representation-classification-result:1.0.0",
+  "type": "object",
+  "required": ["classification", "structural_facts", "name_based_inference_used", "authority_boundary"],
+  "properties": {
+    "classification": {"enum": ["SURFACE_TEXTURE", "NORMAL_MAP", "GEOMETRY", "VOLUME", "HYBRID", "UNKNOWN"]},
+    "structural_facts": {"type": "object"},
+    "name_based_inference_used": {"const": false},
+    "authority_boundary": {"const": "REPRESENTATION_STRUCTURE_ONLY"}
+  },
+  "additionalProperties": true
+}

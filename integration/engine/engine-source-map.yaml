@@ -1,0 +1,131 @@
+schema_version: "1.0.0"
+source_map_id: "engine-source-map:gemstone-engine-source:2026-08-21"
+object_revision: "1"
+workspace_alias: "gemstone-engine-source"
+authority_role: "SKILL_SIDE_SOURCE_INDEX_NOT_ENGINE_TRUTH"
+inventory_scope: "Bounded to certification-relevant runtime, geometry, diagnostics, package metadata, and historical identity sources."
+repository:
+  kind: "GIT_WORKTREE"
+  head_state: "UNBORN_NO_COMMITS"
+  working_tree_state: "ALL_PROJECT_FILES_UNTRACKED_AT_BASELINE"
+  source_revision: null
+  identity_strategy: "SELECTED_SOURCE_HASH_FINGERPRINT"
+package_release:
+  package_name: "citrine-glb-builder"
+  package_version: "1.0.0"
+  release_ref: "package:citrine-glb-builder:1.0.0"
+  behavior_identity_equivalent: false
+  locked_runtime_dependency: "three@0.185.1"
+sources:
+  - source_id: "engine-source:package-manifest"
+    relative_locator: "package.json"
+    roles: ["BUILD_TOOLING", "PACKAGE_METADATA"]
+    behavior_critical: false
+    capability_relevant: true
+    sha256: "4A2BD74AF63B7AD9CE9C46DFA9CC2A4D7A38CD74543DF0C35A7ED0A9C0722B11"
+    availability: "AVAILABLE"
+    provenance: "Engine primary source workspace"
+  - source_id: "engine-source:dependency-lock"
+    relative_locator: "pnpm-lock.yaml"
+    roles: ["BUILD_TOOLING", "BEHAVIOR_CRITICAL"]
+    behavior_critical: true
+    capability_relevant: true
+    sha256: "FDEB5A6800915F4CF2154B1A7C723977F8484D72A64CDB96FB700B9A6F0F1AF7"
+    availability: "AVAILABLE"
+    provenance: "Engine primary source workspace"
+  - source_id: "engine-source:preview-runtime"
+    relative_locator: "preview.mjs"
+    roles: ["BEHAVIOR_CRITICAL", "CAPABILITY_RELEVANT", "DIAGNOSTIC_RELEVANT", "CASE_SPECIFIC"]
+    behavior_critical: true
+    capability_relevant: true
+    sha256: "FC48BE9DD8ED0C002B0D9578C1BE453156670E0A5E38FC4776CB3728301818AC"
+    availability: "AVAILABLE"
+    provenance: "Engine primary source workspace"
+    notes:
+      - "Contains shader modification, transparent optics, analytic cavity paths, environment/presentation logic, debug modes, and case-specific presets."
+  - source_id: "engine-source:shared-geometry-builder"
+    relative_locator: "build-citrine-csg.mjs"
+    roles: ["BEHAVIOR_CRITICAL", "CAPABILITY_RELEVANT", "CASE_SPECIFIC"]
+    behavior_critical: true
+    capability_relevant: true
+    sha256: "E2D0B40D37A84B19F9E1F80C722BFD216A8B3F4626FC837A3E04171E5630C9EC"
+    availability: "AVAILABLE"
+    provenance: "Engine primary source workspace"
+  - source_id: "engine-source:citrine-reference-builder"
+    relative_locator: "build-citrine-reference-v1.mjs"
+    roles: ["BEHAVIOR_CRITICAL", "CAPABILITY_RELEVANT", "CASE_SPECIFIC"]
+    behavior_critical: true
+    capability_relevant: true
+    sha256: "C8414C5EBC46B33C65DA0F6AFBBE969457F07001344F94A1AEF0FB905182717D"
+    availability: "AVAILABLE"
+    provenance: "Engine primary source workspace"
+  - source_id: "engine-source:glb-geometry-audit"
+    relative_locator: "audit-glb.mjs"
+    roles: ["DIAGNOSTIC_RELEVANT", "CAPABILITY_RELEVANT"]
+    behavior_critical: false
+    capability_relevant: true
+    sha256: "13D483F7E61410EC929FD342E2127B16EC20F918D7C70776DEF8E09362192495"
+    availability: "AVAILABLE"
+    provenance: "Engine primary source workspace"
+  - source_id: "engine-source:citrine-optical-path-audit"
+    relative_locator: "audit-citrine-optical-path.mjs"
+    roles: ["DIAGNOSTIC_RELEVANT", "CASE_SPECIFIC"]
+    behavior_critical: false
+    capability_relevant: true
+    sha256: "B8F2EB455C639DE0061839B23C380E4A943341531307233E52FDB1E2A5807361"
+    availability: "AVAILABLE"
+    provenance: "Engine primary source workspace"
+  - source_id: "engine-source:citrine-measurement-v1"
+    relative_locator: "measure-citrine-protocol-v1.ps1"
+    roles: ["DIAGNOSTIC_RELEVANT", "CASE_SPECIFIC"]
+    behavior_critical: false
+    capability_relevant: true
+    sha256: "551B4FC457CB6597311ABB079B66923E88541B1BF22886C56715D5CE4C6EFB1C"
+    availability: "AVAILABLE"
+    provenance: "Engine primary source workspace"
+  - source_id: "engine-source:citrine-cavity-support-v2"
+    relative_locator: "measure-citrine-cavity-support-v2.ps1"
+    roles: ["DIAGNOSTIC_RELEVANT", "CASE_SPECIFIC"]
+    behavior_critical: false
+    capability_relevant: true
+    sha256: "80C32E8E8C9B8FBC681158341DE6B189114C37824542EB6249B612ED4C13EEEB"
+    availability: "AVAILABLE"
+    provenance: "Engine primary source workspace"
+    notes: ["Writes CSV and JSON outputs; not read-only."]
+  - source_id: "engine-source:preview-server"
+    relative_locator: "preview-server.mjs"
+    roles: ["BUILD_TOOLING"]
+    behavior_critical: false
+    capability_relevant: false
+    sha256: "5C44DDE9D030E897A96CE8D152CCAF1E237A7C16CC0906AB78FDC495390ADD6C"
+    availability: "AVAILABLE"
+    provenance: "Engine primary source workspace"
+  - source_id: "engine-source:smoky-final-record"
+    relative_locator: "FINAL_SMOKY_QUARTZ.md"
+    roles: ["DOCUMENTATION", "HISTORICAL_IDENTITY_EVIDENCE"]
+    behavior_critical: false
+    capability_relevant: true
+    sha256: "B7B4B885E00CABA2D4DD9F4DDAFE058C802BA740CFEC50144EAC875E33F69D6C"
+    availability: "AVAILABLE"
+    provenance: "Smoky final source record"
+  - source_id: "engine-source:smoky-delivery-archive"
+    relative_locator: "output/smoky-quartz-reference-final-output.zip"
+    roles: ["HISTORICAL_IDENTITY_EVIDENCE"]
+    behavior_critical: false
+    capability_relevant: true
+    sha256: "A0E54909B52CE1C001F332BF87969AE94E39BD074BCCBE00DF8C9F1999D390EE"
+    availability: "ARCHIVED_AVAILABLE"
+    provenance: "Exact archived delivery bytes inspected in memory"
+  - source_id: "engine-source:citrine-phase1.6.2r-record"
+    relative_locator: "CITRINE_PHASE1_6_2R.md"
+    roles: ["DOCUMENTATION", "CASE_SPECIFIC", "HISTORICAL_IDENTITY_EVIDENCE"]
+    behavior_critical: false
+    capability_relevant: true
+    sha256: "AD8C04D7DE6F17F49DCAC4FC0BC1685BE8D590906A5299D608E875B2D1B6CBA4"
+    availability: "AVAILABLE"
+    provenance: "Citrine current source record"
+excluded_from_behavior_identity:
+  - {class: "output images and non-identity archives", reason: "Artifacts are not Engine behavior source."}
+  - {class: "reference images", reason: "References are Evidence inputs, not Engine behavior."}
+  - {class: "composition scripts", reason: "Presentation/package generation is not current core Engine behavior."}
+  - {class: "node_modules tree", reason: "Dependency identity is represented by the lockfile."}

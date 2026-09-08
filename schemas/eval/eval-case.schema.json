@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:eval-case:1.0.0",
+  "type": "object",
+  "required": ["schema_version", "eval_id", "object_revision", "fixture_class", "scenario", "expected_decision", "prohibited_effects"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "eval_id": {"type": "string"},
+    "object_revision": {"type": "string"},
+    "fixture_class": {"const": "SYNTHETIC"},
+    "scenario": {"type": "object"},
+    "expected_decision": {"type": "string"},
+    "prohibited_effects": {"type": "array"}
+  },
+  "additionalProperties": true
+}

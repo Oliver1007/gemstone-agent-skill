@@ -1,0 +1,194 @@
+{
+  "schemaVersion": "1.0.0",
+  "adapterId": "gemstone-engine-tool-adapter-v1r1",
+  "engine": {
+    "name": "existing-threejs-gemstone-builder",
+    "packageVersion": "1.0.0",
+    "runtime": "Node.js ESM + Three.js 0.185.1",
+    "engineRootRequiredAtInvocation": true,
+    "sourceIdentity": {
+      "packageJsonSha256": "BA8D2A69E15DF23831F0E5644D193514CB3BF071751AD4E8A4C726DC2CC9C14A",
+      "genericBuilderSha256": "80D354DA0500035A662827580B18D133886833F1FF0C4A01A74605886D70E265",
+      "mutatorInterfaceSha256": "BCEB04B8E8D04BFDEC12328DE57C7C28B6A5D713DD7B990833E641B0F676D482",
+      "glbAuditSha256": "13D483F7E61410EC929FD342E2127B16EC20F918D7C70776DEF8E09362192495",
+      "genericRenderCliSha256": "DAAE64D2EEBB2E0CEA2519432A768527BD78EB3CC7B7E3B2538F71CBD9AF7C10",
+      "genericRenderHtmlSha256": "AE26006B5D24E61FB1D5667513DAD8362D5A2E98156D6C130D52FA12CC0EB866",
+      "genericRenderRuntimeSha256": "2D66F016B96AB162C3E9B134F5C5D09337CC664C8F02E656779DF368F8AE80DD",
+      "previewServerSha256": "5C44DDE9D030E897A96CE8D152CCAF1E237A7C16CC0906AB78FDC495390ADD6C",
+      "previewRuntimeSha256": "FC48BE9DD8ED0C002B0D9578C1BE453156670E0A5E38FC4776CB3728301818AC"
+    }
+  },
+  "capabilities": [
+    {
+      "capability": "BUILD_MODEL",
+      "currentImplementation": "Generic new-output bead builder",
+      "entrypoint": "build-gemstone-mutator-v1.mjs",
+      "inputFormat": "strict generic-mutator-v1 JSON config + SHA-256 + contained output arguments",
+      "outputFormat": "new GLB and one-line JSON result",
+      "mutatesSource": false,
+      "agentCallableNow": true,
+      "adapterRequired": true,
+      "state": "READY_VIA_ADAPTER",
+      "knownLimitations": ["Only spherical bead/through-hole geometry is implemented", "Historical case variant names are rejected", "Output is new-output-only"]
+    },
+    {
+      "capability": "APPLY_MATERIAL",
+      "currentImplementation": "Three.js MeshPhysicalMaterial in generic builder",
+      "entrypoint": "build-gemstone-mutator-v1.mjs#createMaterial",
+      "inputFormat": "linear RGB arrays and explicit numeric physical-material controls",
+      "outputFormat": "material embedded in GLB",
+      "mutatesSource": false,
+      "agentCallableNow": true,
+      "adapterRequired": true,
+      "state": "READY_VIA_ADAPTER",
+      "knownLimitations": ["M01 core only", "No scattering, anisotropy, banding, iridescence, or physical inclusions"]
+    },
+    {
+      "capability": "AUDIT_GLB",
+      "currentImplementation": "Binary glTF 2.0 geometry/material audit CLI",
+      "entrypoint": "audit-glb.mjs",
+      "inputFormat": "GLB path",
+      "outputFormat": "JSON on stdout",
+      "mutatesSource": false,
+      "agentCallableNow": true,
+      "adapterRequired": true,
+      "state": "READY_VIA_ADAPTER",
+      "knownLimitations": ["Some cavity profile thresholds are specialized to current bead geometry", "Root scale is not separately reported"]
+    },
+    {
+      "capability": "RENDER_PREVIEW",
+      "currentImplementation": "Local HTTP server and browser WebGL preview",
+      "entrypoint": "preview-server.mjs + preview.mjs",
+      "inputFormat": "case-specific URL query parameters",
+      "outputFormat": "interactive browser canvas",
+      "mutatesSource": false,
+      "agentCallableNow": false,
+      "adapterRequired": true,
+      "state": "PARTIAL",
+      "knownLimitations": ["Only Smoky/Citrine routes", "Hard-coded model paths and case rigs", "Case-specific material overrides", "Automatic shader fallback", "No image-export CLI"]
+    },
+    {
+      "capability": "RENDER_IMAGE",
+      "currentImplementation": "Engine-owned generic GLB-native browser renderer with programmatic PNG capture",
+      "entrypoint": "render-generic-candidate-v1.mjs + generic-render.html + generic-render.mjs",
+      "inputFormat": "explicit arbitrary GLB + strict Render Rig V1 + explicit new PNG path + browser executable",
+      "outputFormat": "deterministic PNG plus render manifest with source/output hashes and readiness stages",
+      "mutatesSource": false,
+      "agentCallableNow": true,
+      "adapterRequired": true,
+      "state": "READY_VIA_ADAPTER",
+      "knownLimitations": ["Perspective camera only", "Environment modes are NONE or deterministic Three.js RoomEnvironment", "GLB-native declared materials only", "Transmission backdrop is explicit opt-in only", "Visual realism is not qualified by infrastructure readiness"]
+    },
+    {
+      "capability": "REFERENCE_TRANSMISSION_BACKDROP",
+      "currentImplementation": "Optional deterministic opaque vertical-gradient scene backdrop sampled through the GLB-native transmission path",
+      "entrypoint": "render-generic-candidate-v1.mjs + generic-render.mjs",
+      "inputFormat": "strict Engine Render Rig background.transmissionBackdrop with VERTICAL_GRADIENT and two explicit colors",
+      "outputFormat": "deterministic PNG plus render manifest containing the resolved backdrop contract",
+      "mutatesSource": false,
+      "agentCallableNow": true,
+      "adapterRequired": true,
+      "state": "READY_VIA_ADAPTER",
+      "knownLimitations": ["Explicit opt-in only", "VERTICAL_GRADIENT only", "Not a path tracer", "Not a caustic receiver", "No texture/image input"]
+    },
+    {
+      "capability": "PARAMETER_MATRIX",
+      "currentImplementation": "Bounded portable Build → Audit → Render matrix under one fixed Render Rig",
+      "entrypoint": "engine-tool-adapter.mjs#renderParameterMatrix",
+      "inputFormat": "portable base spec, one parameter or allowed logical pair, 2–4 trials, fixed Render Rig V1, isolated empty output directory",
+      "outputFormat": "traceable per-trial specs/GLBs/audits/PNGs/manifests plus matrix-result.json; pauses for Host Agent evaluation",
+      "mutatesSource": false,
+      "agentCallableNow": true,
+      "adapterRequired": true,
+      "state": "READY_VIA_ADAPTER",
+      "knownLimitations": ["Maximum four trials", "No internal visual scoring", "Host Agent V2.2 evaluations are required before promotion"]
+    },
+    {
+      "capability": "STRUCTURAL_IDENTITY_FAST_PROOF",
+      "currentImplementation": "Skill-side deterministic object-space volumetric structural proof renderer",
+      "entrypoint": "engine-tool-adapter.mjs#renderStructuralCandidateProof",
+      "inputFormat": "validated Candidate Spec with Structural Identity V1 plus 1–8 canonical views",
+      "outputFormat": "bounded deterministic PNG set and hash-bound manifest",
+      "mutatesSource": false,
+      "agentCallableNow": true,
+      "adapterRequired": true,
+      "state": "READY_VIA_SKILL_FAST_ADAPTER",
+      "knownLimitations": ["Diagnostic Fast proof, not frozen production optics", "Spherical normalized proof volume", "No GLB structural bake", "No final reference-match claim"]
+    },
+    {
+      "capability": "MULTIVIEW_RENDER",
+      "currentImplementation": "Internal consistency cameras and four-view browser mode",
+      "entrypoint": "preview.mjs",
+      "inputFormat": "case-specific browser query",
+      "outputFormat": "browser canvas and runtime metrics",
+      "mutatesSource": false,
+      "agentCallableNow": false,
+      "adapterRequired": true,
+      "state": "PARTIAL",
+      "knownLimitations": ["Not a standalone generic output operation"]
+    },
+    {
+      "capability": "MEASURE_MODEL",
+      "currentImplementation": "GLB audit plus Citrine-specific image measurement scripts",
+      "entrypoint": "audit-glb.mjs and measurement PowerShell scripts",
+      "inputFormat": "GLB or protocol-specific image",
+      "outputFormat": "JSON/CSV/stdout depending on operation",
+      "mutatesSource": false,
+      "agentCallableNow": false,
+      "adapterRequired": true,
+      "state": "PARTIAL",
+      "knownLimitations": ["Image measurements are case/protocol specific and are not visual-realism evaluation"]
+    },
+    {
+      "capability": "EXPORT_GLB",
+      "currentImplementation": "GLTFExporter in generic builder",
+      "entrypoint": "build-gemstone-mutator-v1.mjs",
+      "inputFormat": "validated generic-mutator-v1 config",
+      "outputFormat": "binary glTF 2.0",
+      "mutatesSource": false,
+      "agentCallableNow": true,
+      "adapterRequired": true,
+      "state": "READY_VIA_ADAPTER",
+      "knownLimitations": ["New-output-only"]
+    },
+    {
+      "capability": "COMPARE_REFERENCE",
+      "currentImplementation": "No general reference-versus-render comparator",
+      "entrypoint": null,
+      "inputFormat": null,
+      "outputFormat": null,
+      "mutatesSource": false,
+      "agentCallableNow": false,
+      "adapterRequired": true,
+      "state": "FUTURE",
+      "knownLimitations": ["Reserved for V2.2"]
+    },
+    {
+      "capability": "PACKAGE_OUTPUT",
+      "currentImplementation": "Historical case delivery files only",
+      "entrypoint": null,
+      "inputFormat": null,
+      "outputFormat": null,
+      "mutatesSource": false,
+      "agentCallableNow": false,
+      "adapterRequired": true,
+      "state": "FUTURE",
+      "knownLimitations": ["No generic portable package operation"]
+    }
+  ],
+  "portableOperations": {
+    "build_candidate": "READY_VIA_ADAPTER",
+    "audit_candidate": "READY_VIA_ADAPTER",
+    "render_candidate": "READY_VIA_ADAPTER",
+    "render_parameter_matrix": "READY_VIA_ADAPTER",
+    "render_structural_proof": "READY_VIA_SKILL_FAST_ADAPTER"
+  },
+  "renderRigCapabilities": {
+    "transmissionBackdropPassThrough": "READY_VIA_ADAPTER_EXPLICIT_OPT_IN"
+  },
+  "supportedFamilies": ["M01"],
+  "structuralProofFamilies": ["M01", "M02", "M03", "M04", "M05", "M06", "M07", "M08", "M09", "M10"],
+  "supportedFeatures": ["THROUGH_HOLE"],
+  "unsupportedFeaturePolicy": "FAIL_CLOSED",
+  "engineCapabilityLimitCode": "ENGINE_CAPABILITY_LIMIT"
+}

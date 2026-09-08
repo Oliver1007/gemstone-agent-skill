@@ -1,0 +1,149 @@
+{
+  "authorization": "GSI_V1_TARGETED_FINAL_TECHNICAL_CLOSURE",
+  "scope": "FINAL_TECHNICAL_CLOSURE_ONLY",
+  "evidence": [
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\integration-final-gate.json",
+      "sha256": "528A93C95A28D6B665E099DDC80BDC76CC32EEF973D4C21877EDF17F9CB23622",
+      "bytes": 2079
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\validation-summary.json",
+      "sha256": "AD0496813214520BF4EBDB4240DDC42103DC82D4CC81B67D57FFC79EAB833C2E",
+      "bytes": 611
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-non-semantic-production-causal-export-implementation-r1\\validation-summary.json",
+      "sha256": "38D2A839C7B59579933412E36741095D2A5234ED2B00A7966A84EA7B68E36F89",
+      "bytes": 2403
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-non-semantic-production-causal-export-implementation-r1\\legacy-authoritative-regression.json",
+      "sha256": "95E56EAECFCAE75A67797272332689261BF606094844F3927F046BBDD82A75C9",
+      "bytes": 95
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-non-semantic-production-causal-export-implementation-r1\\shadow-regression.json",
+      "sha256": "D8574A9518922C0FA42FD774BF7C52EAFC8DD1F1159AA418E7C0BC82B0F357D7",
+      "bytes": 97
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-non-semantic-production-causal-export-implementation-r1\\stage-tap-side-effect-validation.json",
+      "sha256": "9E60A449411162534186C3BCFF53CA73A9F7E3881256EC97C29A53FE262AFB44",
+      "bytes": 113
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-non-semantic-production-causal-export-implementation-r1\\semantic-owner-identity-validation.json",
+      "sha256": "E29507E8F0A8AAE777F776D6EC70F46C43B3903DD55D7BAFD8CF2488C10CE8C8",
+      "bytes": 213
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-non-semantic-production-causal-export-implementation-r1\\qualification-mode-isolation-validation.json",
+      "sha256": "BE6A1391B5809CF78B1D6CB8303E579E6530B065266CAF36295414562E8B5133",
+      "bytes": 461
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-clean-restart-full-root-local-transport-stage-tap-causal-diagnostic-r1\\validation-summary.json",
+      "sha256": "17D0BAAB6D8119F69B82423D8FFBE4C21AF9FEDED6DA2C86493D5BFF8E4EA865",
+      "bytes": 1375
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-clean-restart-full-root-local-transport-stage-tap-causal-diagnostic-r1\\target-root-input-freeze.json",
+      "sha256": "6C6A75CA32F8597FB6595A4FF80C01B0BCFEE2DABD229E658C555EAD0DCF5469",
+      "bytes": 262
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-clean-restart-full-root-local-transport-stage-tap-causal-diagnostic-r1\\visual-observations.json",
+      "sha256": "7BF02B9D6ACA06C0DC05CC61F33645961D787DB9F1F4B3214E07CEE6EAD50DF2",
+      "bytes": 74051
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-canonical-v2-structural-to-material-relational-evidence-boundary-review-r1\\review-final-gate.json",
+      "sha256": "E93D5FF568F86AB57DD3D8FBD457CC840186DF13D58421FAF7F7E6B81F1AD0E3",
+      "bytes": 477
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-outcome-only-semantic-adjudication-v1-1-application-r1\\official-outcome-only-adjudication.json",
+      "sha256": "EBD46B90A22104A32E57F434A31695B05E45F4E5054668F7B65ABF73E2F608E6",
+      "bytes": 1065
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-outcome-only-semantic-adjudication-v1-1-application-r1\\per-review-count-recomputation.json",
+      "sha256": "3D38A91B226DE10075A836B660C740AE26F80A48C6CD9345C0F410A0877602FB",
+      "bytes": 2307
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-outcome-only-semantic-adjudication-v1-1-application-r1\\validation-summary.json",
+      "sha256": "6883C1A310317C693D16B9E804BC68815F23F34A80BFDF9D12E0D9750EC00079",
+      "bytes": 365
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-outcome-only-semantic-adjudication-v1-1-application-r1\\outcome-only-rule-engine-validation.json",
+      "sha256": "A7BACC09B4BCBBA25CDBE5556E23DE9FBBC54D5B7BDBFAAB20C0D936F1511A87",
+      "bytes": 158
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-outcome-only-semantic-adjudication-v1-1-application-r1\\review-order-invariance-validation.json",
+      "sha256": "DA48B5FBDE8D7E8718C7D79C4DE5F5A2D1E79BF8B6A2FEBF71FF4207501ABA26",
+      "bytes": 1327
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-outcome-only-semantic-adjudication-v1-1-application-r1\\serialization-invariance-validation.json",
+      "sha256": "09C068440B0BC0796939CAC823967C245475C4C351CE648F14A84349E90E48FD",
+      "bytes": 1582
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-final-assembly-union-remediated-targeted-transfer-requalification-r1\\qualification-final-presentation-gate.json",
+      "sha256": "4D9555259F55DB6EE6614947D338C2124F2DB7D560E9065B32A0D745B66A3015",
+      "bytes": 2667
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-integrated-relational-path-post-closure-requalification-r1\\qualification-final-presentation-gate.json",
+      "sha256": "B9AD6BDA93BEA7FFA41765CFE5884B033322C7B485DF5FC0CBBD10A90FD13BA0",
+      "bytes": 522
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-canonical-semantic-protocol-v2-targeted-requalification-r1\\v2-final-presentation-gate.json",
+      "sha256": "094D64DA822B5B84600A44565EA56B2C983FE6B44AD260D0FF1A702163BEC25F",
+      "bytes": 304
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-canonical-v2-outcome-determinacy-adjudication-protocol-application-r1\\application-final-gate.json",
+      "sha256": "4F8EC1D747E25ABCC6A4FCB551ACBC92DA9B3ECE62416927337FB01DF4821E02",
+      "bytes": 279
+    }
+  ],
+  "required": [
+    "wave-final-report.md",
+    "closure-manifest.json",
+    "source-protection-start.json",
+    "source-protection-final.json",
+    "final-production-identity.json",
+    "implementation-status-summary.json",
+    "qualification-history-summary.json",
+    "canonical-v2-final-status.json",
+    "semantic-governance-closure.json",
+    "causal-review-history-summary.json",
+    "established-causal-facts.json",
+    "unresolved-causal-facts.json",
+    "component-reopening-freeze.json",
+    "production-causal-export-status.json",
+    "future-addressability-requirement.json",
+    "generic-blue-lace-status.json",
+    "production-promotion-status.json",
+    "legacy-authority-status.json",
+    "validation-aggregate-summary.json",
+    "deferred-research-entrypoint.json",
+    "future-reopening-conditions.json",
+    "final-development-state.json",
+    "closure-final-gate.json",
+    "validation-summary.json"
+  ],
+  "additional": [
+    "closure-consistency-discrepancy.json"
+  ],
+  "newRender": 0,
+  "newReview": 0,
+  "newQualification": 0,
+  "productionWrite": 0
+}

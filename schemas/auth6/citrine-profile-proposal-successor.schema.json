@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:citrine-profile-proposal-successor:1.0.0",
+  "type": "object",
+  "required": ["schema_version", "proposal_id", "object_kind", "status", "case_id", "lineage", "authority_flags", "stable_profile_field_set", "candidate_override_whitelist", "closure_refs", "completeness", "unresolved_fields", "creation_authority", "activation_authority"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "proposal_id": {"pattern": "^proposal:citrine:"},
+    "object_kind": {"const": "NON_AUTHORITATIVE_PROFILE_PROPOSAL"},
+    "status": {"const": "NONAUTHORITATIVE_DRAFT"},
+    "case_id": {"const": "case:citrine"},
+    "lineage": {"type": "object"},
+    "authority_flags": {"type": "object"},
+    "stable_profile_field_set": {"type": "object"},
+    "candidate_override_whitelist": {"type": "array"},
+    "closure_refs": {"type": "array", "minItems": 1},
+    "completeness": {"type": "object"},
+    "unresolved_fields": {"type": "array"},
+    "creation_authority": {"const": "NONE"},
+    "activation_authority": {"const": "NONE"}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,12 @@
+{
+  "name": "gemstone-material-agent-skill",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {"node": ">=24 <25"},
+  "scripts": {
+    "test": "node --test tests/portable-governance.test.mjs",
+    "smoke": "node tests/portable-smoke.mjs",
+    "verify:sources": "node scripts/verify-portable-sources.mjs"
+  }
+}

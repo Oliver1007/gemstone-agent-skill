@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "normalAuthorizationDefault": false,
+  "normalObjectDefault": false,
+  "testModule": "tests/portable-test-host.mjs",
+  "normalEntrypoint": "runtime/index.mjs",
+  "hostRegistry": "WeakMap branded host",
+  "staticEvidence": "No test provider import in index/host; hostConfig called before request normalization",
+  "limitation": "Callback truth supplied by trusted embedding; branding is not independent issuer verification"
+}

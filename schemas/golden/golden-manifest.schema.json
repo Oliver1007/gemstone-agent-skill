@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:golden-manifest:1.0.0",
+  "type": "object",
+  "required": ["schema_version", "golden_id", "golden_version", "case_ref", "immutable", "source_access", "snapshot_ref", "coverage_ref", "verification_state", "source_provenance"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "golden_id": {"type": "string"},
+    "golden_version": {"type": "string"},
+    "case_ref": {"type": "string"},
+    "immutable": {"const": true},
+    "source_access": {"const": "READ_ONLY"},
+    "snapshot_ref": {"type": "object"},
+    "coverage_ref": {"type": "string"},
+    "verification_state": {"type": "string"},
+    "source_provenance": {"type": "array", "minItems": 1}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,407 @@
+{
+  "status": "PASS",
+  "fingerprint": "302E5918CE5FA536167E8DCCBE08613CFADEE9729455058EE4386E0E6D49BFD1",
+  "sources": [
+    {
+      "path": "README.md",
+      "bytes": 2962,
+      "sha256": "F15B5F6CF481F79A1E2DCC8B8E8E4E1B2D11976D20498B3FD0AAB93EC636F894"
+    },
+    {
+      "path": "SKILL.md",
+      "bytes": 10615,
+      "sha256": "10ABC6C7C31D04CCA83B51CF3D1723811253D7E4A8FB1887325EC0788AAD6FC7"
+    },
+    {
+      "path": "adapter/README.md",
+      "bytes": 6636,
+      "sha256": "0B2F84BDD7FF0D4B693FDDA058F525297BC45F429073F8F5A74EC94BFE45DB69"
+    },
+    {
+      "path": "adapter/engine-capabilities.json",
+      "bytes": 9692,
+      "sha256": "02EE3510D014382CDEC8B80A10992ABFD6C261B5422DAFCC8BE371C180AEEA5A"
+    },
+    {
+      "path": "adapter/engine-tool-adapter.mjs",
+      "bytes": 52586,
+      "sha256": "9D6F9523DE69B449CDD5316D79C91E41BEBD81590E9ADC6B378839817E5BAFCB"
+    },
+    {
+      "path": "adapter/tests/engine-identity-requalification-v1r1.test.mjs",
+      "bytes": 3413,
+      "sha256": "4CE5D68958157C5438EEAE6E9A4DA190A8411643202A3F8EC7ECAE1D298F87C8"
+    },
+    {
+      "path": "adapter/tests/engine-tool-adapter.test.mjs",
+      "bytes": 25442,
+      "sha256": "CC2F33BF17201B2534BC03636614DFF5B6D8CAF5FAC92FCB3155F7C3E43783F3"
+    },
+    {
+      "path": "adapter/tests/fixtures/v24r-normalized-rig.json",
+      "bytes": 727,
+      "sha256": "F3A9E814D0A26EE7CEBB48E9F912EEB547FFC2620981485A342BAFB3F9515B97"
+    },
+    {
+      "path": "evaluator/README.md",
+      "bytes": 1743,
+      "sha256": "44D5255524F2E97F466510F52F4D6441B2F32D7F75F2623B87A5EF5D29C7F898"
+    },
+    {
+      "path": "evaluator/reference-render-evaluator-contract.mjs",
+      "bytes": 27355,
+      "sha256": "43FFCBA1957DB1C5FC16B6488911F9AACF1E1B29183EF70E4FB5941D3B95D053"
+    },
+    {
+      "path": "evaluator/tests/fixtures/synthetic-evaluation-fixtures.mjs",
+      "bytes": 7660,
+      "sha256": "E0034842595B9715CB29CCCFB789BD4C75280B85A20605EAC039C14B5760C30B"
+    },
+    {
+      "path": "evaluator/tests/reference-render-evaluator-contract.test.mjs",
+      "bytes": 13651,
+      "sha256": "218BA71CE19FCD91A9CC0C0CFB7DD8A01456E41573D748A8E5BA4038DFE7EE90"
+    },
+    {
+      "path": "material-library/README.md",
+      "bytes": 410,
+      "sha256": "5BDA1A6DE84EE9C4250312CEA5C4C98C80577BF995202D3375CD9B1D9E1BBFA7"
+    },
+    {
+      "path": "material-library/calibration/citrine-calibration.json",
+      "bytes": 484,
+      "sha256": "262B1690D3A6F356200DEF0020FC9EF502FC56DE1A15C4FAC8958E4B32750581"
+    },
+    {
+      "path": "material-library/calibration/quartz-calibration.json",
+      "bytes": 425,
+      "sha256": "C50F202A58D2C28B256F2BD5855CF6DD0E7F84579654F738FBCC5D861B9A331E"
+    },
+    {
+      "path": "material-library/external-references/blendkit-recipes.json",
+      "bytes": 12331,
+      "sha256": "B45588277C647C58018DFCA4A4833C1CE7F503139A0D001FCFD609EE127AE3B5"
+    },
+    {
+      "path": "material-library/external-references/future-sources.json",
+      "bytes": 193,
+      "sha256": "A2C73E9A75CE20EF0605460F080744E23C0FE992D312089EC1398458D1741652"
+    },
+    {
+      "path": "material-library/external-references/khronos-conformance.json",
+      "bytes": 6080,
+      "sha256": "72C7695E112FF5A33BB24022DA4B72EF4E620300C8D985632315FCCE84A35D22"
+    },
+    {
+      "path": "material-library/external-references/polyhaven-lighting.json",
+      "bytes": 5403,
+      "sha256": "D625ABA661AC5709B819FA8354F17142A69DABD608F0920FCD7C00B30FCC9383"
+    },
+    {
+      "path": "material-library/external-references/polyhaven-source-policy.json",
+      "bytes": 453,
+      "sha256": "B5DBA7710FEA94DE575EF4B09705AD33D14426642F9127FD0738539F4E69FFEC"
+    },
+    {
+      "path": "material-library/external-references/real-reference-index.json",
+      "bytes": 4032,
+      "sha256": "7239864EA4BC40946456CB14B65420E1A169295123377CF2CD84CF0291735550"
+    },
+    {
+      "path": "material-library/families/beryl/aquamarine.json",
+      "bytes": 1032,
+      "sha256": "F977341DE3C5B762A9F8CB5F6862B2E33648700579AE09DFC5BB1DF6A1FBE2E9"
+    },
+    {
+      "path": "material-library/families/beryl/emerald.json",
+      "bytes": 1281,
+      "sha256": "48BE5C3766715AC96245CA22DCAC8F3EE26594623BC0F960FB1401F902FBD436"
+    },
+    {
+      "path": "material-library/families/beryl/family.json",
+      "bytes": 2886,
+      "sha256": "9618F6460C36347DE1A8D2379B6D9D33391C94D1F6B07DA57D1A096EEA51D82D"
+    },
+    {
+      "path": "material-library/families/corundum/family.json",
+      "bytes": 2784,
+      "sha256": "E0E468177B135DAC57E80273EF57C7F76D26D9C835D3CC093C963C2584CDFAF4"
+    },
+    {
+      "path": "material-library/families/corundum/ruby.json",
+      "bytes": 1065,
+      "sha256": "5ACEFE4A6A2914788CBA06FC71B6D45FA128E6177AC48EB1E9BB2F91C38BF524"
+    },
+    {
+      "path": "material-library/families/corundum/sapphire.json",
+      "bytes": 984,
+      "sha256": "FB8F322A028BE562182CDAA29CE21C062F9941F4CDC075EDE93C7022B6734A2A"
+    },
+    {
+      "path": "material-library/families/diamond/family.json",
+      "bytes": 2430,
+      "sha256": "080C1FC5C60C4D336CCD8C49320181CCA09DEB8892BBD5C8DD0F12212EB03CA3"
+    },
+    {
+      "path": "material-library/families/glass-synthetic-crystal/family.json",
+      "bytes": 1908,
+      "sha256": "24C87CA98D015DFADE845B323B0A1DFC1110A1061DCF936323B459A326EE1B42"
+    },
+    {
+      "path": "material-library/families/quartz/amethyst.json",
+      "bytes": 968,
+      "sha256": "53904F46DCC6661B2CC5B4DDCFC6A1A5190FAD708EAF449E646726FAF778B80A"
+    },
+    {
+      "path": "material-library/families/quartz/citrine.json",
+      "bytes": 2113,
+      "sha256": "5B748074675E58230D8B48E94668F5694EAD9CE36CA7F94EED5C7395299F0F09"
+    },
+    {
+      "path": "material-library/families/quartz/clear-quartz.json",
+      "bytes": 621,
+      "sha256": "A721B6DB5AD2EE64C88E1A927A310610D04552F1F42255C12D2AEE17E19C580E"
+    },
+    {
+      "path": "material-library/families/quartz/family.json",
+      "bytes": 2876,
+      "sha256": "1EABFA2DE288BA8F6971A41A513FA56E5AF7CE3A0C388B292ECBEA88EE71412A"
+    },
+    {
+      "path": "material-library/families/quartz/smoky-quartz.json",
+      "bytes": 1300,
+      "sha256": "DD85D70EF2F774E12B37F10CD8B55C1A94C3B11890E94375E411D96C8D05ACCE"
+    },
+    {
+      "path": "material-library/library-manifest.json",
+      "bytes": 1221,
+      "sha256": "0C7980AE5B8B41A38B5EEA62E419ACAE51CB596F499433DE01AF0AAEFDFEFEB4"
+    },
+    {
+      "path": "material-library/renderer-compatibility/direct-loop-experimental.json",
+      "bytes": 543,
+      "sha256": "F25BC26FE7F2148424BE725C9610CD34E3774D8ABAEF757DAD5F2A1CA77A07AF"
+    },
+    {
+      "path": "material-library/renderer-compatibility/stable-renderer.json",
+      "bytes": 516,
+      "sha256": "85B86B7C44F32047AF11C1F25E0677A91BFB8895DB66C55D01B7919673FF4D45"
+    },
+    {
+      "path": "material-library/schema/external-reference.schema.json",
+      "bytes": 353,
+      "sha256": "FE6226673B27A199B69C7E6B043434DE08112886014B114906BD2BDA43494E0B"
+    },
+    {
+      "path": "material-library/schema/lighting-environment.schema.json",
+      "bytes": 677,
+      "sha256": "7EFA268BA0338BF1F1081BF7B5D49C79991BBFF399B9B6044D45BB8180FC3D79"
+    },
+    {
+      "path": "material-library/schema/material-family.schema.json",
+      "bytes": 1130,
+      "sha256": "0BD89F8B30BCE9DA3BB66D8E890E68997EEFDD1CC7C5EB39C2D1F29523243EBF"
+    },
+    {
+      "path": "material-library/schema/material-subtype.schema.json",
+      "bytes": 595,
+      "sha256": "0D24B9DB81BDED6C1B53521ABB8182D2AD0C81FBF403568AA7D98013A611BB91"
+    },
+    {
+      "path": "material-library/tools/resolve-material-prior.mjs",
+      "bytes": 2008,
+      "sha256": "A71B4B5DFFAD746CF24B459D2BB9D838A2BC3C5A6B48B697DF9F2511E5B385D4"
+    },
+    {
+      "path": "material-library/tools/test-material-library.mjs",
+      "bytes": 5746,
+      "sha256": "0711D925908394072BB58F20618E568A46B2C75B01560F2DD65C947FD895E3CD"
+    },
+    {
+      "path": "material-library/tools/validate-external-assets.mjs",
+      "bytes": 857,
+      "sha256": "F34197F4E512677FFC7C2FC875B7753C64F48F7D86B83ED1F5DD098F4F26731E"
+    },
+    {
+      "path": "material-library/tools/validate-material-library.mjs",
+      "bytes": 3420,
+      "sha256": "FC4A2A277302BE3D7E0B827AED39073C5C7D35B990E3A2CB15A6BB32CE2A8E8E"
+    },
+    {
+      "path": "optimizer/README.md",
+      "bytes": 2305,
+      "sha256": "E493E732C4B6FB8369EDB2567867DA073E39FC27F8FF925F19EAA47C75AE2101"
+    },
+    {
+      "path": "optimizer/autonomous-optimizer-v1.mjs",
+      "bytes": 33080,
+      "sha256": "3D18D72D7F4028590134032B4BE6A48BC137F0C9BEAE052D37C83A7ACBBABF8A"
+    },
+    {
+      "path": "optimizer/optimizer-policy-v1.json",
+      "bytes": 1484,
+      "sha256": "95F3CE0549CD7B354C4C5CA4447A9F3B845B3DE82AF7DC5DACA6D3FCAABD1511"
+    },
+    {
+      "path": "optimizer/structural-mutation-contract-v1.mjs",
+      "bytes": 2574,
+      "sha256": "7737ABF544D0A5EA39595AF78329069D15FDA51EA35660264B7E29BA70F877D9"
+    },
+    {
+      "path": "optimizer/structural-mutation-policy-v1.json",
+      "bytes": 1264,
+      "sha256": "EFBBEDB708705B489460947EE90C8FED01D8A7C008B9164B1467673488B375E8"
+    },
+    {
+      "path": "optimizer/tests/autonomous-optimizer-v1.test.mjs",
+      "bytes": 23221,
+      "sha256": "B5C301DB669CDD5412252260640DE402055877FCD831387CE704F8AC0343F994"
+    },
+    {
+      "path": "optimizer/tests/fixtures/optimizer-fixtures.mjs",
+      "bytes": 4479,
+      "sha256": "0ABE58EF78CF871978D09DA4DB8BAFDD1DAE0AE2CC8CEF2759FC452DDAF5634E"
+    },
+    {
+      "path": "schemas/material-spec.schema.json",
+      "bytes": 5812,
+      "sha256": "2F43CA45DB94C31C3ED5D738FD5DAC3D6A7ED53FC134C4E6889A1EEFA27B5E31"
+    },
+    {
+      "path": "schemas/reference-render-evaluation.schema.json",
+      "bytes": 9610,
+      "sha256": "01D2180F22A0F135622292685F00C33A4124E6689D13D1CF15936EBFE9ED4C7C"
+    },
+    {
+      "path": "schemas/structural-identity-v1-1.schema.json",
+      "bytes": 5697,
+      "sha256": "0E8ECB6D84D9E2790A92C91CF3D0DBF0AC8C6DD97371F003CE83CDE3427D47AF"
+    },
+    {
+      "path": "schemas/structural-identity-v1.schema.json",
+      "bytes": 2750,
+      "sha256": "D5F790E7C638B29313B02AA7116EA1E81902D1736AAD35D5341B025B75DA829D"
+    },
+    {
+      "path": "structural/fixtures/generic-irregular-cluster-system-v1-1.json",
+      "bytes": 4948,
+      "sha256": "ECC4C62C55D16CA43DF7801928E2253E1701A879697A58D5ECD7E34E78484C90"
+    },
+    {
+      "path": "structural/fixtures/sakura-agate-research-proof-v1-1.json",
+      "bytes": 5018,
+      "sha256": "138F15A04D5D6219C3D86E42625A8064D2B4584972CDC3E44B266C98C0728709"
+    },
+    {
+      "path": "structural/instance-realization-quality-v1.mjs",
+      "bytes": 6360,
+      "sha256": "D8004ED2C2DCE8BB4113059426C7CD21E2738CDE1F9C424AB75B38F369BA1D93"
+    },
+    {
+      "path": "structural/primitive-registry-v1-1.json",
+      "bytes": 1116,
+      "sha256": "AABD761386F617345AFE1C7F7D07F568BDEB235AEE90ACCC7FDA28D07CD70FD2"
+    },
+    {
+      "path": "structural/profiles/blue-lace-agate-v1.json",
+      "bytes": 4468,
+      "sha256": "81724FF22DE3FEAB621B27E793178365B84168338AD3DEE600194761F1B1BE75"
+    },
+    {
+      "path": "structural/profiles/releases/blue-lace-agate-real-calibrated-v1-320870848895f806/candidate-spec.json",
+      "bytes": 7593,
+      "sha256": "ED210E485B7E8E8F17401FE152E8437A1630E93DCD42819F9C50DCA08704CC94"
+    },
+    {
+      "path": "structural/profiles/releases/blue-lace-agate-real-calibrated-v1-320870848895f806/profile-manifest.json",
+      "bytes": 4733,
+      "sha256": "FE36B683B9B12867AC40306554BD85AF33519FFE229E5330D3AF2A4251115C7A"
+    },
+    {
+      "path": "structural/profiles/sakura-agate-v1.json",
+      "bytes": 3934,
+      "sha256": "7718AB01CDEDCCA38F7A263FC81776017D7DCC03C5710718F01466A8B59E1345"
+    },
+    {
+      "path": "structural/profiles/selectors/blue-lace-agate-active.json",
+      "bytes": 567,
+      "sha256": "E17DE6D28B1D1CFA9DBBBCCB573F07AF940FA20B9F0D405555F1FFF9045742A2"
+    },
+    {
+      "path": "structural/relational-capability-registry.mjs",
+      "bytes": 4199,
+      "sha256": "AD72723442729BE1AC005410A7752F58458DF9A7F45AEEDA143CE6434183E0D5"
+    },
+    {
+      "path": "structural/relational-depth-localization-v1.mjs",
+      "bytes": 2438,
+      "sha256": "5ED92091B43EB250A08BBD5C483404966BF533202EE92E55D6A55AE6221361D1"
+    },
+    {
+      "path": "structural/relational-material-runtime-v1.mjs",
+      "bytes": 10475,
+      "sha256": "A5E712992AF390F429127696E12AA32300547C57041B2539C86FC213AEA3637F"
+    },
+    {
+      "path": "structural/relational-presentation-binding-v1.mjs",
+      "bytes": 1845,
+      "sha256": "FC56F5CBE86E038F8E58A0F556661194859FFF611CA6EFC44895EE08C18F7DCA"
+    },
+    {
+      "path": "structural/relational-presentation-v1.mjs",
+      "bytes": 13242,
+      "sha256": "A66B9852868C341272C73340C0C2ED8BF3081704DB09C9DA0EF5A259D21ABE63"
+    },
+    {
+      "path": "structural/relational-transport-v1.mjs",
+      "bytes": 8670,
+      "sha256": "26C010F72D65BCEB0EEB3DC7ECFEAF76C8671D0C30E213D14952D2E267114B06"
+    },
+    {
+      "path": "structural/sakura-latent-object-space-placement-adapter-r1.mjs",
+      "bytes": 12206,
+      "sha256": "6732DB4847A5C98C0056500D9731E2A86F7B1D0E5A25DFF310F76A782214BFB7"
+    },
+    {
+      "path": "structural/structural-identity-dispatch.mjs",
+      "bytes": 7072,
+      "sha256": "833D9D69775A1BE4F19FE1FD67ED49FABC4E02FC40F646C9CE6908117B680314"
+    },
+    {
+      "path": "structural/structural-identity-v1-1.mjs",
+      "bytes": 71415,
+      "sha256": "A4937CC47600500C5F293A20A0F0789A027D00A0066F940475F9227FC4C334EB"
+    },
+    {
+      "path": "structural/structural-identity-v1.mjs",
+      "bytes": 28285,
+      "sha256": "823D855F139E6199E3B67E5F836AF885F5E20A96BF7A80E60DF5048BC26DB218"
+    },
+    {
+      "path": "structural/tests/relational-path-v1-render.test.mjs",
+      "bytes": 2660,
+      "sha256": "1AC8043E70570441D520E47688B2F43E559E896FFCF3996305DF38A1809CC8C3"
+    },
+    {
+      "path": "structural/tests/relational-path-v1.test.mjs",
+      "bytes": 6157,
+      "sha256": "84264819FD9EA30C25FE54C7456ED69EADDB223B7FEB4680DD898148C6093438"
+    },
+    {
+      "path": "structural/tests/relational-runtime-closure-v1.test.mjs",
+      "bytes": 5228,
+      "sha256": "B4E5601498EBCA19D94950CB4AC81EA2DED58E1B300170C837B76BA449B000A8"
+    },
+    {
+      "path": "structural/tests/structural-identity-v1-1.test.mjs",
+      "bytes": 13646,
+      "sha256": "4103DED8790D5B42136527E7D24D046F315181F58E271B86A6BDC82487A70EE0"
+    },
+    {
+      "path": "structural/tests/structural-identity-v1.test.mjs",
+      "bytes": 7012,
+      "sha256": "B4A9C77DD492100F93417621307C073C08E5727D9D8A164EB5740055E3A49F36"
+    }
+  ],
+  "semanticFingerprint": "0BE545B708F48334534D27E7FB148713ECB6F58801B9A8B745C7D036BFD63210"
+}

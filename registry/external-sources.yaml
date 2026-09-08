@@ -1,0 +1,16 @@
+schema_version: "1.0.0"
+registry_id: "registry:external-sources"
+object_revision: "1"
+authority_role: "EXTERNAL_SOURCE_DISCOVERY"
+sources:
+  - source_id: "external-source:barcelona-bear-4-glb:55fc42968ed3"
+    path: "knowledge/external/barcelona-bear-4-glb/source.yaml"
+    observations_path: "knowledge/external/barcelona-bear-4-glb/observations.yaml"
+    source_type: "EXTERNAL_COMPARATIVE_GLB_PRESET_BUNDLE"
+    sha256: "55FC42968ED35CF27654112E91A2D9E4BEB990DBC8A1C6DB5E8D0F78681B6CC2"
+    verification_state: "VERIFIED"
+    authority_role: "EXTERNAL_COMPARATIVE_SOURCE"
+    golden_authority: false
+    family_parameter_authority: false
+    engine_range_authority: false
+

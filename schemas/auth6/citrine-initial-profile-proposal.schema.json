@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:citrine-initial-profile-proposal:1.0.0",
+  "type": "object",
+  "required": [
+    "schema_version", "proposal_id", "object_kind", "case_id", "status", "authority_flags",
+    "family", "stable_profile_field_set", "field_provenance_refs", "target_engine_behavior_ref",
+    "schema_compatibility", "candidate_override_whitelist", "forbidden_override_fields",
+    "run_context_exclusions", "presentation_field_exclusions", "known_stale_fields",
+    "known_conflicts", "missing_required_fields", "revalidation_requirements",
+    "human_decisions_required", "creation_authority", "activation_authority"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "proposal_id": {"pattern": "^proposal:"},
+    "object_kind": {"const": "NON_AUTHORITATIVE_PROFILE_PROPOSAL"},
+    "case_id": {"const": "case:citrine"},
+    "status": {"const": "NONAUTHORITATIVE_DRAFT"},
+    "authority_flags": {"type": "object"},
+    "family": {"type": "object"},
+    "stable_profile_field_set": {"type": "object"},
+    "field_provenance_refs": {"type": "array", "minItems": 1},
+    "target_engine_behavior_ref": {"type": "string"},
+    "schema_compatibility": {"type": "object"},
+    "candidate_override_whitelist": {"type": "array"},
+    "forbidden_override_fields": {"type": "array", "minItems": 1},
+    "run_context_exclusions": {"type": "array", "minItems": 1},
+    "presentation_field_exclusions": {"type": "array", "minItems": 1},
+    "known_stale_fields": {"type": "array"},
+    "known_conflicts": {"type": "array"},
+    "missing_required_fields": {"type": "array"},
+    "revalidation_requirements": {"type": "array"},
+    "human_decisions_required": {"type": "array"},
+    "creation_authority": {"const": "NONE"},
+    "activation_authority": {"const": "NONE"}
+  },
+  "additionalProperties": false
+}

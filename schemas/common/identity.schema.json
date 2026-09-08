@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:identity:1.0.0",
+  "title": "Logical identity",
+  "$defs": {
+    "logical_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9._-]*:[a-z0-9][a-z0-9._:-]*$"
+    },
+    "verification_state": {
+      "enum": ["VERIFIED", "PARTIALLY_VERIFIED", "UNVERIFIED", "UNKNOWN", "NOT_RESOLVED", "NOT_APPLICABLE"]
+    }
+  },
+  "type": "object",
+  "required": ["schema_version", "object_id", "object_revision"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "object_id": {"$ref": "#/$defs/logical_id"},
+    "object_revision": {"type": "string"}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,67 @@
+schema_version: "1.0.0"
+registry_id: "registry:schemas:1.0.0"
+object_revision: "11"
+authority_role: "SCHEMA_DISCOVERY"
+schemas:
+  - {id: "schema:identity:1.0.0", path: "schemas/common/identity.schema.json"}
+  - {id: "schema:reference:1.0.0", path: "schemas/common/reference.schema.json"}
+  - {id: "schema:artifact-ref:1.0.0", path: "schemas/common/artifact-ref.schema.json"}
+  - {id: "schema:state-axes:1.0.0", path: "schemas/common/state-axes.schema.json"}
+  - {id: "schema:workspace-manifest:1.0.0", path: "schemas/manifests/workspace-manifest.schema.json"}
+  - {id: "schema:skill-manifest:1.0.0", path: "schemas/manifests/skill-manifest.schema.json"}
+  - {id: "schema:case-manifest:1.0.0", path: "schemas/cases/case-manifest.schema.json"}
+  - {id: "schema:candidate:1.0.0", path: "schemas/cases/candidate.schema.json"}
+  - {id: "schema:profile:1.0.0", path: "schemas/cases/profile.schema.json"}
+  - {id: "schema:profile:1.1.0", path: "schemas/cases/profile.v1.1.0.schema.json"}
+  - {id: "schema:profile-registry-entry:1.0.0", path: "schemas/cases/profile-registry-entry.schema.json"}
+  - {id: "schema:knowledge-unit:1.0.0", path: "schemas/knowledge/knowledge-unit.schema.v1.0.0.json"}
+  - {id: "schema:knowledge-unit:1.1.0", path: "schemas/knowledge/knowledge-unit.schema.json"}
+  - {id: "schema:family-package:1.0.0", path: "schemas/knowledge/family-package.schema.json"}
+  - {id: "schema:failure-package:1.0.0", path: "schemas/knowledge/failure-package.schema.json"}
+  - {id: "schema:case-finding:1.0.0", path: "schemas/knowledge/case-finding.schema.json"}
+  - {id: "schema:capability-record:1.0.0", path: "schemas/engine/capability-record.schema.v1.0.0.json"}
+  - {id: "schema:capability-record:1.1.0", path: "schemas/engine/capability-record.schema.json"}
+  - {id: "schema:local-workspace-resolution:1.0.0", path: "schemas/engine/local-workspace-resolution.schema.json"}
+  - {id: "schema:engine-source-map:1.0.0", path: "schemas/engine/engine-source-map.schema.json"}
+  - {id: "schema:engine-behavior-snapshot-set:1.0.0", path: "schemas/engine/engine-behavior-snapshot-set.schema.json"}
+  - {id: "schema:capability-source-map:1.0.0", path: "schemas/engine/capability-source-map.schema.json"}
+  - {id: "schema:operation-inventory:1.0.0", path: "schemas/engine/operation-inventory.schema.json"}
+  - {id: "schema:engine-integration-status:1.0.0", path: "schemas/engine/engine-integration-status.schema.json"}
+  - {id: "schema:geometry-audit-output:1.0.0", path: "schemas/engine/geometry-audit-output.schema.json"}
+  - {id: "schema:tool-definition:1.0.0", path: "schemas/tools/tool-definition.schema.json"}
+  - {id: "schema:tool-execution-request:1.0.0", path: "schemas/tools/tool-execution-request.schema.json"}
+  - {id: "schema:glb-material-metadata-result:1.0.0", path: "schemas/tools/glb-material-metadata-result.schema.json"}
+  - {id: "schema:repeated-constant-result:1.0.0", path: "schemas/tools/repeated-constant-result.schema.json"}
+  - {id: "schema:representation-classification-result:1.0.0", path: "schemas/tools/representation-classification-result.schema.json"}
+  - {id: "schema:inclusion-representation-result:1.0.0", path: "schemas/tools/inclusion-representation-result.schema.json"}
+  - {id: "schema:mutation-request:1.0.0", path: "schemas/mutation/mutation-request.schema.json"}
+  - {id: "schema:mutation-plan:1.0.0", path: "schemas/mutation/mutation-plan.schema.json"}
+  - {id: "schema:mutation-diff:1.0.0", path: "schemas/mutation/mutation-diff.schema.json"}
+  - {id: "schema:write-set:1.0.0", path: "schemas/mutation/write-set.schema.json"}
+  - {id: "schema:rollback-plan:1.0.0", path: "schemas/mutation/rollback-plan.schema.json"}
+  - {id: "schema:mutation-preflight-result:1.0.0", path: "schemas/mutation/mutation-preflight-result.schema.json"}
+  - {id: "schema:mutation-request:1.1.0", path: "schemas/mutation/mutation-request.v1.1.0.schema.json"}
+  - {id: "schema:mutation-plan:1.1.0", path: "schemas/mutation/mutation-plan.v1.1.0.schema.json"}
+  - {id: "schema:mutation-diff:1.1.0", path: "schemas/mutation/mutation-diff.v1.1.0.schema.json"}
+  - {id: "schema:write-set:1.1.0", path: "schemas/mutation/write-set.v1.1.0.schema.json"}
+  - {id: "schema:rollback-plan:1.1.0", path: "schemas/mutation/rollback-plan.v1.1.0.schema.json"}
+  - {id: "schema:mutation-result:1.0.0", path: "schemas/mutation/mutation-result.schema.json"}
+  - {id: "schema:mutation-preflight-result:1.1.0", path: "schemas/mutation/mutation-preflight-result.v1.1.0.schema.json"}
+  - {id: "schema:safe-mutator-execution-request:1.0.0", path: "schemas/mutation/safe-mutator-execution-request.schema.json"}
+  - {id: "schema:safe-mutator-invocation-plan:1.0.0", path: "schemas/mutation/safe-mutator-invocation-plan.schema.json"}
+  - {id: "schema:safe-mutator-pilot-result:1.0.0", path: "schemas/mutation/safe-mutator-pilot-result.schema.json"}
+  - {id: "schema:tool-result:1.0.0", path: "schemas/evidence/tool-result.schema.json"}
+  - {id: "schema:evidence:1.0.0", path: "schemas/evidence/evidence.schema.json"}
+  - {id: "schema:measurement-protocol:1.0.0", path: "schemas/qa/measurement-protocol.schema.json"}
+  - {id: "schema:qa-package:1.0.0", path: "schemas/qa/qa-package.schema.json"}
+  - {id: "schema:certified-snapshot:1.0.0", path: "schemas/certification/certified-snapshot.schema.json"}
+  - {id: "schema:golden-manifest:1.0.0", path: "schemas/golden/golden-manifest.schema.json"}
+  - {id: "schema:golden-coverage:1.0.0", path: "schemas/golden/golden-coverage.schema.v1.0.0.json"}
+  - {id: "schema:golden-coverage:1.1.0", path: "schemas/golden/golden-coverage.schema.json"}
+  - {id: "schema:eval-case:1.0.0", path: "schemas/eval/eval-case.schema.json"}
+  - {id: "schema:real-case-execution-request:1.0.0", path: "schemas/auth6/real-case-execution-request.schema.json"}
+  - {id: "schema:real-case-target-selection:1.0.0", path: "schemas/auth6/real-case-target-selection.schema.json"}
+  - {id: "schema:auth6-preflight-result:1.0.0", path: "schemas/auth6/auth6-preflight-result.schema.json"}
+  - {id: "schema:reference-analysis-input:1.0.0", path: "schemas/reference-analysis/reference-analysis-input.v1.schema.json"}
+  - {id: "schema:reference-analysis-output:1.0.0", path: "schemas/reference-analysis/reference-analysis-output.v1.schema.json"}
+  - {id: "schema:reference-analysis-provider-semantic-output:1.0.0", path: "schemas/reference-analysis/provider-semantic-output.v1.schema.json"}

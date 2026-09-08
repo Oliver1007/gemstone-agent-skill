@@ -1,0 +1,38 @@
+schema_version: "1.1.0"
+knowledge_id: "knowledge:m01-transparent-crystal:qa"
+package_id: "knowledge-package:m01-transparent-crystal:qa"
+object_revision: "2"
+type: "QA"
+authority_role: "SCOPED_QA_SUMMARY"
+claim: "M01 QA requires independent technical/physical, reference/visual, engine-capability, and multi-view-stability gates for the exact QA target."
+claim_state: "SUPPORTED"
+family_maturity_dependency:
+  family_ref: "family:m01-transparent-crystal"
+  observed_maturity: "PROTOTYPE"
+scope:
+  family_ref: "family:m01-transparent-crystal"
+  mechanism_scope: ["transparent_host", "refraction", "absorption", "optical_path"]
+provenance:
+  - source: "contract:step-8-evaluation-acceptance"
+    authority: "ACCEPTED"
+gates:
+  - gate_id: "gate:technical-physical"
+    independent: true
+  - gate_id: "gate:reference-visual"
+    independent: true
+  - gate_id: "gate:engine-capability"
+    independent: true
+  - gate_id: "gate:multi-view-stability"
+    independent: true
+requirements:
+  - "exact Candidate/Snapshot/Engine/Protocol identity"
+  - "unit-aware physical values"
+  - "Family-specific failure checks"
+  - "P9 read-only execution"
+does_not_validate:
+  - "an untested Feature Module"
+  - "a different Engine Behavior"
+  - "a Candidate other than the exact QA target"
+engine_dependency:
+  verification_state: "UNVERIFIED"
+loading_level: "DECISION"

@@ -1,0 +1,24 @@
+schema_version: "1.1.0"
+knowledge_id: "knowledge:global:reference-uncertainty"
+object_revision: "2"
+type: "GLOBAL_RULE"
+claim: "A Reference is Evidence affected by capture and presentation uncertainty; it is not absolute physical truth."
+claim_state: "SUPPORTED"
+governance_origin: "ACCEPTED_FROZEN_CONSTITUTION"
+scope:
+  mechanisms: ["reference_interpretation"]
+  applies_to: ["all_gemstone_material_cases"]
+mechanism:
+  observations: ["exposure", "white_balance", "camera_response", "lighting", "scale", "post_processing", "compression", "retouching"]
+parameter_regime: "NOT_APPLICABLE"
+geometry_assumptions: ["reference_geometry_may_be_ambiguous"]
+environment_assumptions: ["capture_environment_may_be_unknown"]
+engine_dependency:
+  required: false
+provenance:
+  - source: "constitution:C10"
+    authority: "ACCEPTED_FROZEN"
+exceptions: []
+does_not_validate:
+  - "a physical material inference without discriminating Evidence"
+loading_level: "SUMMARY"

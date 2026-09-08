@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:inclusion-representation-result:1.0.0",
+  "type": "object",
+  "required": ["explicit_inclusion_geometry", "explicit_inclusion_volume_field", "surface_contributions", "bounded_conclusion", "authority_boundary"],
+  "properties": {
+    "explicit_inclusion_geometry": {"enum": ["DISCOVERED", "NOT_DISCOVERED"]},
+    "explicit_inclusion_volume_field": {"enum": ["DISCOVERED", "NOT_DISCOVERED"]},
+    "surface_contributions": {"type": "object"},
+    "bounded_conclusion": {"type": "string"},
+    "authority_boundary": {"const": "SOURCE_STRUCTURE_ONLY_NO_PHYSICAL_CORRECTNESS_JUDGMENT"}
+  },
+  "additionalProperties": true
+}

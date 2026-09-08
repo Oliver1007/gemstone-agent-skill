@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:tool-profile-remap:1.0.0",
+  "type": "object",
+  "required": ["schema_version", "remap_id", "case_id", "tool_identity", "old_projection_count", "mappings", "corrected_metrics"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "remap_id": {"type": "string"},
+    "case_id": {"const": "case:citrine"},
+    "tool_identity": {"type": "object"},
+    "old_projection_count": {"const": 14},
+    "mappings": {"type": "array", "minItems": 14, "maxItems": 14, "items": {"type": "object", "required": ["old_tool_field", "tool_role", "tool_required", "tool_default", "profile_semantic_match", "profile_class", "new_profile_role", "provenance_status", "human_decision_still_needed", "engine_revalidation_still_needed", "range_still_relevant", "result"], "additionalProperties": false}},
+    "corrected_metrics": {"type": "object"}
+  },
+  "additionalProperties": false
+}

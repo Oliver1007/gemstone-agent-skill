@@ -1,0 +1,20 @@
+schema_version: "1.0.0"
+registry_id: "registry:cases"
+object_revision: "1"
+authority_role: "DISCOVERY_AND_CURRENT_NAVIGATION"
+entries:
+  - case_id: "case:smoky-quartz"
+    role: "GOLDEN_SOURCE"
+    manifest: "golden/smoky-quartz/manifest.yaml"
+    current_candidate_ref: null
+    verification_state: "PARTIALLY_VERIFIED"
+  - case_id: "case:citrine"
+    role: "ACTIVE_GENERALIZATION_CASE"
+    manifest: "cases/active/citrine/manifest.yaml"
+    current_candidate_ref: null
+    verification_state: "PARTIALLY_VERIFIED"
+  - case_id: "case:synthetic-new-m01"
+    role: "SYNTHETIC_FIXTURE"
+    manifest: "eval/fixtures/new-m01.yaml"
+    current_candidate_ref: null
+    verification_state: "SYNTHETIC"

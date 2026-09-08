@@ -1,0 +1,11 @@
+{
+  "status": "REQUIRED_AND_DOCUMENTED",
+  "objectResolver": {
+    "resolveCase": "case_ref => actual record with case_ref/provenance_ref",
+    "resolveCandidate": "candidate_ref => matching case_ref, immutable=true, artifact locator/sha256/bytes",
+    "resolveProfile": "profile_ref => matching case_ref, committed=true, content_sha256"
+  },
+  "fullRecordsBound": true,
+  "connectedRealResolver": false,
+  "syntacticIdAloneInsufficient": true
+}

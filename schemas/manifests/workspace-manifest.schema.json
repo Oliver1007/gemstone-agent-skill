@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:workspace-manifest:1.0.0",
+  "type": "object",
+  "required": ["schema_version", "workspace_id", "object_revision", "role", "write_boundary"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "workspace_id": {"type": "string"},
+    "object_revision": {"type": "string"},
+    "role": {"const": "SKILL_GOVERNANCE_WORKSPACE"},
+    "write_boundary": {"type": "object", "required": ["allowed", "forbidden"]}
+  },
+  "additionalProperties": true
+}

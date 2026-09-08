@@ -1,0 +1,12 @@
+schema_version: "1.0.0"
+registry_id: "registry:engine-behaviors"
+object_revision: "3"
+authority_role: "DISCOVERY_NOT_ENGINE_TRUTH"
+source: "integration/engine/behavior-snapshots.yaml"
+additional_sources: ["integration/engine/behavior-snapshots.generic-mutator-v1.yaml", "integration/engine/behavior-snapshots.generic-mutator-v1-topology-r1.yaml"]
+entries:
+  - {behavior_id: "engine-behavior:current-source:54e31b0b3e80", identity_target: "CURRENT_ENGINE", verification_state: "RESOLVED_FROM_SOURCE", fingerprint: "54E31B0B3E80753B4507CDB25717CC4BF847B123988D0EE299391051B90530F8"}
+  - {behavior_id: "engine-behavior:smoky-reference-final-source:9c1b90dad5fe", identity_target: "SMOKY_HISTORICAL_ENGINE", verification_state: "RESOLVED_FROM_ARCHIVED_SOURCE", fingerprint: "9C1B90DAD5FE799163A5698A88D708D9B97AE79CB80DC934401A7D27D70BAA04"}
+  - {behavior_id: "engine-behavior:citrine-phase1.6.2r-source-partial:dd6f8db3f981", identity_target: "CITRINE_RELEVANT_ENGINE", verification_state: "PARTIALLY_RESOLVED", fingerprint: "DD6F8DB3F981307766D786EE7021C251F9F509B7424415EC2F3998438C6A7065"}
+  - {behavior_id: "engine-behavior:generic-mutator-v1:e01d3ba840c8", identity_target: "GENERIC_MUTATOR_INTERFACE_V1", verification_state: "RESOLVED_FROM_SOURCE_CONTRACT_ONLY", fingerprint: "E01D3BA840C8E7A9674901C29E83DAFC6FEB3A3FD908889662D35979211EFB4D"}
+  - {behavior_id: "engine-behavior:generic-mutator-v1-topology-r1:6c5c03ef0022", identity_target: "GENERIC_MUTATOR_INTERFACE_V1_TOPOLOGY_REPAIR_R1", verification_state: "STAGE_A_STATICALLY_REQUALIFIED", fingerprint: "6C5C03EF00220FAE70F32C0A2CED37EAE583BFEB8AEC043B662A8DB95F1D9BE8"}

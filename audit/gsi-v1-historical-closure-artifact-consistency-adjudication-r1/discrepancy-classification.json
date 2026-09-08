@@ -1,0 +1,5 @@
+{
+  "class": "A_VALIDATION_SUMMARY_TOP_LEVEL_AGGREGATION_ERROR",
+  "reason": "First-write-only self-presence condition; all required frozen supporting records pass.",
+  "notMajorityVote": true
+}

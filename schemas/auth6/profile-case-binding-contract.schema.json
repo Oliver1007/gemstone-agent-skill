@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:profile-case-binding-contract:1.1.0",
+  "type": "object",
+  "required": [
+    "schema_version", "contract_id", "version", "supersedes", "contract_role",
+    "case_id", "profile_ref", "profile_version", "profile_hash", "profile_state",
+    "engine_behavior_ref", "binding_authority", "binding_status",
+    "candidate_inheritance", "override_policy", "run_context_relation",
+    "immutability", "pointer_update_rule", "activation_rule", "drift_policy",
+    "error_codes", "audit_requirements", "authority_ceiling"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.1.0"},
+    "contract_id": {"type": "string", "minLength": 1},
+    "version": {"const": "1.1.0"},
+    "supersedes": {"type": "string", "minLength": 1},
+    "contract_role": {"const": "VALIDATION_AND_PROPOSAL_ONLY_NOT_BINDING_AUTHORITY"},
+    "case_id": {"const": "case:citrine"},
+    "profile_ref": {"type": ["string", "null"]},
+    "profile_version": {"type": ["string", "null"]},
+    "profile_hash": {"anyOf": [{"type": "null"}, {"type": "string", "pattern": "^[A-F0-9]{64}$"}]},
+    "profile_state": {"enum": ["CURRENT", "STALE", "SUPERSEDED", "UNRESOLVED", "NONE"]},
+    "engine_behavior_ref": {"type": ["string", "null"]},
+    "binding_authority": {"type": "object"},
+    "binding_status": {"enum": ["BOUND_AND_CURRENT", "BOUND_BUT_STALE", "BOUND_BUT_ENGINE_INCOMPATIBLE", "LEGACY_IMPLICIT_BINDING", "MULTIPLE_BINDINGS", "NO_BINDING", "UNRESOLVED"]},
+    "candidate_inheritance": {"type": "object"},
+    "override_policy": {"type": "object"},
+    "run_context_relation": {"type": "object"},
+    "immutability": {"type": "object"},
+    "pointer_update_rule": {"const": "DENIED_REQUIRES_SEPARATE_EXPLICIT_HUMAN_AUTHORITY"},
+    "activation_rule": {"const": "DENIED_REQUIRES_SEPARATE_EXPLICIT_HUMAN_AUTHORITY"},
+    "drift_policy": {"type": "object"},
+    "error_codes": {"type": "array", "minItems": 15, "uniqueItems": true},
+    "audit_requirements": {"type": "array", "minItems": 1, "uniqueItems": true},
+    "authority_ceiling": {"const": "AUTH-5_MAINTENANCE_CONTRACT_ONLY_NO_AUTH6_EXECUTION"}
+  },
+  "additionalProperties": false
+}

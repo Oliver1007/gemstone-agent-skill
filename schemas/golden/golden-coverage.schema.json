@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:golden-coverage:1.1.0",
+  "type": "object",
+  "required": ["schema_version", "coverage_id", "object_revision", "golden_ref", "coverage_state", "validates", "does_not_validate", "mechanism_scope", "parameter_regime"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "coverage_id": {"type": "string"},
+    "object_revision": {"type": "string"},
+    "golden_ref": {"type": "string"},
+    "coverage_state": {"enum": ["DRAFT", "SOURCE_BOUNDED", "VALIDATED", "REVALIDATION_REQUIRED", "DEPRECATED"]},
+    "validates": {"type": "array", "minItems": 1},
+    "does_not_validate": {"type": "array", "minItems": 1},
+    "mechanism_scope": {"type": "array", "minItems": 1},
+    "parameter_regime": {"type": "object"}
+  },
+  "additionalProperties": true
+}

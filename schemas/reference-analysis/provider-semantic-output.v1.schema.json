@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema:reference-analysis-provider-semantic-output:1.0.0",
+  "name": "gemstone_reference_analysis_v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["analysis_status", "reference_set_ref", "reference_asset_refs", "analysis_scope", "direct_observations", "supported_inferences", "working_hypotheses", "unresolved_ambiguities", "camera_cues", "lighting_environment_cues", "geometry_cues", "material_body_cues", "surface_cues", "background_cues", "color_cues", "transparency_depth_cues", "hole_cavity_cues", "internal_structure_cues", "limitations", "confidence_summary", "claim_scope"],
+  "properties": {
+    "analysis_status": {"enum": ["ANALYSIS_COMPLETE", "ANALYSIS_COMPLETE_WITH_LIMITATIONS"]},
+    "reference_set_ref": {"type": "string", "minLength": 1},
+    "reference_asset_refs": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "analysis_scope": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"enum": ["MATERIAL_BODY", "SURFACE", "GEOMETRY", "HOLE_CAVITY", "CAMERA", "LIGHTING", "ENVIRONMENT_REFLECTION", "BACKGROUND", "POST_TONEMAPPING", "TRANSPARENCY_DEPTH", "INTERNAL_STRUCTURE"]}},
+    "direct_observations": {"type": "array", "items": {"$ref": "#/$defs/directObservation"}},
+    "supported_inferences": {"type": "array", "items": {"$ref": "#/$defs/supportedInference"}},
+    "working_hypotheses": {"type": "array", "items": {"$ref": "#/$defs/workingHypothesis"}},
+    "unresolved_ambiguities": {"type": "array", "items": {"$ref": "#/$defs/unresolved"}},
+    "camera_cues": {"type": "array", "items": {"$ref": "#/$defs/cue"}},
+    "lighting_environment_cues": {"type": "array", "items": {"$ref": "#/$defs/cue"}},
+    "geometry_cues": {"type": "array", "items": {"$ref": "#/$defs/cue"}},
+    "material_body_cues": {"type": "array", "items": {"$ref": "#/$defs/cue"}},
+    "surface_cues": {"type": "array", "items": {"$ref": "#/$defs/cue"}},
+    "background_cues": {"type": "array", "items": {"$ref": "#/$defs/cue"}},
+    "color_cues": {"type": "array", "items": {"$ref": "#/$defs/cue"}},
+    "transparency_depth_cues": {"type": "array", "items": {"$ref": "#/$defs/cue"}},
+    "hole_cavity_cues": {"type": "array", "items": {"$ref": "#/$defs/cue"}},
+    "internal_structure_cues": {"type": "array", "items": {"$ref": "#/$defs/cue"}},
+    "limitations": {"type": "array", "items": {"type": "string", "minLength": 1, "maxLength": 500}},
+    "confidence_summary": {"type": "object", "additionalProperties": false, "required": ["level", "basis"], "properties": {"level": {"enum": ["LOW", "MEDIUM", "HIGH"]}, "basis": {"type": "string", "minLength": 1, "maxLength": 500}}},
+    "claim_scope": {"type": "object", "additionalProperties": false, "required": ["scope_type", "reference_refs"], "properties": {"scope_type": {"enum": ["REFERENCE_ASSET", "REFERENCE_SET"]}, "reference_refs": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}}}
+  },
+  "$defs": {
+    "confidence": {"enum": ["LOW", "MEDIUM", "HIGH"]},
+    "attribution": {"enum": ["MATERIAL_BODY", "SURFACE", "GEOMETRY", "HOLE_CAVITY", "CAMERA", "LIGHTING", "ENVIRONMENT_REFLECTION", "BACKGROUND", "POST_TONEMAPPING", "UNKNOWN_COMBINED"]},
+    "directObservation": {"type": "object", "additionalProperties": false, "required": ["claim_id", "claim_class", "statement", "reference_refs", "attributions", "confidence"], "properties": {"claim_id": {"type": "string", "pattern": "^obs-[0-9]{3}$"}, "claim_class": {"const": "DIRECT_OBSERVATION"}, "statement": {"type": "string", "minLength": 1, "maxLength": 800}, "reference_refs": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}, "attributions": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/attribution"}}, "confidence": {"$ref": "#/$defs/confidence"}}},
+    "supportedInference": {"type": "object", "additionalProperties": false, "required": ["claim_id", "claim_class", "statement", "reference_refs", "attributions", "confidence", "supporting_observation_ids", "alternative_explanation"], "properties": {"claim_id": {"type": "string", "pattern": "^inf-[0-9]{3}$"}, "claim_class": {"const": "SUPPORTED_INFERENCE"}, "statement": {"type": "string", "minLength": 1, "maxLength": 800}, "reference_refs": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}, "attributions": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/attribution"}}, "confidence": {"$ref": "#/$defs/confidence"}, "supporting_observation_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "pattern": "^obs-[0-9]{3}$"}}, "alternative_explanation": {"type": "string", "minLength": 1, "maxLength": 500}}},
+    "workingHypothesis": {"type": "object", "additionalProperties": false, "required": ["claim_id", "claim_class", "statement", "reference_refs", "attributions", "confidence"], "properties": {"claim_id": {"type": "string", "pattern": "^hyp-[0-9]{3}$"}, "claim_class": {"const": "WORKING_HYPOTHESIS"}, "statement": {"type": "string", "minLength": 1, "maxLength": 800}, "reference_refs": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}, "attributions": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/attribution"}}, "confidence": {"$ref": "#/$defs/confidence"}}},
+    "unresolved": {"type": "object", "additionalProperties": false, "required": ["claim_id", "claim_class", "statement", "reference_refs", "attributions", "confidence", "plausible_explanations"], "properties": {"claim_id": {"type": "string", "pattern": "^amb-[0-9]{3}$"}, "claim_class": {"const": "UNRESOLVED_AMBIGUOUS"}, "statement": {"type": "string", "minLength": 1, "maxLength": 800}, "reference_refs": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}, "attributions": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/attribution"}}, "confidence": {"$ref": "#/$defs/confidence"}, "plausible_explanations": {"type": "array", "minItems": 2, "items": {"type": "string", "minLength": 1, "maxLength": 300}}}},
+    "cue": {"type": "object", "additionalProperties": false, "required": ["cue_id", "description", "classification", "reference_refs", "attributions", "confidence"], "properties": {"cue_id": {"type": "string", "pattern": "^cue-[a-z0-9-]+$"}, "description": {"type": "string", "minLength": 1, "maxLength": 500}, "classification": {"enum": ["OBSERVED", "INFERRED", "UNRESOLVED"]}, "reference_refs": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}, "attributions": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/attribution"}}, "confidence": {"$ref": "#/$defs/confidence"}}}
+  }
+}

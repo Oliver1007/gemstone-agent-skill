@@ -1,0 +1,15 @@
+{
+  "status": "READY",
+  "executed": false,
+  "checklist": "SECOND_MACHINE_VALIDATION.md",
+  "steps": [
+    "clone intended private branch",
+    "verify owner commit and exact files",
+    "install frozen dependencies",
+    "26 governance tests + 8 host tests",
+    "audit bundled Citrine",
+    "synthetic build/audit + one LEGACY smoke render using explicit TEST_ONLY harness",
+    "verify source hashes and preserve logs"
+  ],
+  "formalExecution": "requires actual host provider/resolvers; never test fallback"
+}

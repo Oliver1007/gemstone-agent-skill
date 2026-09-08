@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:engine-integration-status:1.0.0",
+  "type": "object",
+  "required": ["schema_version", "integration_id", "object_revision", "authorization", "status", "workspace_alias", "records", "adapter_decision", "source_protection", "unresolved_identity_gaps", "unresolved_capability_gaps", "next_authorization"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "integration_id": {"type": "string"},
+    "object_revision": {"type": "string"},
+    "authorization": {"const": "AUTH-3"},
+    "status": {"enum": ["READ_ONLY_ENGINE_INTEGRATED", "READ_ONLY_ENGINE_INTEGRATED_WITH_GAPS", "BLOCKED"]},
+    "workspace_alias": {"type": "string"},
+    "records": {"type": "object"},
+    "adapter_decision": {"enum": ["NO_ADAPTER_REQUIRED", "READ_ONLY_ADAPTER_PRESENT"]},
+    "source_protection": {"type": "object"},
+    "unresolved_identity_gaps": {"type": "array"},
+    "unresolved_capability_gaps": {"type": "array"},
+    "next_authorization": {"type": "string"}
+  },
+  "additionalProperties": true
+}

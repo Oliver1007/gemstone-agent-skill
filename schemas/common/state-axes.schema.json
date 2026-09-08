@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:state-axes:1.0.0",
+  "title": "Independent lifecycle and maturity axes",
+  "$defs": {
+    "knowledge_claim_state": {
+      "enum": ["DRAFT", "CANDIDATE", "SUPPORTED", "VALIDATED", "GOLDEN_RULE", "REVALIDATION_REQUIRED", "DEPRECATED", "REJECTED"]
+    },
+    "family_knowledge_maturity": {
+      "enum": ["UNVALIDATED", "PROTOTYPE", "VALIDATED", "PRODUCTION"]
+    },
+    "engine_module_maturity": {
+      "enum": ["UNVALIDATED", "PROTOTYPE", "VALIDATED", "PRODUCTION"]
+    },
+    "failure_validation_level": {
+      "enum": ["OBSERVED", "REPRODUCED", "VALIDATED", "REGRESSION_PROTECTED", "DEPRECATED"]
+    },
+    "case_finding_state": {
+      "enum": ["RECORDED", "SUPPORTED", "CASE_VALIDATED", "REVALIDATION_REQUIRED", "REJECTED"]
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:human-schema-decision-packet:1.0.0",
+  "type": "object",
+  "required": ["schema_version", "packet_id", "case_id", "status", "proposal_ref", "decisions", "machine_authority_ceiling"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "packet_id": {"type": "string"},
+    "case_id": {"const": "case:citrine"},
+    "status": {"const": "HUMAN_SCHEMA_AUTHORIZATION_REQUIRED"},
+    "proposal_ref": {"type": "string"},
+    "decisions": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["decision_id", "question", "fields", "existing_sources", "source_authority", "conflict", "tool_behavior", "engine_behavior", "m01_impact", "candidate_impact", "backward_compatibility", "options", "recommended_option", "human_action_required", "unchanged_by_decision"], "additionalProperties": false}},
+    "machine_authority_ceiling": {"const": "NONAUTHORITATIVE_SCHEMA_PROPOSAL_ONLY"}
+  },
+  "additionalProperties": false
+}

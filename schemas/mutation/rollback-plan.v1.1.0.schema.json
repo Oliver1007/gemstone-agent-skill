@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "urn:gemstone-material-agent:schema:rollback-plan:1.1.0", "type": "object",
+  "required": ["schema_version", "rollback_id", "request_ref", "defined_before_execution", "precommit_action", "precommit_target", "inputs_immutable", "parent_candidate_immutable", "audit_preserved", "postcommit_destructive_rollback", "unknown_state_action"],
+  "properties": {"schema_version": {"const": "1.1.0"}, "rollback_id": {"type": "string"}, "request_ref": {"type": "string"}, "defined_before_execution": {"const": true}, "precommit_action": {"const": "DELETE_OR_QUARANTINE_EXACT_STAGING_ONLY"}, "precommit_target": {"type": "string"}, "inputs_immutable": {"const": true}, "parent_candidate_immutable": {"const": true}, "audit_preserved": {"const": true}, "postcommit_destructive_rollback": {"const": false}, "unknown_state_action": {"const": "STOP_INSPECT_RECONCILE_NO_BLIND_RETRY"}},
+  "additionalProperties": false
+}

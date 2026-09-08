@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:mutation-plan:1.0.0",
+  "type": "object",
+  "required": ["schema_version", "plan_id", "request_ref", "phase", "changed_domains", "frozen_domains", "staging_root", "final_root", "commit_strategy", "retry_policy", "unknown_state_policy"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "plan_id": {"type": "string"},
+    "request_ref": {"type": "string"},
+    "phase": {"enum": ["P4", "P5", "P6", "P7", "P8"]},
+    "changed_domains": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+    "frozen_domains": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+    "staging_root": {"type": "string"},
+    "final_root": {"type": "string"},
+    "commit_strategy": {"const": "ATOMIC_DIRECTORY_RENAME_SAME_VOLUME"},
+    "retry_policy": {"const": "INSPECT_EXACT_STATE_BEFORE_RETRY"},
+    "unknown_state_policy": {"const": "STOP_AND_RECONCILE_IDENTITY"}
+  },
+  "additionalProperties": false
+}

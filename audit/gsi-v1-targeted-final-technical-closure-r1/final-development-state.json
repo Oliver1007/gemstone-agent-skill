@@ -1,0 +1,8 @@
+{
+  "engineeringState": "TECHNICALLY_COMPLETE_NOT_QUALIFIED",
+  "technicalClosure": "BLOCKED_ARTIFACT_CONSISTENCY",
+  "qualificationPass": false,
+  "promotion": false,
+  "currentCycleAdditionalRemediation": "CLOSED",
+  "reason": "Technical work preserved; formal closure certification is withheld if records conflict."
+}

@@ -1,0 +1,12 @@
+{
+  "status": "FAIL_ARTIFACT_CONSISTENCY",
+  "result": "GSI_V1_TARGETED_TECHNICAL_CLOSURE_VALIDATION_FAILED",
+  "requiredArtifacts": 24,
+  "conflictCount": 1,
+  "sourceProtection": "PASS",
+  "existingEvidenceFiles": 22,
+  "testsRerun": 0,
+  "productionSourceMutations": 0,
+  "profileMutations": 0,
+  "historicalMutations": 0
+}

@@ -1,0 +1,135 @@
+schema_version: "1.0.0"
+capability_map_id: "capability-source-map:current-engine:2026-08-21"
+object_revision: "1"
+authority_role: "SKILL_SIDE_SOURCE_OBSERVATION_NOT_ENGINE_DECLARATION"
+engine_behavior_ref: "engine-behavior:current-source:54e31b0b3e80"
+authority_ranking:
+  - "Engine-owned Capability Manifest (not found)"
+  - "Versioned module/configuration declaration (not found)"
+  - "Behavior-critical implementation source"
+  - "Historical validation record"
+  - "Documentation"
+  - "Comment or naming inference"
+entries:
+  - capability_id: "capability:transparent-volume-optics"
+    mechanism: "transmission, IOR/refraction, Fresnel weighting, path-length attenuation, analytic cavity air/glass paths"
+    availability: "AVAILABLE_SOURCE_DISCOVERED"
+    accepted_range:
+      status: "PARTIAL_PARAMETER_SPECIFIC"
+      cavity_refraction_contrast: {minimum: 1.0, maximum: 1.15, source: "preview.mjs clamp"}
+      ior: "UNKNOWN_AS_RANGE; fixed Case values in source are not an Engine range"
+    validated_range: "UNKNOWN"
+    engine_module_maturity: "UNVALIDATED"
+    execution_validation_state: "NOT_EXECUTED"
+    source_evidence: ["engine-source:preview-runtime", "engine-source:dependency-lock"]
+    known_limitations:
+      - "Analytic cavity logic assumes a unit sphere with cylindrical through-hole geometry."
+      - "Case presets are embedded in runtime source."
+      - "Automatic standard-material fallback can alter optical behavior."
+  - capability_id: "capability:geometry-identity-inspection"
+    mechanism: "GLB 2.0 structure, bounds, topology edge counts, normals, through-hole profile, material/extras reporting"
+    availability: "AVAILABLE_SOURCE_DISCOVERED"
+    accepted_range: {input_format: "binary glTF 2.0", other_formats: "REJECTED_BY_SOURCE"}
+    validated_range: "UNKNOWN"
+    engine_module_maturity: "UNVALIDATED"
+    execution_validation_state: "NOT_EXECUTED"
+    source_evidence: ["engine-source:glb-geometry-audit"]
+    known_limitations:
+      - "Through-hole thresholds are specialized to the current bead geometry."
+      - "Output file field resolves to a local absolute path and must not become semantic identity."
+  - capability_id: "capability:diagnostic-rendering"
+    mechanism: "source-defined optical debug modes, multi-view metrics, cavity boundary DPI, runtime performance/fallback reporting"
+    availability: "AVAILABLE_SOURCE_DISCOVERED"
+    accepted_range: {debug_modes: "SOURCE_ENUMERATED", output_dimensions: {width: [320, 3840], height: [320, 2160]}}
+    validated_range: "UNKNOWN"
+    engine_module_maturity: "UNVALIDATED"
+    execution_validation_state: "NOT_EXECUTED"
+    source_evidence: ["engine-source:preview-runtime"]
+    known_limitations:
+      - "Requires browser/WebGL execution and is not authorized in AUTH-3."
+      - "Fallback state must be captured and fail-closed before Evidence acceptance."
+  - capability_id: "capability:optical-environment-presentation-separation"
+    mechanism: "visible cyclorama/background separated from no-card optical render target and procedural optical environment field"
+    availability: "AVAILABLE_SOURCE_DISCOVERED"
+    accepted_range: "UNKNOWN"
+    validated_range: "UNKNOWN"
+    engine_module_maturity: "UNVALIDATED"
+    execution_validation_state: "NOT_EXECUTED"
+    source_evidence: ["engine-source:preview-runtime"]
+    known_limitations:
+      - "Environment/card behavior remains case-specific and shares one runtime file with presentation."
+  - capability_id: "capability:deterministic-inclusion-layout"
+    mechanism: "fixed-seed LCG generates clustered inclusion layout"
+    availability: "AVAILABLE_SOURCE_DISCOVERED"
+    accepted_range: {maximum_count: 28, fixed_seed: "0x51f15e"}
+    validated_range: "UNKNOWN"
+    engine_module_maturity: "UNVALIDATED"
+    execution_validation_state: "NOT_EXECUTED"
+    source_evidence: ["engine-source:preview-runtime"]
+    known_limitations:
+      - "Implementation is a visual absorption approximation, not validated physical inclusion scattering."
+range_audit:
+  - capability_parameter: "transparent-volume-optics / IOR"
+    source_accepted_range: "UNKNOWN"
+    validated_range: "UNKNOWN"
+    case_search_range: "Case-specific fixed values and sweeps exist"
+    family_validated_range: "UNKNOWN"
+    must_not_confuse: true
+    result: "PASS_SEPARATED"
+  - capability_parameter: "cavityRefractionContrast"
+    source_accepted_range: "1.0..1.15 in current preview source"
+    validated_range: "UNKNOWN"
+    case_search_range: "Discrete Citrine sweeps 1.00/1.04/1.06/1.08/1.10"
+    family_validated_range: "UNKNOWN"
+    must_not_confuse: true
+    result: "PASS_SEPARATED"
+  - capability_parameter: "renderer output dimensions"
+    source_accepted_range: "width 320..3840; height 320..2160"
+    validated_range: "UNKNOWN"
+    case_search_range: "NOT_APPLICABLE"
+    family_validated_range: "NOT_APPLICABLE"
+    must_not_confuse: true
+    result: "PASS_SEPARATED"
+capability_gaps:
+  - {mechanism: "scattering", source_evidence: "NOT_DISCOVERED_IN_BOUNDED_SOURCE", status: "UNKNOWN", maturity: "UNVALIDATED"}
+  - {mechanism: "gemstone banding", source_evidence: "NOT_DISCOVERED; horizontal studio band is environment behavior", status: "UNKNOWN", maturity: "UNVALIDATED"}
+  - {mechanism: "chatoyancy", source_evidence: "NOT_DISCOVERED_IN_BOUNDED_SOURCE", status: "UNKNOWN", maturity: "UNVALIDATED"}
+  - {mechanism: "iridescence", source_evidence: "NOT_DISCOVERED_IN_BOUNDED_SOURCE", status: "UNKNOWN", maturity: "UNVALIDATED"}
+  - {mechanism: "anisotropy", source_evidence: "NOT_DISCOVERED_IN_BOUNDED_SOURCE", status: "UNKNOWN", maturity: "UNVALIDATED"}
+review_flags:
+  - review_id: "engine-review:auto-shader-fallback"
+    source: "engine-source:preview-runtime"
+    concern: "Shader compile failure automatically switches to MeshPhysicalMaterial and continues rendering."
+    evidence: "activateStandardMaterialFallback plus compileAsync catch path; runtime flag and console error exist."
+    affected_capability: ["capability:transparent-volume-optics", "capability:diagnostic-rendering"]
+    affected_case: ["case:smoky-quartz", "case:citrine"]
+    blocks_auth_4: "OPTICAL_RENDER_AND_RENDER_DIAGNOSTIC_ACCEPTANCE_ONLY"
+    blocks_auth_5: true
+    route: "Require fallback state in Tool output and fail-closed Evidence acceptance before optical execution."
+  - review_id: "engine-review:embedded-case-profiles"
+    source: "engine-source:preview-runtime"
+    concern: "Smoky and Citrine parameters/presets are embedded directly in runtime source instead of external Profile objects."
+    evidence: "isSmoky/isCitrine routing and frozen lookPresets in preview.mjs."
+    affected_capability: ["capability:transparent-volume-optics", "capability:optical-environment-presentation-separation"]
+    affected_case: ["case:smoky-quartz", "case:citrine"]
+    blocks_auth_4: false
+    blocks_auth_5: true
+    route: "Future Profile/Engine boundary review; do not extract values as defaults in AUTH-3."
+  - review_id: "engine-review:analytic-cavity-geometry-assumption"
+    source: "engine-source:preview-runtime"
+    concern: "Optical path shader assumes unit-sphere and cylindrical through-hole analytic geometry."
+    evidence: "smokySphereExit/smokyCylinderHit source path and fixed geometry uniforms."
+    affected_capability: ["capability:transparent-volume-optics"]
+    affected_case: ["case:smoky-quartz", "case:citrine"]
+    blocks_auth_4: "GENERIC_TARGET_OPTICAL_DIAGNOSTICS_ONLY"
+    blocks_auth_5: true
+    route: "Pin exact compatible geometry identity before any optical operation."
+  - review_id: "engine-review:artistic-inclusion-approximation"
+    source: "engine-source:shared-geometry-builder"
+    concern: "Sheets/wisps and shader absorption modifiers imitate inclusions without validated scattering."
+    evidence: "Source comments explicitly describe the approximation; current shader multiplies transmittance."
+    affected_capability: ["capability:deterministic-inclusion-layout"]
+    affected_case: ["case:smoky-quartz"]
+    blocks_auth_4: false
+    blocks_auth_5: true
+    route: "Disclose approximation and certification ceiling; do not label physical scattering."

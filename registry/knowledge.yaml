@@ -1,0 +1,12 @@
+schema_version: "1.0.0"
+registry_id: "registry:knowledge"
+object_revision: "1"
+authority_role: "KNOWLEDGE_DISCOVERY"
+entries:
+  - {knowledge_id: "knowledge:global:evidence-knowledge-boundary", path: "knowledge/global/evidence-knowledge-boundary.yaml", claim_state: "SUPPORTED", type: "GLOBAL_RULE"}
+  - {knowledge_id: "knowledge:global:reference-uncertainty", path: "knowledge/global/reference-uncertainty.yaml", claim_state: "SUPPORTED", type: "GLOBAL_RULE"}
+  - {knowledge_id: "knowledge:global:polished-surface-body-response-separation", path: "knowledge/global/candidates/polished-surface-body-response-separation.yaml", claim_state: "CANDIDATE", type: "GLOBAL_RULE", source_ref: "external-source:barcelona-bear-4-glb:55fc42968ed3"}
+  - {knowledge_id: "knowledge:global:lightweight-gltf-fallback", path: "knowledge/global/candidates/lightweight-gltf-fallback.yaml", claim_state: "CANDIDATE", type: "GLOBAL_RULE", source_ref: "external-source:barcelona-bear-4-glb:55fc42968ed3"}
+  - {knowledge_id: "knowledge:global:surface-baked-inclusion-limitation", path: "knowledge/global/candidates/surface-baked-inclusion-limitation.yaml", claim_state: "CANDIDATE", type: "GLOBAL_RULE", source_ref: "external-source:barcelona-bear-4-glb:55fc42968ed3"}
+  - {knowledge_id: "knowledge:global:generator-constant-detection", path: "knowledge/global/candidates/generator-constant-detection.yaml", claim_state: "CANDIDATE", type: "GLOBAL_RULE", source_ref: "external-source:barcelona-bear-4-glb:55fc42968ed3"}
+

@@ -1,0 +1,27 @@
+{
+  "status": "REQUIRED_AND_DOCUMENTED",
+  "implementation": "runtime/governance/host.mjs",
+  "interface": "createTrustedHost(config)",
+  "authorizationProvider": {
+    "resolveAuthorization": "(authorization_id) => actual current trusted decision or null",
+    "fields": [
+      "authorization_id",
+      "human_approval_ref",
+      "principal",
+      "session",
+      "run_id",
+      "operation_id",
+      "binding_sha256",
+      "production_path",
+      "expires_at",
+      "execution_budget",
+      "retry"
+    ],
+    "production_path": "LEGACY",
+    "execution_budget": 1,
+    "retry": false,
+    "resolveGovernance": "operationQuery => phase_id, frozen_scope_ref, six PASS/source_ref authority records"
+  },
+  "connectedRealProvider": false,
+  "testFallback": false
+}

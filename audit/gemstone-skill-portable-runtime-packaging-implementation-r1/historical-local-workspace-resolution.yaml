@@ -1,0 +1,16 @@
+schema_version: "1.0.0"
+mapping_id: "local-workspace-resolution:gemstone-engine-source:2026-08-21"
+object_revision: "1"
+record_type: "LOCAL_WORKSPACE_RESOLUTION"
+authority_role: "ENVIRONMENT_LOCATION_ONLY_NOT_SEMANTIC_IDENTITY"
+workspace_alias: "gemstone-engine-source"
+local_resolved_path: 'C:\Users\79433\Documents\ChatGPT\3d model builder'
+access: "READ_ONLY"
+semantic_identity: false
+portable: false
+resolution_state: "RESOLVED"
+authorization: "AUTH-3"
+does_not_prove:
+  - "Engine semantic identity"
+  - "Engine capability maturity"
+  - "execution validation"

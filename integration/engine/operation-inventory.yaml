@@ -1,0 +1,144 @@
+schema_version: "1.0.0"
+inventory_id: "operation-inventory:current-engine:2026-08-21"
+object_revision: "1"
+authority_role: "SOURCE_DISCOVERY_NOT_EXECUTION_VALIDATION"
+engine_behavior_ref: "engine-behavior:current-source:54e31b0b3e80"
+operations:
+  - operation_id: "operation:glb-geometry-audit"
+    source_entry_ref: "engine-source:glb-geometry-audit"
+    conceptual_class: ["GEOMETRY", "DIAGNOSTIC"]
+    operation_class: "READ_ONLY"
+    read_only: true
+    target_type: "PINNED_GLB_ARTIFACT"
+    apparent_inputs: ["GLB path; defaults to output/yellow-citrine-csg-realistic.glb"]
+    apparent_outputs: ["JSON to stdout conforming structurally to schema:geometry-audit-output:1.0.0"]
+    candidate_impact: "NONE"
+    artifact_impact: "READ_ONLY"
+    engine_impact: "NONE"
+    determinism_evidence: "Pure file parsing and deterministic calculations; not execution-validated."
+    capability_requirements: ["capability:geometry-identity-inspection"]
+    execution_validation_state: "NOT_EXECUTED"
+    auth_4_candidate: true
+    limitations:
+      - "Source has bead-specific cavity thresholds."
+      - "Future invocation must pin target hash and normalize local file path out of semantic identity."
+  - operation_id: "operation:citrine-optical-path-analytic-audit"
+    source_entry_ref: "engine-source:citrine-optical-path-audit"
+    conceptual_class: ["MATERIAL", "DIAGNOSTIC"]
+    operation_class: "READ_ONLY"
+    read_only: true
+    target_type: "HARDCODED_CITRINE_ANALYTIC_MODEL"
+    apparent_inputs: ["No external input; fixed camera, sphere, IOR, attenuation constants"]
+    apparent_outputs: ["JSON optical path samples to stdout"]
+    candidate_impact: "NONE"
+    artifact_impact: "NONE"
+    engine_impact: "NONE"
+    determinism_evidence: "Deterministic source calculations; not execution-validated."
+    capability_requirements: ["capability:transparent-volume-optics"]
+    execution_validation_state: "NOT_EXECUTED"
+    auth_4_candidate: false
+    limitations: ["Case constants are embedded; no exact Candidate/Profile target identity."]
+  - operation_id: "operation:citrine-measurement-protocol-v1"
+    source_entry_ref: "engine-source:citrine-measurement-v1"
+    conceptual_class: ["MEASUREMENT", "DIAGNOSTIC"]
+    operation_class: "READ_ONLY"
+    read_only: true
+    target_type: "PINNED_1280x720_IMAGE_ARTIFACT"
+    apparent_inputs: ["Mandatory image path; exact 1280x720 resolution"]
+    apparent_outputs: ["JSON measurement result to stdout"]
+    candidate_impact: "NONE"
+    artifact_impact: "READ_ONLY"
+    engine_impact: "NONE"
+    determinism_evidence: "Fixed ROI and sampling rules in versioned protocol; not execution-validated."
+    capability_requirements: ["capability:diagnostic-rendering"]
+    execution_validation_state: "NOT_EXECUTED"
+    auth_4_candidate: true
+    limitations: ["Case-specific post-ACES image protocol; input provenance must be pinned."]
+  - operation_id: "operation:browser-preview-renderer"
+    source_entry_ref: "engine-source:preview-runtime"
+    conceptual_class: ["RENDERING", "DIAGNOSTIC", "PRESENTATION", "ENVIRONMENT"]
+    operation_class: "READ_ONLY"
+    read_only: true
+    target_type: "FIXED_SMOKY_OR_CITRINE_GLB_ROUTE"
+    apparent_inputs: ["URL query parameters", "GLB", "reference image", "runtime WebGL environment"]
+    apparent_outputs: ["Browser frame", "window/console metrics", "GPU render targets"]
+    candidate_impact: "NONE_IN_SOURCE_PATH"
+    artifact_impact: "NO_PERSISTENT_WRITE_DISCOVERED_IN_PREVIEW_SOURCE"
+    engine_impact: "RUNTIME_ONLY"
+    determinism_evidence: "Fixed seed exists, but GPU/browser determinism is unverified."
+    capability_requirements: ["capability:transparent-volume-optics", "capability:diagnostic-rendering", "capability:optical-environment-presentation-separation"]
+    execution_validation_state: "NOT_EXECUTED"
+    auth_4_candidate: false
+    limitations:
+      - "Automatic shader fallback review flag must be resolved for Evidence acceptance."
+      - "Case profiles are embedded and exact target compatibility must be pinned."
+  - operation_id: "operation:citrine-cavity-support-v2"
+    source_entry_ref: "engine-source:citrine-cavity-support-v2"
+    conceptual_class: ["MEASUREMENT", "QA"]
+    operation_class: "MUTATING"
+    read_only: false
+    target_type: "CITRINE_DEBUG_IMAGE"
+    apparent_inputs: ["Input image", "optional output JSON path", "optional output CSV path"]
+    apparent_outputs: ["CSV file", "JSON file", "JSON stdout"]
+    candidate_impact: "NONE"
+    artifact_impact: "WRITES_OUTPUT_FILES"
+    engine_impact: "NONE"
+    determinism_evidence: "Deterministic parsing source; not execution-validated."
+    capability_requirements: ["capability:diagnostic-rendering"]
+    execution_validation_state: "NOT_EXECUTED"
+    auth_4_candidate: false
+    limitations: ["Forbidden under read-only execution scope unless output writes are separately authorized."]
+  - operation_id: "operation:shared-glb-builder"
+    source_entry_ref: "engine-source:shared-geometry-builder"
+    conceptual_class: ["GEOMETRY", "MATERIAL"]
+    operation_class: "MUTATING"
+    read_only: false
+    target_type: "OUTPUT_GLB_ARTIFACT"
+    apparent_inputs: ["Optional smoky/citrine variant CLI argument"]
+    apparent_outputs: ["GLB file", "JSON stdout"]
+    candidate_impact: "CREATES_NEW_ARTIFACT_STATE"
+    artifact_impact: "WRITES_GLB"
+    engine_impact: "NONE_TO_SOURCE"
+    determinism_evidence: "Source appears deterministic; not execution-validated."
+    capability_requirements: ["capability:transparent-volume-optics"]
+    execution_validation_state: "NOT_EXECUTED"
+    auth_4_candidate: false
+    limitations: ["Explicitly forbidden in AUTH-3 and outside AUTH-4 read-only scope."]
+  - operation_id: "operation:citrine-reference-glb-builder"
+    source_entry_ref: "engine-source:citrine-reference-builder"
+    conceptual_class: ["GEOMETRY", "MATERIAL"]
+    operation_class: "MUTATING"
+    read_only: false
+    target_type: "FROZEN_CITRINE_GLB_ARTIFACT"
+    apparent_inputs: []
+    apparent_outputs: ["output/yellow-citrine-csg-reference-v1.glb", "JSON stdout"]
+    candidate_impact: "WOULD_REPLACE_FROZEN_SOURCE_ARTIFACT"
+    artifact_impact: "WRITES_GLB"
+    engine_impact: "NONE_TO_SOURCE"
+    determinism_evidence: "Source appears deterministic; not execution-validated."
+    capability_requirements: ["capability:transparent-volume-optics"]
+    execution_validation_state: "NOT_EXECUTED"
+    auth_4_candidate: false
+    limitations: ["Forbidden by Citrine source protection."]
+  - operation_id: "operation:preview-server"
+    source_entry_ref: "engine-source:preview-server"
+    conceptual_class: ["BUILD_TOOLING", "PRESENTATION"]
+    operation_class: "READ_ONLY"
+    read_only: true
+    target_type: "SOURCE_WORKSPACE_FILES"
+    apparent_inputs: ["HTTP request path"]
+    apparent_outputs: ["HTTP response", "listener on 127.0.0.1:4173"]
+    candidate_impact: "NONE"
+    artifact_impact: "READ_ONLY"
+    engine_impact: "RUNTIME_PROCESS_ONLY"
+    determinism_evidence: "Simple file server source; not execution-validated."
+    capability_requirements: []
+    execution_validation_state: "NOT_EXECUTED"
+    auth_4_candidate: false
+    limitations: ["Starts a persistent process and is not a standalone diagnostic result."]
+operation_summary:
+  read_only_discovered: 5
+  mutating_discovered: 3
+  unknown: 0
+  executed: 0
+  preferred_first_auth_4_candidate: "operation:glb-geometry-audit"

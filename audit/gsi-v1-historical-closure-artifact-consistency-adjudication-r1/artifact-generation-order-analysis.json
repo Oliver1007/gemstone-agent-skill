@@ -1,0 +1,15 @@
+{
+  "sourceOrder": [
+    "Read render/equivalence inputs",
+    "Compute finalPass",
+    "Write supporting validation records",
+    "Write integration-final-gate (91)",
+    "Write implementation-manifest (93)",
+    "Write final report (94)",
+    "Scan required presence (95)",
+    "Write validation summary (96)"
+  ],
+  "conclusion": "Summary is after final gate in generator, not evidence of a pre-final stale state.",
+  "postGenerationEdits": "jsonValidation and skillValidation finalized from PENDING in existing artifact; exact later command not reconstructed.",
+  "mtimeNotSoleBasis": true
+}

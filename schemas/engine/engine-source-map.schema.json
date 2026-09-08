@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:engine-source-map:1.0.0",
+  "type": "object",
+  "required": ["schema_version", "source_map_id", "object_revision", "workspace_alias", "authority_role", "sources"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "source_map_id": {"type": "string"},
+    "object_revision": {"type": "string"},
+    "workspace_alias": {"type": "string"},
+    "authority_role": {"const": "SKILL_SIDE_SOURCE_INDEX_NOT_ENGINE_TRUTH"},
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["source_id", "relative_locator", "roles", "behavior_critical", "capability_relevant", "availability", "provenance"],
+        "properties": {
+          "source_id": {"type": "string"},
+          "relative_locator": {"type": "string", "not": {"pattern": "^[A-Za-z]:[\\\\/]"}},
+          "roles": {"type": "array", "minItems": 1},
+          "behavior_critical": {"type": "boolean"},
+          "capability_relevant": {"type": "boolean"},
+          "sha256": {"type": ["string", "null"], "pattern": "^[A-F0-9]{64}$"},
+          "availability": {"enum": ["AVAILABLE", "ARCHIVED_AVAILABLE", "NOT_AVAILABLE"]},
+          "provenance": {"type": "string"}
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

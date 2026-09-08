@@ -1,0 +1,6 @@
+{
+  "portability": "PASS_CARRIED_FORWARD",
+  "normalEngineAdmission": "UNSUPPORTED_DUE_EXT_MESH_GPU_INSTANCING",
+  "distributed": false,
+  "normalSmokeFixture": false
+}

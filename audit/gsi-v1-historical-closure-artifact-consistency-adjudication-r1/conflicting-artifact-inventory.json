@@ -1,0 +1,28 @@
+{
+  "files": [
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\integration-final-gate.json",
+      "bytes": 2079,
+      "sha256": "528A93C95A28D6B665E099DDC80BDC76CC32EEF973D4C21877EDF17F9CB23622",
+      "mtime": "2026-09-08T07:28:38.398Z",
+      "field": "status",
+      "value": "PASS"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\validation-summary.json",
+      "bytes": 611,
+      "sha256": "AD0496813214520BF4EBDB4240DDC42103DC82D4CC81B67D57FFC79EAB833C2E",
+      "mtime": "2026-09-08T07:30:23.986Z",
+      "field": "status",
+      "value": "FAIL"
+    },
+    {
+      "path": "C:\\Users\\79433\\Documents\\ChatGPT\\gemstone-agent-skill\\audit\\gsi-v1-production-final-presentation-runtime-closure-implementation-r1\\wave-final-report.md",
+      "bytes": 1888,
+      "sha256": "159B9A61B0850E03C1E8F18F1B179947BB09FD6429CF5B862FA4955AF8841B39",
+      "mtime": "2026-09-08T07:30:21.453Z",
+      "field": "OVERALL RESULT",
+      "value": "PASS"
+    }
+  ]
+}

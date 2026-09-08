@@ -1,0 +1,214 @@
+{
+  "version": 1,
+  "ownership": "OWNER_ASSERTED_PRIVATE_ONLY",
+  "thirdPartyVendored": false,
+  "files": [
+    {
+      "path": "runtime/production/adapter/engine-tool-adapter.mjs",
+      "sha256": "9D6F9523DE69B449CDD5316D79C91E41BEBD81590E9ADC6B378839817E5BAFCB",
+      "bytes": 52586
+    },
+    {
+      "path": "runtime/production/structural/structural-identity-dispatch.mjs",
+      "sha256": "833D9D69775A1BE4F19FE1FD67ED49FABC4E02FC40F646C9CE6908117B680314",
+      "bytes": 7072
+    },
+    {
+      "path": "runtime/production/structural/structural-identity-v1.mjs",
+      "sha256": "823D855F139E6199E3B67E5F836AF885F5E20A96BF7A80E60DF5048BC26DB218",
+      "bytes": 28285
+    },
+    {
+      "path": "runtime/production/structural/structural-identity-v1-1.mjs",
+      "sha256": "A4937CC47600500C5F293A20A0F0789A027D00A0066F940475F9227FC4C334EB",
+      "bytes": 71415
+    },
+    {
+      "path": "runtime/production/structural/instance-realization-quality-v1.mjs",
+      "sha256": "D8004ED2C2DCE8BB4113059426C7CD21E2738CDE1F9C424AB75B38F369BA1D93",
+      "bytes": 6360
+    },
+    {
+      "path": "runtime/production/structural/relational-capability-registry.mjs",
+      "sha256": "AD72723442729BE1AC005410A7752F58458DF9A7F45AEEDA143CE6434183E0D5",
+      "bytes": 4199
+    },
+    {
+      "path": "runtime/production/structural/relational-presentation-v1.mjs",
+      "sha256": "A66B9852868C341272C73340C0C2ED8BF3081704DB09C9DA0EF5A259D21ABE63",
+      "bytes": 13242
+    },
+    {
+      "path": "runtime/production/structural/relational-depth-localization-v1.mjs",
+      "sha256": "5ED92091B43EB250A08BBD5C483404966BF533202EE92E55D6A55AE6221361D1",
+      "bytes": 2438
+    },
+    {
+      "path": "runtime/production/structural/relational-transport-v1.mjs",
+      "sha256": "26C010F72D65BCEB0EEB3DC7ECFEAF76C8671D0C30E213D14952D2E267114B06",
+      "bytes": 8670
+    },
+    {
+      "path": "runtime/production/structural/relational-presentation-binding-v1.mjs",
+      "sha256": "FC56F5CBE86E038F8E58A0F556661194859FFF611CA6EFC44895EE08C18F7DCA",
+      "bytes": 1845
+    },
+    {
+      "path": "runtime/production/structural/relational-material-runtime-v1.mjs",
+      "sha256": "A5E712992AF390F429127696E12AA32300547C57041B2539C86FC213AEA3637F",
+      "bytes": 10475
+    },
+    {
+      "path": "runtime/production/adapter/engine-capabilities.json",
+      "sha256": "02EE3510D014382CDEC8B80A10992ABFD6C261B5422DAFCC8BE371C180AEEA5A",
+      "bytes": 9692
+    },
+    {
+      "path": "runtime/engine/package.json",
+      "sha256": "BA8D2A69E15DF23831F0E5644D193514CB3BF071751AD4E8A4C726DC2CC9C14A",
+      "bytes": 559
+    },
+    {
+      "path": "runtime/engine/pnpm-lock.yaml",
+      "sha256": "FDEB5A6800915F4CF2154B1A7C723977F8484D72A64CDB96FB700B9A6F0F1AF7",
+      "bytes": 382
+    },
+    {
+      "path": "runtime/engine/build-gemstone-mutator-v1.mjs",
+      "sha256": "80D354DA0500035A662827580B18D133886833F1FF0C4A01A74605886D70E265",
+      "bytes": 6837
+    },
+    {
+      "path": "runtime/engine/mutator-interface-v1.mjs",
+      "sha256": "BCEB04B8E8D04BFDEC12328DE57C7C28B6A5D713DD7B990833E641B0F676D482",
+      "bytes": 10407
+    },
+    {
+      "path": "runtime/engine/audit-glb.mjs",
+      "sha256": "13D483F7E61410EC929FD342E2127B16EC20F918D7C70776DEF8E09362192495",
+      "bytes": 7815
+    },
+    {
+      "path": "runtime/engine/render-generic-candidate-v1.mjs",
+      "sha256": "DAAE64D2EEBB2E0CEA2519432A768527BD78EB3CC7B7E3B2538F71CBD9AF7C10",
+      "bytes": 29472
+    },
+    {
+      "path": "runtime/engine/generic-render.html",
+      "sha256": "AE26006B5D24E61FB1D5667513DAD8362D5A2E98156D6C130D52FA12CC0EB866",
+      "bytes": 595
+    },
+    {
+      "path": "runtime/engine/generic-render.mjs",
+      "sha256": "2D66F016B96AB162C3E9B134F5C5D09337CC664C8F02E656779DF368F8AE80DD",
+      "bytes": 15217
+    },
+    {
+      "path": "runtime/engine/depth-aware-refraction-v1.mjs",
+      "sha256": "28DDDF93523DFABA56DDC01B2831BBB60DB55E5FE90276A219A6485FA311912D",
+      "bytes": 9695
+    },
+    {
+      "path": "runtime/engine/bounded-sequential-refraction-v1.mjs",
+      "sha256": "C8A3996BCFD93F60CBC5114EF4CD5A12C04A80A334DB526CEBF9269B7F482407",
+      "bytes": 40595
+    },
+    {
+      "path": "runtime/engine/loop-limit-optical-surface-v1.mjs",
+      "sha256": "6FB77B74B242CF501E45CBA3381EA186F4A8606E50C93F9CCB1CC61F5DDB092B",
+      "bytes": 14068
+    },
+    {
+      "path": "runtime/index.mjs",
+      "sha256": "EBFF092FBB0126B2AB31584075992344397049421DE28755E4672AB275C7E1D3",
+      "bytes": 14501,
+      "origin": "AUTHORED_IN_AUTHORIZED_PACKAGING_WAVE"
+    },
+    {
+      "path": "runtime/governance/adapter-worker.mjs",
+      "sha256": "6155A3CB3AF40C85C595F4F4439E33FB9D2D3AD8A72317EE7FB7CF03C337D213",
+      "bytes": 679,
+      "origin": "AUTHORED_IN_AUTHORIZED_PACKAGING_WAVE"
+    },
+    {
+      "path": "runtime/governance/assets.mjs",
+      "sha256": "624E75B856301F1BA166D053FF057A09DCA3D776171780B47330EE56FEC2E24B",
+      "bytes": 1925,
+      "origin": "AUTHORED_IN_AUTHORIZED_PACKAGING_WAVE"
+    },
+    {
+      "path": "runtime/governance/host.mjs",
+      "sha256": "657AA2BC8FC561180E04B10FA2C903B39818C263E30E8ED0A644D54CA884BDA6",
+      "bytes": 1191,
+      "origin": "AUTHORED_IN_AUTHORIZED_PACKAGING_WAVE"
+    },
+    {
+      "path": "runtime/governance/primitives.mjs",
+      "sha256": "B123834A1B0F376431A1F82BE3090996EA40436D6C87B3FD02E234C730D22C9F",
+      "bytes": 2589,
+      "origin": "AUTHORED_IN_AUTHORIZED_PACKAGING_WAVE"
+    },
+    {
+      "path": "runtime/governance/read-lease.mjs",
+      "sha256": "CD7685FD0DEF149A139A2E676BB7E44B828E06E08F0EFCA47797D665A6A08AAE",
+      "bytes": 1206,
+      "origin": "AUTHORED_IN_AUTHORIZED_PACKAGING_WAVE"
+    },
+    {
+      "path": "runtime/governance/windows-read-lease.ps1",
+      "sha256": "E10ACC59DFE954E5F773A5B8DB20AA8EBD48863544438422D8C4D58DEE7EDA1D",
+      "bytes": 557,
+      "origin": "AUTHORED_IN_AUTHORIZED_PACKAGING_WAVE"
+    },
+    {
+      "path": "runtime/portable-config.json",
+      "sha256": "780D58D37BA5FD6207020148373D04C63CD7BEDBD64A67EA31B0E70132814B5F",
+      "bytes": 488,
+      "origin": "AUTHORED_IN_AUTHORIZED_PACKAGING_WAVE"
+    }
+  ],
+  "assets": [
+    {
+      "path": "runtime/assets/citrine-normal-use.glb",
+      "sha256": "8FB9E9DBD2DA677CABD26C40C3D8FE205825196E3829CEED4B5B2547A41016E4",
+      "role": "PORTABILITY_ONLY_NOT_QUALIFICATION"
+    }
+  ],
+  "packageFiles": [
+    {
+      "path": "three/build/three.module.js",
+      "sha256": "BBF5ED13FE4373F5BD38B14EA8E62E9F157327DA5638EDC6D3863E08B167C9C7",
+      "installation": "PACKAGE_MANAGER_ONLY"
+    },
+    {
+      "path": "three/build/three.core.js",
+      "sha256": "3718DF126D69C125362A03340913204470D8C50238605150E57F808840FB7759",
+      "installation": "PACKAGE_MANAGER_ONLY"
+    },
+    {
+      "path": "three/examples/jsm/exporters/GLTFExporter.js",
+      "sha256": "318C588C527D03528A60610A4FC420018375A5C1BCF520E48F3666C5BC28D90D",
+      "installation": "PACKAGE_MANAGER_ONLY"
+    },
+    {
+      "path": "three/examples/jsm/utils/BufferGeometryUtils.js",
+      "sha256": "5C552223A9309883743B80538D6E9CDB45E3227F30D3EC56FB2C39B46E78D595",
+      "installation": "PACKAGE_MANAGER_ONLY"
+    },
+    {
+      "path": "three/examples/jsm/loaders/GLTFLoader.js",
+      "sha256": "97642D720F16CC9A0C9844934198E4D0C023BEA8E89576D0F7545D03B2D103D2",
+      "installation": "PACKAGE_MANAGER_ONLY"
+    },
+    {
+      "path": "three/examples/jsm/utils/SkeletonUtils.js",
+      "sha256": "B1632A703206C3D830DE9FCBE515696770D04B71A15EE6B50AFA6D2C3298C86F",
+      "installation": "PACKAGE_MANAGER_ONLY"
+    },
+    {
+      "path": "three/examples/jsm/environments/RoomEnvironment.js",
+      "sha256": "55F466192CC84298755A424C5E040345006B2EE1455589B3B54126C2EA4123F4",
+      "installation": "PACKAGE_MANAGER_ONLY"
+    }
+  ]
+}

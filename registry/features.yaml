@@ -1,0 +1,11 @@
+schema_version: "1.0.0"
+registry_id: "registry:features"
+object_revision: "1"
+authority_role: "DISCOVERY_NOT_KNOWLEDGE_TRUTH"
+entries:
+  - feature_id: "feature:structural-inclusion"
+    role_options: ["CORE_FEATURE", "OPTIONAL_FEATURE"]
+    verification_state: "UNVERIFIED"
+  - feature_id: "feature:banded-structure"
+    role_options: ["CORE_FEATURE", "OPTIONAL_FEATURE"]
+    verification_state: "UNVERIFIED"

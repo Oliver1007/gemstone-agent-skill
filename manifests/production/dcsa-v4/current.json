@@ -1,0 +1,15 @@
+{
+  "auditMetadata": {
+    "advancedAt": "2026-09-01T19:13:29.723Z",
+    "timestampExcludedFromReleaseSemanticIdentity": true
+  },
+  "manifestPath": "manifests/production/dcsa-v4/releases/dcsa-v4-r2-patched-production-frozen-r1-bf20bc8a/production-freeze-manifest.json",
+  "manifestSha256": "e22adfd753a82935c56044a748cd2ebe50e1ac40f174b6b0a2ac707db121a377",
+  "pointerId": "dcsa-v4-production-current",
+  "previousPointerMode": "IMPLICIT_LEGACY_QUALIFIED_BASELINE_NO_POINTER_FILE",
+  "previousProductionRelease": "pre-r2-v4-qualified-baseline",
+  "productionStatus": "R2_PATCHED_PRODUCTION_BASELINE",
+  "releaseId": "dcsa-v4-r2-patched-production-frozen-r1-bf20bc8a",
+  "schemaVersion": "dcsa-v4-production-pointer-v1",
+  "semanticIdentity": "c547c69b65dbb94417fb88e097e4a7fcc7b0ecbd36d884847d702eecd531252d"
+}

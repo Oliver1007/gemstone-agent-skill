@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:auth6:human-field-reassertion-authority:1.0.0",
+  "title": "Human Field Reassertion Authority Event Set",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "record_id", "event_type", "wave", "case_id", "atomic_pair", "events", "result"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "record_id": {"type": "string", "minLength": 1},
+    "event_type": {"const": "HUMAN_FIELD_REASSERTION_AUTHORITY"},
+    "wave": {"const": "IMPLEMENTATION_WAVE_4.3G-A"},
+    "case_id": {"const": "case:citrine"},
+    "atomic_pair": {"const": true},
+    "events": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {"$ref": "#/$defs/event"}
+    },
+    "result": {"const": "PASS_BOTH_ATTENUATION_HUMAN_AUTHORITIES_MATERIALIZED"}
+  },
+  "$defs": {
+    "event": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["authority_event_id", "event_type", "human_authorization_ref", "schema", "field_id", "authorized_value", "value_representation", "authority_effective_utc", "authority_basis", "historical_provenance", "future_use_scope", "current_engine_revalidation", "profile_creation_authority", "case_binding_authority", "auth6_authority", "lineage"],
+      "properties": {
+        "authority_event_id": {"type": "string", "minLength": 1},
+        "event_type": {"const": "HUMAN_FIELD_REASSERTION_AUTHORITY"},
+        "human_authorization_ref": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["ref", "prompt_sha256", "selected_option"],
+          "properties": {
+            "ref": {"const": "HUMAN_MESSAGE:IMPLEMENTATION_WAVE_4.3G-A"},
+            "prompt_sha256": {"type": "string", "pattern": "^[A-F0-9]{64}$"},
+            "selected_option": {"type": "string", "minLength": 1}
+          }
+        },
+        "schema": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["id", "sha256"],
+          "properties": {
+            "id": {"const": "urn:gemstone-material-agent:schema:profile:1.1.0"},
+            "sha256": {"const": "55E81AC859ACFCA93109CEF23249DD84DC8F7105879C655AC78E2E26366346CE"}
+          }
+        },
+        "field_id": {"enum": ["material.volume.attenuationColor", "material.volume.attenuationDistance"]},
+        "authorized_value": {},
+        "value_representation": {"type": "string", "minLength": 1},
+        "unit": {"type": ["string", "null"]},
+        "authority_effective_utc": {"type": "string", "format": "date-time"},
+        "authority_basis": {"const": "EXPLICIT_CURRENT_HUMAN_REASSERTION"},
+        "historical_provenance": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["original_provenance", "archive_recovery", "historical_gap"],
+          "properties": {
+            "original_provenance": {"const": "NOT_VERIFIED"},
+            "archive_recovery": {"const": "NOT_FOUND"},
+            "historical_gap": {"const": "PRESERVED"}
+          }
+        },
+        "future_use_scope": {"const": "FUTURE_CITRINE_PROFILE_INPUT_ONLY"},
+        "current_engine_revalidation": {"const": "REQUIRED"},
+        "profile_creation_authority": {"const": false},
+        "case_binding_authority": {"const": false},
+        "auth6_authority": {"const": false},
+        "lineage": {
+          "type": "array",
+          "minItems": 4,
+          "items": {"type": "string", "minLength": 1}
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+schema_version: "1.0.0"
+mapping_id: "local-workspace-resolution:gemstone-engine-source:2026-08-21"
+object_revision: "2"
+record_type: "REPOSITORY_WORKSPACE_RESOLUTION"
+authority_role: "ENVIRONMENT_LOCATION_ONLY_NOT_SEMANTIC_IDENTITY"
+workspace_alias: "gemstone-engine-source"
+repository_relative_path: 'runtime/engine'
+path_base: "REPOSITORY_ROOT"
+access: "READ_ONLY"
+semantic_identity: false
+portable: true
+resolution_state: "RESOLVED"
+authorization: "SINGLE_REPOSITORY_PORTABLE_RUNTIME_PACKAGING_IMPLEMENTATION"
+historical_record: "audit/gemstone-skill-portable-runtime-packaging-implementation-r1/historical-local-workspace-resolution.yaml"
+does_not_prove:
+  - "Engine semantic identity"
+  - "Engine capability maturity"
+  - "execution validation"

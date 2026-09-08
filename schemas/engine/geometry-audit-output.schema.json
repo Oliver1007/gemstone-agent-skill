@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:geometry-audit-output:1.0.0",
+  "type": "object",
+  "required": ["file", "bytes", "asset", "sceneCount", "nodeCount", "meshCount", "materialCount", "totalVertices", "totalTriangles", "dimensions", "boundingBox", "extensionsUsed", "extensionsRequired", "mainPrimitive", "materials", "nodeExtras"],
+  "properties": {
+    "file": {"type": "string"},
+    "bytes": {"type": "integer", "minimum": 1},
+    "asset": {"type": "object"},
+    "sceneCount": {"type": "integer", "minimum": 0},
+    "nodeCount": {"type": "integer", "minimum": 0},
+    "meshCount": {"type": "integer", "minimum": 0},
+    "materialCount": {"type": "integer", "minimum": 0},
+    "totalVertices": {"type": "integer", "minimum": 0},
+    "totalTriangles": {"type": "number", "minimum": 0},
+    "dimensions": {"type": "array", "minItems": 3, "maxItems": 3},
+    "boundingBox": {"type": "object"},
+    "extensionsUsed": {"type": "array"},
+    "extensionsRequired": {"type": "array"},
+    "mainPrimitive": {"type": ["object", "null"]},
+    "materials": {"type": "array"},
+    "nodeExtras": {"type": "array"}
+  },
+  "additionalProperties": true
+}

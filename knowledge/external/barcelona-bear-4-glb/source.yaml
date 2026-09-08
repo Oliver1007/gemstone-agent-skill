@@ -1,0 +1,145 @@
+schema_version: "1.0.0"
+source_id: "external-source:barcelona-bear-4-glb:55fc42968ed3"
+object_revision: "1"
+record_type: "EXTERNAL_SOURCE"
+source_type: "EXTERNAL_COMPARATIVE_GLB_PRESET_BUNDLE"
+citation: "Human-provided local binary bundle: barcelona_bear_4_glb.zip"
+version_publication:
+  bundle_version: "NOT_DECLARED"
+  embedded_generator: "image-to-gem-bead-glb skill 1.0"
+authority_role: "EXTERNAL_COMPARATIVE_SOURCE"
+bundle:
+  filename: "barcelona_bear_4_glb.zip"
+  resolved_locator: "C:\\Users\\79433\\Desktop\\crystal ball\\barcelona_bear_4_glb.zip"
+  locator_is_semantic_identity: false
+  byte_size: 3959913
+  sha256: "55FC42968ED35CF27654112E91A2D9E4BEB990DBC8A1C6DB5E8D0F78681B6CC2"
+  file_type: "ZIP"
+  zip_integrity: "PASS"
+  archive_member_count: 4
+  mutation_policy: "READ_ONLY_REFERENCE_BY_LOCATOR_AND_HASH"
+  copied_into_workspace: false
+shared_geometry:
+  geometry_id: "external-geometry:barcelona-bear-beveled-through-hole:bbfd6a397220"
+  geometry_payload_sha256: "BBFD6A397220207813C4370F7B7CA37922317C61D431BB933B3F61D4108A3B06"
+  identity_basis: ["POSITION", "NORMAL", "TANGENT", "TEXCOORD_0", "INDICES"]
+  mesh_count: 1
+  primitive_count: 1
+  vertex_count: 11352
+  triangle_count: 22528
+  bounds_m:
+    minimum: [-0.004999999888241291, -0.004999999888241291, -0.004930965136736631]
+    maximum: [0.004999999888241291, 0.004999999888241291, 0.004930965136736631]
+  declared_diameter_mm: 10.0
+  declared_hole_diameter_mm: 1.2
+  node_scale: [1.0, 1.0, 1.0]
+  comparison_context: "FIXED_GEOMETRY_COMPARATIVE_PRESET_SET"
+members:
+  - source_member_id: "external-source-member:golden-rutilated-quartz:7cc0fd20dce1"
+    archive_member: "2-01_golden_rutilated_quartz.glb"
+    material: "Golden Rutilated Quartz"
+    role: "EXTERNAL_COMPARATIVE_MATERIAL_REFERENCE"
+    byte_size: 1793756
+    sha256: "7CC0FD20DCE101CA41825E7451BC517B59C706BD99B6E245E9FA76758A85FD19"
+    readable: true
+    status: "VERIFIED"
+    glb_version: "2.0"
+    generator: "image-to-gem-bead-glb skill 1.0"
+    generator_source_label: "procedural preset: golden-rutilated-quartz"
+    asset_metadata: {units: "meters", diameter_mm: 10.0, hole_diameter_mm: 1.2}
+    mesh_name: "2-01 Golden Rutilated Quartz Beveled Through-hole Mesh"
+    geometry_ref: "external-geometry:barcelona-bear-beveled-through-hole:bbfd6a397220"
+    material_name: "2-01 Golden Rutilated Quartz Polished PBR"
+    material_sha256: "3B38C834AAF8A8674EB891C32C5CD35B4F9B3E6A08C034A98C49CCB5B34A0CF3"
+    khr_extensions: ["KHR_materials_clearcoat", "KHR_materials_ior", "KHR_materials_transmission", "KHR_materials_volume"]
+    textures:
+      - {role: "BASE_COLOR", dimensions: [1024, 512], mime_type: "image/png", sha256: "A22CB65F8E1FDFFEE83294A5A48CCD19C08CFAFCEA463147A09199487C647189"}
+      - {role: "NORMAL", dimensions: [1024, 512], mime_type: "image/png", sha256: "846DB8AF2433F02DD8855E60DF29B50A6CD074DD5CF6A7D59F462255666F88EF"}
+      - {role: "ORM", dimensions: [1024, 512], mime_type: "image/png", sha256: "49AFE33777D6BD32AF1466A7A01190FF8F5F66C92F446FA95C5D7EA666C9C93B"}
+  - source_member_id: "external-source-member:white-rabbit-hair-quartz:d81a2a3c08c2"
+    archive_member: "2-10_white_rabbit_hair_quartz.glb"
+    material: "White Rabbit Hair Quartz"
+    role: "EXTERNAL_COMPARATIVE_MATERIAL_REFERENCE"
+    byte_size: 1607140
+    sha256: "D81A2A3C08C2C03776CB13AA635090A9245F40B535C7F2B4881FC7FC82544997"
+    readable: true
+    status: "VERIFIED"
+    glb_version: "2.0"
+    generator: "image-to-gem-bead-glb skill 1.0"
+    generator_source_label: "procedural preset: white-rabbit-hair-quartz"
+    asset_metadata: {units: "meters", diameter_mm: 10.0, hole_diameter_mm: 1.2}
+    mesh_name: "2-10 White Rabbit-hair Quartz Beveled Through-hole Mesh"
+    geometry_ref: "external-geometry:barcelona-bear-beveled-through-hole:bbfd6a397220"
+    material_name: "2-10 White Rabbit-hair Quartz Polished PBR"
+    material_sha256: "C548D183E887E97C77E8BFCF9382612B93126DDEE8606E52FE432686CF2D0ECB"
+    khr_extensions: ["KHR_materials_clearcoat", "KHR_materials_ior", "KHR_materials_transmission", "KHR_materials_volume"]
+    textures:
+      - {role: "BASE_COLOR", dimensions: [1024, 512], mime_type: "image/png", sha256: "4F5A7B87AEAAEBAF3E95B1CC3CBB858674B13DB223CD7F2640C9F8D9050D08E2"}
+      - {role: "NORMAL", dimensions: [1024, 512], mime_type: "image/png", sha256: "DA749EA447AA346DB1F12BB9F246217E14A4407BFD205EAAF5E9C566F8F13182"}
+      - {role: "ORM", dimensions: [1024, 512], mime_type: "image/png", sha256: "6DABF8742A2E18083DF0B1EE16A55B510032C951F8060863F673994515747792"}
+  - source_member_id: "external-source-member:malachite:f5e05d7d6aa5"
+    archive_member: "3-09_malachite.glb"
+    material: "Malachite"
+    role: "EXTERNAL_COMPARATIVE_MATERIAL_REFERENCE"
+    byte_size: 1591496
+    sha256: "F5E05D7D6AA56DFB48B4DB8AD7BB77C3B8CEEAB5F3F2F9D62D3333E6F4408DCF"
+    readable: true
+    status: "VERIFIED"
+    glb_version: "2.0"
+    generator: "image-to-gem-bead-glb skill 1.0"
+    generator_source_label: "procedural preset: malachite"
+    asset_metadata: {units: "meters", diameter_mm: 10.0, hole_diameter_mm: 1.2}
+    mesh_name: "3-09 Malachite Beveled Through-hole Mesh"
+    geometry_ref: "external-geometry:barcelona-bear-beveled-through-hole:bbfd6a397220"
+    material_name: "3-09 Malachite Polished PBR"
+    material_sha256: "A5E3AA51E59805E2EB7FB1E0AF79B8EC2EB51D00C41C2C9104C1329E221722FE"
+    khr_extensions: ["KHR_materials_clearcoat", "KHR_materials_ior"]
+    textures:
+      - {role: "BASE_COLOR", dimensions: [1024, 512], mime_type: "image/png", sha256: "7193BAEC38F638E84416A5AC5F9AB88633DAB20D78B976166862A1E7F75089CE"}
+      - {role: "NORMAL", dimensions: [1024, 512], mime_type: "image/png", sha256: "79FE9B77F29CBD3CE95E45D5143023BB8BE5EA131C43D81DAD475BD34D03390C"}
+      - {role: "ORM", dimensions: [1024, 512], mime_type: "image/png", sha256: "E5AABE26CDE73FB738C7E8BF4D40B1536037D1E4EC65ECEDAC73DFA1528307F3"}
+  - source_member_id: "external-source-member:black-onyx:a3d33b1fc6f9"
+    archive_member: "4-01_black_onyx.glb"
+    material: "Black Onyx"
+    role: "EXTERNAL_COMPARATIVE_MATERIAL_REFERENCE"
+    byte_size: 827632
+    sha256: "A3D33B1FC6F9CA2554ADD63F98021A5C4298C7E0334578C887EE0A72F6A5C88B"
+    readable: true
+    status: "VERIFIED"
+    glb_version: "2.0"
+    generator: "image-to-gem-bead-glb skill 1.0"
+    generator_source_label: "procedural preset: black-onyx"
+    asset_metadata: {units: "meters", diameter_mm: 10.0, hole_diameter_mm: 1.2}
+    mesh_name: "4-01 Black Onyx Beveled Through-hole Mesh"
+    geometry_ref: "external-geometry:barcelona-bear-beveled-through-hole:bbfd6a397220"
+    material_name: "4-01 Black Onyx Polished PBR"
+    material_sha256: "D53C337BB6F20954589EC806459A73B8CEBEE801FA291BC6F2116C14A9690A0F"
+    khr_extensions: ["KHR_materials_clearcoat", "KHR_materials_ior", "KHR_materials_transmission", "KHR_materials_volume"]
+    textures:
+      - {role: "BASE_COLOR", dimensions: [1024, 512], mime_type: "image/png", sha256: "B361720BEBAFC349AB28766660C48D7B8627CE7174115650DF39FBB6615AF8EE"}
+      - {role: "NORMAL", dimensions: [1024, 512], mime_type: "image/png", sha256: "FCFF10ED7340ADECDDE3B648182FC478F1CA5F95A5111D5271D32CFA3517EE0C"}
+      - {role: "ORM", dimensions: [1024, 512], mime_type: "image/png", sha256: "15BEE4FCD819706DD6E5D882C0FDDEDFBD5BFAE201B199F0E5DA6B3ADF84C2A1"}
+claims_supported:
+  - "knowledge:global:polished-surface-body-response-separation"
+  - "knowledge:global:lightweight-gltf-fallback"
+  - "knowledge:global:surface-baked-inclusion-limitation"
+  - "knowledge:global:generator-constant-detection"
+scope:
+  materials: ["Golden Rutilated Quartz", "White Rabbit Hair Quartz", "Malachite", "Black Onyx"]
+  source_facts: ["GLB encoding", "embedded texture encoding", "generator metadata", "cross-preset repetition"]
+limitations:
+  - "External presets are not Golden Cases, Family parameter sources, or Gemstone Engine declarations."
+  - "No render, multi-view test, physical measurement, or visual certification was executed."
+  - "Generator labels and fallback_safe extras are generator assertions, not independent validation."
+  - "Direct implementation facts have high source authority; universal physical claims have low authority."
+retrieved_recorded_context:
+  ingestion_event: "IMPLEMENTATION_WAVE_2.1R"
+  recorded_date: "2026-08-21"
+  authorization: "AUTH-2"
+  extraction_mode: "TEMPORARY_READ_ONLY_STATIC_BINARY_PARSE"
+provenance:
+  - source: "human-explicit-source-locator"
+    authority: "HUMAN_PROVIDED_BINARY_SOURCE"
+  - source: "binary:sha256:55FC42968ED35CF27654112E91A2D9E4BEB990DBC8A1C6DB5E8D0F78681B6CC2"
+    authority: "VERIFIED_BINARY_IDENTITY"
+

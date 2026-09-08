@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:family-package:1.0.0",
+  "type": "object",
+  "required": ["schema_version", "family_id", "object_revision", "claim_state", "family_maturity", "scope", "engine_dependency", "does_not_validate"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "family_id": {"type": "string"},
+    "object_revision": {"type": "string"},
+    "claim_state": {"$ref": "urn:gemstone-material-agent:schema:state-axes:1.0.0#/$defs/knowledge_claim_state"},
+    "family_maturity": {"$ref": "urn:gemstone-material-agent:schema:state-axes:1.0.0#/$defs/family_knowledge_maturity"},
+    "scope": {"type": "object", "minProperties": 1},
+    "engine_dependency": {"type": "object"},
+    "does_not_validate": {"type": "array"}
+  },
+  "not": {"required": ["package_state"]},
+  "additionalProperties": true
+}

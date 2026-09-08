@@ -1,0 +1,70 @@
+schema_version: "1.0.0"
+snapshot_set_id: "engine-behavior-snapshots:wave-2:2026-08-21"
+object_revision: "1"
+authority_role: "SKILL_SIDE_DERIVED_REFERENCE_NOT_ENGINE_TRUTH"
+fingerprint_policy:
+  algorithm: "SHA-256"
+  canonicalization: "Sort relative locators ordinally; hash UTF-8 relative_locator + TAB + uppercase SHA-256 + LF for each entry."
+  proves: "Content identity of the declared source set only."
+  does_not_prove: ["physical correctness", "visual correctness", "determinism", "capability maturity", "QA PASS"]
+snapshots:
+  - behavior_id: "engine-behavior:current-source:54e31b0b3e80"
+    identity_target: "CURRENT_ENGINE"
+    verification_state: "RESOLVED_FROM_SOURCE"
+    source_workspace_ref: "workspace:gemstone-engine-source"
+    source_revision: "UNBORN_HEAD_WORKING_TREE_SNAPSHOT_2026-08-21"
+    engine_release_ref: "package:citrine-glb-builder:1.0.0"
+    repository_state: "NO_COMMITS_ALL_FILES_UNTRACKED"
+    behavior_source_set:
+      - {relative_locator: "build-citrine-csg.mjs", sha256: "E2D0B40D37A84B19F9E1F80C722BFD216A8B3F4626FC837A3E04171E5630C9EC"}
+      - {relative_locator: "build-citrine-reference-v1.mjs", sha256: "C8414C5EBC46B33C65DA0F6AFBBE969457F07001344F94A1AEF0FB905182717D"}
+      - {relative_locator: "pnpm-lock.yaml", sha256: "FDEB5A6800915F4CF2154B1A7C723977F8484D72A64CDB96FB700B9A6F0F1AF7"}
+      - {relative_locator: "preview.mjs", sha256: "FC48BE9DD8ED0C002B0D9578C1BE453156670E0A5E38FC4776CB3728301818AC"}
+    fingerprint: {algorithm: "SHA-256", canonicalization: "fingerprint_policy", value: "54E31B0B3E80753B4507CDB25717CC4BF847B123988D0EE299391051B90530F8"}
+    parameter_semantics_sources: ["engine-source:preview-runtime", "engine-source:shared-geometry-builder", "engine-source:citrine-reference-builder"]
+    render_semantics_sources: ["engine-source:preview-runtime", "engine-source:dependency-lock"]
+    diagnostic_semantics_sources: ["engine-source:glb-geometry-audit", "engine-source:citrine-optical-path-audit", "engine-source:citrine-measurement-v1"]
+    execution_validation_state: "NOT_EXECUTED"
+    limitations:
+      - "No Engine-owned Behavior or Capability manifest exists."
+      - "Repository has no commits; identity depends on selected source hashes."
+      - "Runtime contains embedded Smoky/Citrine profiles and case-specific branches."
+      - "Current source is not historical Smoky source."
+    can_support_certification: false
+  - behavior_id: "engine-behavior:smoky-reference-final-source:9c1b90dad5fe"
+    identity_target: "SMOKY_HISTORICAL_ENGINE"
+    verification_state: "RESOLVED_FROM_ARCHIVED_SOURCE"
+    source_workspace_ref: "workspace:gemstone-engine-source"
+    source_revision: "archive:smoky-reference-final-output:A0E54909B52C"
+    engine_release_ref: "package:citrine-glb-builder:1.0.0"
+    archive_source_ref: "engine-source:smoky-delivery-archive"
+    behavior_source_set:
+      - {relative_locator: "build-citrine-csg.mjs", archive_entry: "smoky-quartz-reference-final/build-citrine-csg.mjs", sha256: "E2D0B40D37A84B19F9E1F80C722BFD216A8B3F4626FC837A3E04171E5630C9EC"}
+      - {relative_locator: "pnpm-lock.yaml", archive_entry: "smoky-quartz-reference-final/pnpm-lock.yaml", sha256: "FDEB5A6800915F4CF2154B1A7C723977F8484D72A64CDB96FB700B9A6F0F1AF7"}
+      - {relative_locator: "preview.mjs", archive_entry: "smoky-quartz-reference-final/preview.mjs", sha256: "BAED9AA3AEA1F31A803EC8E0204684EFA17B31FB79D88B9A9B2F755DB5047C11"}
+    fingerprint: {algorithm: "SHA-256", canonicalization: "fingerprint_policy", value: "9C1B90DAD5FE799163A5698A88D708D9B97AE79CB80DC934401A7D27D70BAA04"}
+    execution_validation_state: "NOT_EXECUTED"
+    historical_execution_evidence: "FINAL_SMOKY_QUARTZ.md records historical QA; AUTH-3 did not re-execute or validate it."
+    limitations:
+      - "Structured Certified Snapshot and exact machine/runtime Protocol remain unresolved."
+      - "Compatibility of archived source with the current environment is not validated."
+      - "Archived runtime contains automatic standard-material fallback behavior."
+    can_support_certification: false
+  - behavior_id: "engine-behavior:citrine-phase1.6.2r-source-partial:dd6f8db3f981"
+    identity_target: "CITRINE_RELEVANT_ENGINE"
+    verification_state: "PARTIALLY_RESOLVED"
+    source_workspace_ref: "workspace:gemstone-engine-source"
+    source_revision: "archive:citrine-phase1.6.2r-hold-audit:8682C225A9CB"
+    engine_release_ref: "package:citrine-glb-builder:1.0.0"
+    archive_hash: "8682C225A9CB74E7582E830CDB92BADCE66702770BDF86003590D9415C30BEBA"
+    behavior_source_set:
+      - {relative_locator: "measure-citrine-cavity-support-v2.ps1", sha256: "80C32E8E8C9B8FBC681158341DE6B189114C37824542EB6249B612ED4C13EEEB"}
+      - {relative_locator: "preview.mjs", sha256: "FC48BE9DD8ED0C002B0D9578C1BE453156670E0A5E38FC4776CB3728301818AC"}
+    fingerprint: {algorithm: "SHA-256", canonicalization: "fingerprint_policy", value: "DD6F8DB3F981307766D786EE7021C251F9F509B7424415EC2F3998438C6A7065"}
+    execution_validation_state: "NOT_EXECUTED"
+    limitations:
+      - "Citrine archive omits pnpm-lock.yaml, so exact historical dependency resolution is not proven."
+      - "Current Candidate and Profile remain unresolved."
+      - "Phase 1.6.1 authority archive remains unavailable."
+    reference_eligible_for_current_case_pointer: false
+    can_support_certification: false

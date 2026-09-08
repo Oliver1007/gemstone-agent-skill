@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:real-case-execution-request:1.0.0",
+  "title": "AUTH-6 Real Case Execution Request",
+  "type": "object",
+  "required": [
+    "schema_version", "request_id", "request_state", "human_approval_ref", "case_id",
+    "task_mode", "start_phase", "target_candidate_policy", "parent_candidate_ref",
+    "profile_ref", "reference_ref", "run_context_ref", "engine_behavior",
+    "tool_refs", "renderer_ref", "frozen_scope", "allowed_mutation_domains",
+    "forbidden_domains", "execution_budget", "retry_budget", "expected_write_set",
+    "render_plan", "qa_plan", "regression_plan", "step11b_plan", "rollback", "certification_ceiling",
+    "candidate_activation", "profile_update", "authorization_effect"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "request_id": {"type": "string", "minLength": 1},
+    "request_state": {"enum": ["PENDING_HUMAN_SELECTION", "DRAFT_FOR_HUMAN_REVIEW", "HUMAN_AUTHORIZED"]},
+    "human_approval_ref": {"type": "string", "minLength": 1},
+    "case_id": {"type": "string", "minLength": 1},
+    "task_mode": {"type": "string", "minLength": 1},
+    "start_phase": {"enum": ["PENDING_CASE_STATE_RESOLUTION", "P0", "P1", "P2", "P3", "P4", "P5", "P6", "P7", "P8", "P9"]},
+    "target_candidate_policy": {"enum": ["CREATE_NEW_CANDIDATE", "NO_CANDIDATE_MUTATION"]},
+    "parent_candidate_ref": {"type": ["string", "null"]},
+    "profile_ref": {"type": "string", "minLength": 1},
+    "reference_ref": {"type": "string", "minLength": 1},
+    "run_context_ref": {"type": "string", "minLength": 1},
+    "engine_behavior": {
+      "type": "object",
+      "required": ["behavior_ref", "fingerprint", "aggregate_contract", "aggregate_sha256", "runtime_dependency_sha256"],
+      "properties": {
+        "behavior_ref": {"type": "string"},
+        "fingerprint": {"type": "string", "pattern": "^[A-F0-9]{64}$"},
+        "aggregate_contract": {"const": "engine-aggregate-canonicalization-v1"},
+        "aggregate_sha256": {"type": "string", "pattern": "^[A-F0-9]{64}$"},
+        "runtime_dependency_sha256": {"type": "string", "pattern": "^[A-F0-9]{64}$"}
+      },
+      "additionalProperties": true
+    },
+    "tool_refs": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["tool_id", "tool_hash", "operation_id"], "properties": {"tool_id": {"type": "string"}, "tool_hash": {"type": "string", "pattern": "^[A-F0-9]{64}$"}, "operation_id": {"type": "string"}}}},
+    "renderer_ref": {"type": "string", "minLength": 1},
+    "frozen_scope": {"type": "object", "required": ["geometry", "material", "environment", "camera", "renderer", "profile", "candidate", "case_pointer", "qa_config", "reference"]},
+    "allowed_mutation_domains": {"type": "array", "uniqueItems": true, "items": {"enum": ["geometry", "material", "environment", "camera", "presentation", "candidate_metadata"]}},
+    "forbidden_domains": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+    "execution_budget": {"type": "integer", "minimum": 0, "maximum": 1},
+    "retry_budget": {"type": "integer", "minimum": 0, "maximum": 1},
+    "expected_write_set": {"type": "array", "items": {"type": "object", "required": ["logical_path", "intent", "object_class"]}},
+    "render_plan": {"type": "object", "required": ["status", "contract_ref"]},
+    "qa_plan": {"type": "object", "required": ["status", "protocol_ref"]},
+    "regression_plan": {"type": "object", "required": ["status", "applicable_goldens"]},
+    "step11b_plan": {"type": "object", "required": ["status", "contract_ref"]},
+    "rollback": {"type": "object", "required": ["contract_ref", "source_mutation_response", "unexpected_write_response"]},
+    "certification_ceiling": {"const": "CANDIDATE_ONLY_NO_P10_OR_GOLDEN_EFFECT"},
+    "candidate_activation": {"const": false},
+    "profile_update": {"const": false},
+    "authorization_effect": {"const": "NONE_UNTIL_SEPARATE_EXPLICIT_HUMAN_AUTHORIZATION"}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"request_state": {"const": "PENDING_HUMAN_SELECTION"}}},
+      "then": {
+        "properties": {
+          "case_id": {"const": "PENDING_HUMAN_SELECTION"},
+          "human_approval_ref": {"const": "PENDING_HUMAN_AUTHORIZATION"},
+          "execution_budget": {"const": 0},
+          "retry_budget": {"const": 0},
+          "expected_write_set": {"maxItems": 0}
+        }
+      }
+    }
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:certified-snapshot:1.0.0",
+  "type": "object",
+  "required": ["schema_version", "snapshot_id", "object_revision", "candidate_ref", "profile_ref", "engine_behavior_ref", "qa_package_ref", "coverage_ref", "approval_ref", "immutable"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "snapshot_id": {"type": "string"},
+    "object_revision": {"type": "string"},
+    "candidate_ref": {"type": "string"},
+    "profile_ref": {"type": "string"},
+    "engine_behavior_ref": {"type": "string"},
+    "qa_package_ref": {"type": "string"},
+    "coverage_ref": {"type": "string"},
+    "approval_ref": {"type": "string"},
+    "immutable": {"const": true}
+  },
+  "additionalProperties": true
+}

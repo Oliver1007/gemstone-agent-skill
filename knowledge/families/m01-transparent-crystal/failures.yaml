@@ -1,0 +1,59 @@
+schema_version: "1.0.0"
+package_id: "knowledge-package:m01-transparent-crystal:failures"
+object_revision: "2"
+authority_role: "SCOPED_FAILURE_KNOWLEDGE"
+entries:
+  - failure_id: "failure:bright-cavity-tube"
+    claim_state: "CANDIDATE"
+    failure_validation_level: "OBSERVED"
+    confidence: "LOW"
+    scope:
+      family_ref: "family:m01-transparent-crystal"
+    source_case_refs: []
+    symptom: "A cavity reads as a uniform bright or opaque tube rather than a physically integrated optical path."
+    possible_causes: ["boundary weighting", "path classification", "environment sampling", "refraction displacement", "tone response"]
+    discriminating_evidence: ["path-class diagnostic", "cavity boundary diagnostic", "no-card comparison", "fixed-Protocol ROI measurement"]
+    false_positives: ["legitimate view-dependent reflection", "exposure-compressed cavity highlight"]
+    forbidden_fixes: ["painted cavity stripe", "emissive tube", "brightness overlay", "fake cylinder"]
+    valid_fix_domains: ["optical path", "boundary model", "environment sampling", "measurement protocol"]
+    provenance:
+      - source: "contract:step-4-family-knowledge"
+        authority: "ACCEPTED_DESIGN_SOURCE"
+    engine_dependency: {verification_state: "UNVERIFIED"}
+    does_not_prove: ["that the cavity should be darkened", "that Geometry is wrong"]
+  - failure_id: "failure:hard-horizontal-stripe"
+    claim_state: "CANDIDATE"
+    failure_validation_level: "OBSERVED"
+    confidence: "LOW"
+    scope:
+      family_ref: "family:m01-transparent-crystal"
+    source_case_refs: []
+    symptom: "A horizontal band has a hard finite edge or behaves like a painted surface stripe."
+    possible_causes: ["finite optical card edge", "hard mask", "screen-space correction"]
+    discriminating_evidence: ["vertical derivative diagnostic", "mask inspection", "view variation"]
+    false_positives: ["legitimate broad softbox reflection"]
+    forbidden_fixes: ["painted band", "hard fake stripe", "hidden screen-space correction"]
+    valid_fix_domains: ["optical environment", "mask feathering", "physical lighting diagnosis"]
+    provenance:
+      - source: "contract:step-4-family-knowledge"
+        authority: "ACCEPTED_DESIGN_SOURCE"
+    engine_dependency: {verification_state: "UNVERIFIED"}
+    does_not_prove: ["a universal M01 environment layout"]
+  - failure_id: "failure:uniform-glass-appearance"
+    claim_state: "CANDIDATE"
+    failure_validation_level: "OBSERVED"
+    confidence: "LOW"
+    scope:
+      family_ref: "family:m01-transparent-crystal"
+    source_case_refs: []
+    symptom: "The material reads as generic uniform glass rather than the intended transparent gemstone identity."
+    possible_causes: ["scale mismatch", "insufficient path-length response", "environment mismatch", "missing Core Feature"]
+    discriminating_evidence: ["path-length diagnostic", "multi-view comparison", "scale audit", "capability check"]
+    false_positives: ["low-information Reference", "near-zero absorption regime"]
+    forbidden_fixes: ["decorative noise used to hide the base", "global blind parameter search"]
+    valid_fix_domains: ["scale", "physical foundation", "Core Feature", "optical environment"]
+    provenance:
+      - source: "contract:step-4-family-knowledge"
+        authority: "ACCEPTED_DESIGN_SOURCE"
+    engine_dependency: {verification_state: "UNVERIFIED"}
+    does_not_prove: ["that absorption alone is the cause"]

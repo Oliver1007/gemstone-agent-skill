@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:profile-registry-entry:1.0.0",
+  "title": "Minimal Verifiable Immutable Profile Registry Entry Schema 1.0.0",
+  "description": "Infrastructure metadata for one immutable, versioned authoritative Profile. Physical paths and mutable business state are intentionally excluded.",
+  "type": "object",
+  "required": [
+    "entry_schema_ref",
+    "profile_ref",
+    "profile_schema_ref",
+    "profile_content_sha256"
+  ],
+  "properties": {
+    "entry_schema_ref": {
+      "const": "urn:gemstone-material-agent:schema:profile-registry-entry:1.0.0"
+    },
+    "profile_ref": {
+      "type": "string",
+      "pattern": "^profile:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?@(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$",
+      "allOf": [
+        {"not": {"pattern": "^profile:(?:con|prn|aux|nul|com[1-9]|lpt[1-9]):"}},
+        {"not": {"pattern": "^profile:[^:]+:(?:con|prn|aux|nul|com[1-9]|lpt[1-9])@"}}
+      ]
+    },
+    "profile_schema_ref": {
+      "type": "string",
+      "pattern": "^urn:gemstone-material-agent:schema:[a-z0-9][a-z0-9:-]*:(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$"
+    },
+    "profile_content_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  },
+  "additionalProperties": false
+}

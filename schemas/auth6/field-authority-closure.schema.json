@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:field-authority-closure:1.0.0",
+  "type": "object",
+  "required": ["schema_version", "closure_id", "case_id", "profile_schema_analysis", "tool_projection", "fields", "feature_policies", "summary"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "closure_id": {"type": "string"},
+    "case_id": {"const": "case:citrine"},
+    "profile_schema_analysis": {"type": "object"},
+    "tool_projection": {"type": "object"},
+    "fields": {"type": "array", "minItems": 14, "maxItems": 14},
+    "feature_policies": {"type": "array", "minItems": 2, "maxItems": 2},
+    "summary": {"type": "object"}
+  },
+  "additionalProperties": false
+}

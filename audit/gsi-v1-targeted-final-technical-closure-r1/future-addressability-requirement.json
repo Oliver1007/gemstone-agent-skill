@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "fields": [
+    "normalized centroid",
+    "normalized bounding box",
+    "image binding",
+    "local annotation ID",
+    "sealed spatial metadata"
+  ],
+  "implementationAuthorized": false
+}

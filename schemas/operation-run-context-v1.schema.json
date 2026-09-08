@@ -1,0 +1,18 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"urn:gemstone-material-agent:schema:operation-run-context:1.0.0",
+  "title":"Operation Run Context V1 (distinct from active-case Run Context)",
+  "type":"object",
+  "required":["schema_version","context_kind","request_id","run_id","operation_id","caller","workspace_root","state_root","case_ref","profile_ref","object_bindings","governance_basis","production_path","input_identity","effective_input","runtime_fingerprint","browser","admission_ref","expected_write_set","authority_class","lifecycle_state","governance","human_approval_ref"],
+  "properties":{
+    "schema_version":{"const":"1.0.0"},"context_kind":{"const":"OPERATION_RUN_CONTEXT_V1"},
+    "request_id":{"type":"string","pattern":"^[a-z0-9][a-z0-9-]{0,79}$"},"run_id":{"type":"string","pattern":"^[a-z0-9][a-z0-9-]{0,79}$"},
+    "operation_id":{"enum":["BUILD","AUDIT","RENDER"]},"caller":{"type":"object"},
+    "workspace_root":{"type":"string"},"state_root":{"type":"string"},"case_ref":{"type":["string","null"]},"profile_ref":{"type":["string","null"]},
+    "object_bindings":{"type":"object"},"governance_basis":{"type":"object"},"production_path":{"const":"LEGACY"},"input_identity":{"type":"object"},"effective_input":{"type":"object"},
+    "runtime_fingerprint":{"type":"string","pattern":"^[A-F0-9]{64}$"},"browser":{"type":["object","null"]},"admission_ref":{"type":["string","null"]},
+    "expected_write_set":{"type":"object"},"authority_class":{"const":"EXECUTION_STATE_NON_AUTHORITATIVE"},"lifecycle_state":{"const":"ACTIVE"},"governance":{"type":"object"},"human_approval_ref":{"type":"string","minLength":1}
+  },
+  "additionalProperties":false,
+  "allOf":[{"if":{"properties":{"operation_id":{"const":"BUILD"}}},"then":{"properties":{"case_ref":{"type":"string","pattern":"^case:[a-z0-9][a-z0-9-]*$"}}}}]
+}

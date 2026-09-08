@@ -1,0 +1,34 @@
+schema_version: "1.1.0"
+knowledge_id: "knowledge:global:lightweight-gltf-fallback"
+object_revision: "1"
+type: "GLOBAL_RULE"
+knowledge_role: "REPRESENTATION_STRATEGY_CANDIDATE"
+claim: "A lightweight portable gemstone representation may approximate gemstone visual identity with standard glTF-compatible BaseColor, roughness, normal, IOR, transmission, volume attenuation, and Clearcoat mechanisms without reproducing the full physical optical mechanism."
+claim_state: "CANDIDATE"
+scope:
+  representation_mode: "ARTISTIC_APPROXIMATION_OR_HYBRID"
+  target: "portable glTF preview representation"
+supporting_source_refs:
+  - "external-source:barcelona-bear-4-glb:55fc42968ed3"
+observation_basis:
+  - "Four materially distinct presets use one shared glTF geometry with embedded standard texture roles and KHR material extensions."
+  - "Each material declares fallback_safe, retained only as a generator assertion rather than validation."
+contradicting_sources: []
+duplicate_status: "NEW_CLAIM"
+inference_boundary: "Source encoding demonstrates a portable representation strategy; no render or optical validation establishes result quality."
+provenance:
+  - source: "external-comparison:barcelona-bear-4-glb:2026-08-21"
+    authority: "EXTERNAL_COMPARATIVE_SOURCE"
+    evidence_status: "SOURCE_OBSERVATION_NOT_AUTO_EVIDENCE"
+engine_dependency:
+  required: false
+  firewall: "Not a new runtime mode and not a declaration of current Engine support."
+does_not_validate:
+  - "full optical correctness"
+  - "exact optical path"
+  - "multi-interface cavity transport"
+  - "true volumetric inclusion structure"
+  - "physical multi-view validity"
+  - "Golden certification"
+loading_level: "DECISION"
+

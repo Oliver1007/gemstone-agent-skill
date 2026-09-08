@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:auth6:human-thickness-decision-packet:1.0.0",
+  "title": "Human Thickness Decision Packet",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "packet_id", "case_ref", "field_id", "decision_status", "facts", "options", "prohibited_inferences", "result"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "packet_id": {"type": "string", "minLength": 1},
+    "case_ref": {"const": "case:citrine"},
+    "field_id": {"const": "material.volume.thickness"},
+    "decision_status": {"const": "HUMAN_DECISION_REQUIRED_NOT_SELECTED"},
+    "facts": {"type": "array", "minItems": 1, "items": {"type": "object"}},
+    "options": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": ["option_id", "human_action", "evidence_basis", "authority_effect", "does_not_claim"],
+        "properties": {
+          "option_id": {"type": "string"},
+          "human_action": {"type": "string"},
+          "evidence_basis": {"type": "array", "minItems": 1},
+          "authority_effect": {"type": "string"},
+          "does_not_claim": {"type": "array", "minItems": 1}
+        }
+      }
+    },
+    "prohibited_inferences": {"type": "array", "minItems": 1},
+    "result": {"const": "PASS_HUMAN_THICKNESS_DECISION_PREPARED"}
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:safe-mutator-invocation-plan:1.0.0",
+  "type": "object",
+  "required": ["operation_id", "source_sha256", "argv", "working_directory", "resolved_output_paths", "modeled_only"],
+  "properties": {
+    "operation_id": {"type": "string"},
+    "source_sha256": {"type": "string", "pattern": "^[A-Fa-f0-9]{64}$"},
+    "argv": {"type": "array", "items": {"type": "string"}},
+    "working_directory": {"type": "string"},
+    "resolved_output_paths": {"type": "array", "items": {"type": "string"}},
+    "modeled_only": {"const": true}
+  },
+  "additionalProperties": false
+}

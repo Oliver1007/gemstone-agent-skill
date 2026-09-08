@@ -1,0 +1,15 @@
+{
+  "mechanicalOverall": "Same finalPass variable as integration gate; does not parse final-gate JSON.",
+  "directReferences": {
+    "integrationGateFile": false,
+    "validationSummaryFile": false
+  },
+  "testTotals": "63/63 and 35/35 embedded literals; not independently parsed test logs",
+  "dynamicFields": [
+    "equivalence counts",
+    "render hash validation",
+    "source fingerprint",
+    "performance"
+  ],
+  "authority": "Corroborating generated summary, not independent majority vote."
+}

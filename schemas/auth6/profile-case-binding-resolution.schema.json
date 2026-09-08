@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:profile-case-binding-resolution:1.0.0",
+  "type": "object",
+  "required": [
+    "schema_version", "resolution_id", "case_id", "target_freeze_ref",
+    "profile_inventory", "profile_resolution", "binding", "field_classification",
+    "candidate_inventory", "run_context_inventory", "result", "auth6_authorized"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "resolution_id": {"type": "string"},
+    "case_id": {"const": "case:citrine"},
+    "target_freeze_ref": {"type": "string"},
+    "profile_inventory": {"type": "array"},
+    "profile_resolution": {"enum": ["EXACT_AUTHORITATIVE_PROFILE_RESOLVED", "MULTIPLE_PROFILE_CANDIDATES", "STALE_PROFILE_ONLY", "LEGACY_EMBEDDED_CONFIG_ONLY", "NO_AUTHORITATIVE_PROFILE", "PROFILE_IDENTITY_CONFLICT", "UNRESOLVED"]},
+    "binding": {"type": "object"},
+    "field_classification": {"type": "object"},
+    "candidate_inventory": {"type": "array"},
+    "run_context_inventory": {"type": "array"},
+    "result": {"enum": ["PASS_PROFILE_CASE_BINDING_CLOSED", "PASS_BINDING_CLOSED_PROFILE_REVALIDATION_REQUIRED", "PASS_WITH_BINDING_BLOCKER_RESOLVED", "BLOCKED_NO_AUTHORITATIVE_PROFILE", "BLOCKED_PROFILE_DISAMBIGUATION", "BLOCKED_PROFILE_ENGINE_INCOMPATIBLE", "BLOCKED_BINDING_CONFLICT", "SOURCE_PROTECTION_FAILURE", "ARCHITECTURE_REVIEW_REQUIRED"]},
+    "auth6_authorized": {"const": false}
+  },
+  "additionalProperties": true
+}

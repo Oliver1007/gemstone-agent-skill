@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:safe-mutator-pilot-result:1.0.0",
+  "type": "object",
+  "required": ["schema_version", "result_id", "status", "filesystem_conformance", "semantic_conformance", "invocation_allowed", "execution_allowed", "authorization_granted", "plan", "checks", "blockers", "authority_boundary"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "result_id": {"type": "string"},
+    "status": {"enum": ["STATIC_MOCK_CONFORMANT_EXECUTION_DISABLED", "NOT_READY", "REJECTED"]},
+    "filesystem_conformance": {"enum": ["PASS", "FAIL", "NOT_EVALUATED"]},
+    "semantic_conformance": {"enum": ["PASS_SYNTHETIC_ONLY", "FAIL", "NOT_EVALUATED"]},
+    "invocation_allowed": {"const": false},
+    "execution_allowed": {"const": false},
+    "authorization_granted": {"const": false},
+    "plan": {"type": ["object", "null"]},
+    "checks": {"type": "array"},
+    "blockers": {"type": "array"},
+    "authority_boundary": {"const": "AUTH_4_MAINTENANCE_STATIC_NON_MUTATING_ONLY"}
+  },
+  "additionalProperties": false
+}

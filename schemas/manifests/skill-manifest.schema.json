@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:skill-manifest:1.0.0",
+  "type": "object",
+  "required": ["schema_version", "skill_id", "skill_version", "entrypoint", "modules", "core_precedence"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "skill_id": {"type": "string"},
+    "skill_version": {"const": "1.0.0-rc2"},
+    "entrypoint": {"type": "object", "required": ["path", "revision"]},
+    "modules": {"type": "array", "minItems": 5, "maxItems": 5, "items": {"type": "object", "required": ["id", "path", "revision"]}},
+    "core_precedence": {"const": true}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:glb-material-metadata-result:1.0.0",
+  "type": "object",
+  "required": ["asset", "structure", "materials", "images", "authority_boundary"],
+  "properties": {
+    "asset": {"type": "object"},
+    "structure": {"type": "object"},
+    "materials": {"type": "array"},
+    "images": {"type": "array"},
+    "authority_boundary": {"const": "SOURCE_METADATA_ONLY_NOT_PHYSICAL_TRUTH"}
+  },
+  "additionalProperties": true
+}

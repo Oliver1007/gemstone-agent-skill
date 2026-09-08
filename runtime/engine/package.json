@@ -1,0 +1,18 @@
+{
+  "name": "citrine-glb-builder",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build-citrine-csg.mjs",
+    "build:smoky": "node build-citrine-csg.mjs smoky",
+    "build:citrine:reference-v1": "node build-citrine-reference-v1.mjs",
+    "build:gemstone:mutator:v1": "node build-gemstone-mutator-v1.mjs",
+    "test:mutator-interface:v1": "node test-mutator-interface-v1.mjs",
+    "audit:glb": "node audit-glb.mjs",
+    "preview": "node preview-server.mjs"
+  },
+  "dependencies": {
+    "three": "^0.185.1"
+  }
+}

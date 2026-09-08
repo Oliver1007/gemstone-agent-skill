@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:measurement-protocol:1.0.0",
+  "type": "object",
+  "required": ["schema_version", "protocol_id", "protocol_version", "roi", "mask", "color_space", "units", "exclusion_rules"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "protocol_id": {"type": "string"},
+    "protocol_version": {"type": "string"},
+    "roi": {"type": "object"},
+    "mask": {"type": "object"},
+    "color_space": {"type": "string"},
+    "units": {"type": "array", "minItems": 1},
+    "exclusion_rules": {"type": "array"}
+  },
+  "additionalProperties": true
+}

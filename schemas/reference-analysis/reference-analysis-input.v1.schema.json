@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema:reference-analysis-input:1.0.0",
+  "title": "Reference Analysis Input V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_ref", "analysis_request_ref", "case_ref", "run_context_ref", "reference_set_ref", "reference_assets", "analysis_scope", "provider_ref", "provider_contract_ref", "request_provenance"],
+  "properties": {
+    "schema_ref": {"const": "schema:reference-analysis-input:1.0.0"},
+    "analysis_request_ref": {"type": "string", "pattern": "^reference-analysis-request:[a-z0-9][a-z0-9._:-]*$"},
+    "case_ref": {"type": "string", "pattern": "^case:[a-z0-9][a-z0-9._-]*$"},
+    "run_context_ref": {"type": "string", "pattern": "^runctx:[a-z0-9._-]+:[0-9a-f-]{36}$"},
+    "reference_set_ref": {"type": "string", "pattern": "^reference-set:[a-z0-9][a-z0-9._:-]*$"},
+    "reference_assets": {"type": "array", "minItems": 1, "maxItems": 8, "items": {"$ref": "#/$defs/referenceAsset"}},
+    "analysis_scope": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"enum": ["MATERIAL_BODY", "SURFACE", "GEOMETRY", "HOLE_CAVITY", "CAMERA", "LIGHTING", "ENVIRONMENT_REFLECTION", "BACKGROUND", "POST_TONEMAPPING", "TRANSPARENCY_DEPTH", "INTERNAL_STRUCTURE"]}},
+    "provider_ref": {"const": "provider:openai:gpt-5.6-sol@1.0.0"},
+    "provider_contract_ref": {"const": "contract:openai-responses-vision-provider:1.0.0"},
+    "request_provenance": {"type": "object", "additionalProperties": false, "required": ["human_decision_ref", "purpose", "fixture_class"], "properties": {"human_decision_ref": {"type": "string", "minLength": 1}, "purpose": {"enum": ["P1_REFERENCE_REVALIDATION", "ISOLATED_QUALIFICATION"]}, "fixture_class": {"enum": ["PRODUCTION_REFERENCE", "TEST_ONLY_NONAUTHORITATIVE"]}}}
+  },
+  "$defs": {
+    "referenceAsset": {
+      "type": "object", "additionalProperties": false,
+      "required": ["reference_ref", "expected_sha256", "media_type", "role", "transport"],
+      "properties": {
+        "reference_ref": {"type": "string", "pattern": "^artifact:[a-z0-9][a-z0-9._:-]*$"},
+        "expected_sha256": {"type": "string", "pattern": "^[A-F0-9]{64}$"},
+        "media_type": {"enum": ["image/jpeg", "image/png"]},
+        "role": {"type": "string", "minLength": 1, "maxLength": 80},
+        "transport": {"type": "object", "additionalProperties": false, "required": ["path"], "properties": {"path": {"type": "string", "minLength": 1}}}
+      }
+    }
+  }
+}

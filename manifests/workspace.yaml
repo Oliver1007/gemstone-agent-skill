@@ -1,0 +1,27 @@
+schema_version: "1.0.0"
+workspace_id: "workspace:gemstone-material-agent"
+object_revision: "2"
+name: "gemstone-agent-skill"
+role: "SKILL_GOVERNANCE_WORKSPACE"
+release_state: "V1_CANDIDATE_DESIGN_VALIDATED"
+skill_ref: "skill:gemstone-material-agent:1.0.0-rc2"
+path_policy:
+  semantic_identity_uses_absolute_paths: false
+  locator_strategy: "workspace_alias_plus_relative_locator_plus_hash"
+external_workspaces:
+  - alias: "gemstone-engine-source"
+    authority_role: "ENGINE_AND_SOURCE_ARTIFACT_AUTHORITY"
+    access: "READ_ONLY_UNDER_AUTH_3"
+    environment_resolution: "RESOLVED_IN_LOCAL_NON_SEMANTIC_MAPPING"
+    local_mapping_ref: "integration/engine/local-workspace-resolution.yaml"
+    source_map_ref: "integration/engine/engine-source-map.yaml"
+write_boundary:
+  allowed: ["workspace:gemstone-material-agent"]
+  forbidden:
+    - "workspace:gemstone-engine-source"
+    - "source:smoky-quartz"
+    - "source:citrine"
+authorization:
+  level: ["AUTH-1", "AUTH-2", "AUTH-3"]
+  waves: ["IMP-0", "IMP-1", "IMP-2", "IMP-3", "IMP-4", "IMP-5"]
+  later_levels_authorized: false

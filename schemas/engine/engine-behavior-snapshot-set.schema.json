@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:engine-behavior-snapshot-set:1.0.0",
+  "type": "object",
+  "required": ["schema_version", "snapshot_set_id", "object_revision", "authority_role", "snapshots"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "snapshot_set_id": {"type": "string"},
+    "object_revision": {"type": "string"},
+    "authority_role": {"const": "SKILL_SIDE_DERIVED_REFERENCE_NOT_ENGINE_TRUTH"},
+    "snapshots": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["behavior_id", "identity_target", "verification_state", "source_workspace_ref", "source_revision", "engine_release_ref", "behavior_source_set", "fingerprint", "execution_validation_state", "limitations", "can_support_certification"],
+        "properties": {
+          "behavior_id": {"type": "string"},
+          "identity_target": {"enum": ["CURRENT_ENGINE", "SMOKY_HISTORICAL_ENGINE", "CITRINE_RELEVANT_ENGINE"]},
+          "verification_state": {"enum": ["RESOLVED_FROM_SOURCE", "RESOLVED_FROM_ARCHIVED_SOURCE", "PARTIALLY_RESOLVED", "UNRESOLVED"]},
+          "source_workspace_ref": {"type": "string"},
+          "source_revision": {"type": ["string", "null"]},
+          "engine_release_ref": {"type": ["string", "null"]},
+          "behavior_source_set": {"type": "array", "minItems": 1},
+          "fingerprint": {
+            "type": "object",
+            "required": ["algorithm", "canonicalization", "value"],
+            "properties": {
+              "algorithm": {"const": "SHA-256"},
+              "canonicalization": {"type": "string"},
+              "value": {"type": "string", "pattern": "^[A-F0-9]{64}$"}
+            }
+          },
+          "execution_validation_state": {"const": "NOT_EXECUTED"},
+          "limitations": {"type": "array"},
+          "can_support_certification": {"type": "boolean"}
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:mutation-plan:1.1.0",
+  "type": "object",
+  "required": ["schema_version", "plan_id", "request_ref", "resolved_tool", "resolved_target", "resolved_inputs", "intended_changes", "output_artifact_plan", "staging_location", "final_location", "write_set_ref", "rollback_plan_ref", "postcondition_tests", "new_candidate_identity_plan", "failure_route", "commit_strategy", "case_profile_resolution", "pointer_updates", "profile_updates"],
+  "properties": {
+    "schema_version": {"const": "1.1.0"}, "plan_id": {"type": "string"}, "request_ref": {"type": "string"},
+    "resolved_tool": {"type": "object"}, "resolved_target": {"type": "object"}, "resolved_inputs": {"type": "array", "minItems": 1},
+    "intended_changes": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "output_artifact_plan": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "staging_location": {"type": "string"}, "final_location": {"type": "string"}, "write_set_ref": {"type": "string"}, "rollback_plan_ref": {"type": "string"},
+    "postcondition_tests": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "new_candidate_identity_plan": {"type": "object", "required": ["candidate_id", "parent_candidate_id", "expected_state", "post_state"], "properties": {"candidate_id": {"type": "string"}, "parent_candidate_id": {"type": "string"}, "expected_state": {"const": "ABSENT"}, "post_state": {"const": "CANDIDATE"}}, "additionalProperties": false},
+    "failure_route": {"const": "NO_COMMIT_QUARANTINE_OR_DELETE_STAGE_PRESERVE_AUDIT"},
+    "commit_strategy": {"const": "ATOMIC_NEW_CANDIDATE_DIRECTORY"},
+    "case_profile_resolution": {"const": "EXPLICIT_INPUT_ONLY"}, "pointer_updates": {"const": "NONE"}, "profile_updates": {"const": "NONE"}
+  }, "additionalProperties": false
+}

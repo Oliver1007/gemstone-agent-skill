@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:local-workspace-resolution:1.0.0",
+  "type": "object",
+  "required": ["schema_version", "mapping_id", "object_revision", "record_type", "authority_role", "workspace_alias", "local_resolved_path", "access", "semantic_identity"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "mapping_id": {"type": "string"},
+    "object_revision": {"type": "string"},
+    "record_type": {"const": "LOCAL_WORKSPACE_RESOLUTION"},
+    "authority_role": {"const": "ENVIRONMENT_LOCATION_ONLY_NOT_SEMANTIC_IDENTITY"},
+    "workspace_alias": {"type": "string"},
+    "local_resolved_path": {"type": "string", "minLength": 1},
+    "access": {"const": "READ_ONLY"},
+    "semantic_identity": {"const": false}
+  },
+  "additionalProperties": true
+}

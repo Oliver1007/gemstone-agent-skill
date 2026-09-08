@@ -1,0 +1,257 @@
+schema_version: "1.0.0"
+comparison_id: "external-comparison:barcelona-bear-4-glb:2026-08-21"
+object_revision: "1"
+record_type: "EXTERNAL_COMPARATIVE_OBSERVATION_SET"
+source_ref: "external-source:barcelona-bear-4-glb:55fc42968ed3"
+observation_authority: "SOURCE_FACT_FOR_OWN_ENCODING_ONLY"
+method:
+  glb_parse: "STATIC_BINARY_PARSE"
+  texture_parse: "EMBEDDED_PNG_DECODE_AND_CHANNEL_STATISTICS"
+  rendering: "NOT_EXECUTED"
+  engine_execution: "NOT_EXECUTED"
+  gemstone_tool_execution: "NOT_EXECUTED"
+geometry_comparison:
+  result: "FIXED_GEOMETRY_COMPARATIVE_PRESET_SET"
+  shared_geometry_ref: "external-geometry:barcelona-bear-beveled-through-hole:bbfd6a397220"
+  exact_payload_identity_across_all_four: true
+  mesh_count_each: 1
+  primitive_count_each: 1
+  vertex_count_each: 11352
+  triangle_count_each: 22528
+  dimensions_from_bounds_m: [0.009999999776482582, 0.009999999776482582, 0.009861930273473262]
+  declared_diameter_mm: 10.0
+  declared_hole_diameter_mm: 1.2
+  does_not_prove: ["controlled physical experiment", "physical equivalence of material presets"]
+comparative_materials:
+  - material: "Golden Rutilated Quartz"
+    source_member_ref: "external-source-member:golden-rutilated-quartz:7cc0fd20dce1"
+    geometry_ref: "external-geometry:barcelona-bear-beveled-through-hole:bbfd6a397220"
+    ior: 1.54
+    transmission_factor: 0.48
+    attenuation_distance_m: 0.05
+    attenuation_color: [0.95, 0.76, 0.35]
+    thickness_factor: 0.01
+    clearcoat_factor: 1.0
+    clearcoat_roughness_factor: 0.0578
+    base_roughness_factor: 1.0
+    orm_roughness_channel_normalized: {minimum: 0.1569, maximum: 0.3373, mean: 0.1673}
+    normal_scale: 0.72
+    texture_roles: ["BASE_COLOR", "NORMAL", "OCCLUSION", "ROUGHNESS", "METALLIC"]
+    inclusion_representation: "SURFACE_UV_TEXTURE_SET; no separate inclusion geometry or volume field"
+    repeated_constant_flags: ["GEOMETRY", "GENERATOR", "DIAMETER", "HOLE_DIAMETER", "BASE_COLOR_FACTOR", "METALLIC_FACTOR", "BASE_ROUGHNESS_FACTOR", "NORMAL_SCALE", "CLEARCOAT_FACTOR", "IOR_1_54", "THICKNESS_0_01", "ATTENUATION_DISTANCE_0_05"]
+    authority_interpretation: "High for this GLB encoding; low for universal rutile/quartz physics."
+  - material: "White Rabbit Hair Quartz"
+    source_member_ref: "external-source-member:white-rabbit-hair-quartz:d81a2a3c08c2"
+    geometry_ref: "external-geometry:barcelona-bear-beveled-through-hole:bbfd6a397220"
+    ior: 1.54
+    transmission_factor: 0.36
+    attenuation_distance_m: 0.05
+    attenuation_color: [0.96, 0.95, 0.91]
+    thickness_factor: 0.01
+    clearcoat_factor: 1.0
+    clearcoat_roughness_factor: 0.0714
+    base_roughness_factor: 1.0
+    orm_roughness_channel_normalized: {minimum: 0.2039, maximum: 0.2745, mean: 0.2081}
+    normal_scale: 0.72
+    texture_roles: ["BASE_COLOR", "NORMAL", "OCCLUSION", "ROUGHNESS", "METALLIC"]
+    inclusion_representation: "SURFACE_UV_TEXTURE_SET; no separate inclusion geometry or volume field"
+    repeated_constant_flags: ["GEOMETRY", "GENERATOR", "DIAMETER", "HOLE_DIAMETER", "BASE_COLOR_FACTOR", "METALLIC_FACTOR", "BASE_ROUGHNESS_FACTOR", "NORMAL_SCALE", "CLEARCOAT_FACTOR", "IOR_1_54", "THICKNESS_0_01", "ATTENUATION_DISTANCE_0_05"]
+    authority_interpretation: "High for this GLB encoding; low for universal rabbit-hair/quartz physics."
+  - material: "Malachite"
+    source_member_ref: "external-source-member:malachite:f5e05d7d6aa5"
+    geometry_ref: "external-geometry:barcelona-bear-beveled-through-hole:bbfd6a397220"
+    ior: 1.57
+    transmission_factor: null
+    attenuation_distance_m: null
+    attenuation_color: null
+    thickness_factor: null
+    clearcoat_factor: 1.0
+    clearcoat_roughness_factor: 0.0816
+    base_roughness_factor: 1.0
+    orm_roughness_channel_normalized: {minimum: 0.2353, maximum: 0.2941, mean: 0.2387}
+    normal_scale: 0.72
+    texture_roles: ["BASE_COLOR", "NORMAL", "OCCLUSION", "ROUGHNESS", "METALLIC"]
+    inclusion_representation: "NOT_APPLICABLE; banding is surface UV texture encoded"
+    repeated_constant_flags: ["GEOMETRY", "GENERATOR", "DIAMETER", "HOLE_DIAMETER", "BASE_COLOR_FACTOR", "METALLIC_FACTOR", "BASE_ROUGHNESS_FACTOR", "NORMAL_SCALE", "CLEARCOAT_FACTOR"]
+    authority_interpretation: "High for opaque surface-encoded preset facts; no Family authority."
+  - material: "Black Onyx"
+    source_member_ref: "external-source-member:black-onyx:a3d33b1fc6f9"
+    geometry_ref: "external-geometry:barcelona-bear-beveled-through-hole:bbfd6a397220"
+    ior: 1.54
+    transmission_factor: 0.02
+    attenuation_distance_m: 0.05
+    attenuation_color: [0.025, 0.028, 0.032]
+    thickness_factor: 0.01
+    clearcoat_factor: 1.0
+    clearcoat_roughness_factor: 0.0408
+    base_roughness_factor: 1.0
+    orm_roughness_channel_normalized: {minimum: 0.1176, maximum: 0.1255, mean: 0.1177}
+    normal_scale: 0.72
+    texture_roles: ["BASE_COLOR", "NORMAL", "OCCLUSION", "ROUGHNESS", "METALLIC"]
+    inclusion_representation: "NOT_APPLICABLE; dark body and surface response are texture/material encoded"
+    repeated_constant_flags: ["GEOMETRY", "GENERATOR", "DIAMETER", "HOLE_DIAMETER", "BASE_COLOR_FACTOR", "METALLIC_FACTOR", "BASE_ROUGHNESS_FACTOR", "NORMAL_SCALE", "CLEARCOAT_FACTOR", "IOR_1_54", "THICKNESS_0_01", "ATTENUATION_DISTANCE_0_05"]
+    authority_interpretation: "High for this dark-body preset encoding; no numeric Onyx Family authority."
+repeated_constants:
+  - parameter: "geometry_payload"
+    value: "BBFD6A397220207813C4370F7B7CA37922317C61D431BB933B3F61D4108A3B06"
+    materials: ["Golden Rutilated Quartz", "White Rabbit Hair Quartz", "Malachite", "Black Onyx"]
+    count: 4
+    material_diversity: "transparent inclusion-bearing quartz, opaque banded mineral, dark near-opaque gemstone"
+    physical_explanation_possible: true
+    generator_default_hypothesis: "HIGH; deliberate shared bead geometry"
+    independent_evidence: "NONE"
+    family_knowledge_authority: "NONE"
+    engine_range_authority: "NONE"
+    status: "FIXED_COMPARATIVE_CONTEXT"
+  - parameter: "normalTexture.scale"
+    value: 0.72
+    materials: ["Golden Rutilated Quartz", "White Rabbit Hair Quartz", "Malachite", "Black Onyx"]
+    count: 4
+    material_diversity: "HIGH"
+    physical_explanation_possible: false
+    generator_default_hypothesis: "HIGH"
+    independent_evidence: "NONE"
+    family_knowledge_authority: "NONE"
+    engine_range_authority: "NONE"
+    status: "GENERATOR_DEFAULT_CANDIDATE"
+  - parameter: "KHR_materials_clearcoat.clearcoatFactor"
+    value: 1.0
+    materials: ["Golden Rutilated Quartz", "White Rabbit Hair Quartz", "Malachite", "Black Onyx"]
+    count: 4
+    material_diversity: "HIGH"
+    physical_explanation_possible: "Possible shared polished-surface convention; not literal coating proof"
+    generator_default_hypothesis: "HIGH"
+    independent_evidence: "NONE"
+    family_knowledge_authority: "NONE"
+    engine_range_authority: "NONE"
+    status: "PORTABLE_FALLBACK_PARAMETER_AND_GENERATOR_DEFAULT_CANDIDATE"
+  - parameter: "pbrMetallicRoughness.roughnessFactor"
+    value: 1.0
+    materials: ["Golden Rutilated Quartz", "White Rabbit Hair Quartz", "Malachite", "Black Onyx"]
+    count: 4
+    material_diversity: "HIGH"
+    physical_explanation_possible: false
+    generator_default_hypothesis: "HIGH; neutral multiplier for texture-driven roughness"
+    independent_evidence: "ORM roughness textures differ by material"
+    family_knowledge_authority: "NONE"
+    engine_range_authority: "NONE"
+    status: "GENERATOR_CONVENTION"
+  - parameter: "asset diameter_mm / hole_diameter_mm"
+    value: [10.0, 1.2]
+    materials: ["Golden Rutilated Quartz", "White Rabbit Hair Quartz", "Malachite", "Black Onyx"]
+    count: 4
+    material_diversity: "HIGH"
+    physical_explanation_possible: true
+    generator_default_hypothesis: "HIGH; fixed comparison geometry"
+    independent_evidence: "Geometry payload and bounds"
+    family_knowledge_authority: "NONE"
+    engine_range_authority: "NONE"
+    status: "FIXED_COMPARATIVE_CONTEXT"
+  - parameter: "KHR_materials_volume.thicknessFactor"
+    value: 0.01
+    materials: ["Golden Rutilated Quartz", "White Rabbit Hair Quartz", "Black Onyx"]
+    count: 3
+    material_diversity: "quartz inclusion presets plus dark Onyx preset"
+    physical_explanation_possible: "Matches declared 10 mm diameter as a coarse volume scale"
+    generator_default_hypothesis: "HIGH"
+    independent_evidence: "NONE for ray-specific path length"
+    family_knowledge_authority: "NONE"
+    engine_range_authority: "NONE"
+    status: "PORTABLE_VOLUME_APPROXIMATION_AND_GENERATOR_DEFAULT_CANDIDATE"
+  - parameter: "KHR_materials_volume.attenuationDistance"
+    value: 0.05
+    materials: ["Golden Rutilated Quartz", "White Rabbit Hair Quartz", "Black Onyx"]
+    count: 3
+    material_diversity: "HIGH"
+    physical_explanation_possible: true
+    generator_default_hypothesis: "HIGH"
+    independent_evidence: "NONE"
+    family_knowledge_authority: "NONE"
+    engine_range_authority: "NONE"
+    status: "GENERATOR_DEFAULT_CANDIDATE"
+  - parameter: "KHR_materials_ior.ior"
+    value: 1.54
+    materials: ["Golden Rutilated Quartz", "White Rabbit Hair Quartz", "Black Onyx"]
+    count: 3
+    material_diversity: "two quartz presets and a dark Onyx preset"
+    physical_explanation_possible: true
+    generator_default_hypothesis: "POSSIBLE"
+    independent_evidence: "NONE in this workspace Knowledge set"
+    family_knowledge_authority: "OBSERVATION_ONLY"
+    engine_range_authority: "NONE"
+    status: "POSSIBLE_PHYSICAL_PRIOR_SUPPORT_AND_GENERATOR_DEFAULT_CANDIDATE"
+parameter_authority:
+  - {observation: "Quartz preset IOR", value_pattern: "1.54 in both Quartz presets", source_count: 2, physical_prior_authority: "POSSIBLE", visual_heuristic_authority: "LOW", fallback_authority: "MEDIUM", generator_default_likelihood: "POSSIBLE", family_knowledge_authority: "NONE", engine_range_authority: "NONE", decision: "EXTERNAL_SUPPORTING_OBSERVATION_ONLY"}
+  - {observation: "Transmission factors", value_pattern: "0.48 / 0.36 / absent / 0.02", source_count: 4, physical_prior_authority: "LOW", visual_heuristic_authority: "MEDIUM", fallback_authority: "MEDIUM", generator_default_likelihood: "LOW_AS_VALUES_DIFFER", family_knowledge_authority: "NONE", engine_range_authority: "NONE", decision: "MATERIAL_SPECIFIC_REPRESENTATION_PARAMETERS"}
+  - {observation: "Attenuation distance", value_pattern: "0.05 m in three transmissive presets", source_count: 3, physical_prior_authority: "LOW", visual_heuristic_authority: "MEDIUM", fallback_authority: "MEDIUM", generator_default_likelihood: "HIGH", family_knowledge_authority: "NONE", engine_range_authority: "NONE", decision: "GENERATOR_DEFAULT_CANDIDATE"}
+  - {observation: "Thickness", value_pattern: "0.01 in three transmissive presets and equal to declared diameter in meters", source_count: 3, physical_prior_authority: "LOW", visual_heuristic_authority: "MEDIUM", fallback_authority: "HIGH", generator_default_likelihood: "HIGH", family_knowledge_authority: "NONE", engine_range_authority: "NONE", decision: "PORTABLE_VOLUME_APPROXIMATION"}
+  - {observation: "Normal scale", value_pattern: "0.72 in all four", source_count: 4, physical_prior_authority: "NONE", visual_heuristic_authority: "MEDIUM", fallback_authority: "MEDIUM", generator_default_likelihood: "HIGH", family_knowledge_authority: "NONE", engine_range_authority: "NONE", decision: "GENERATOR_DEFAULT_CANDIDATE"}
+  - {observation: "Clearcoat factor", value_pattern: "1.0 in all four; roughness differs", source_count: 4, physical_prior_authority: "LOW", visual_heuristic_authority: "HIGH", fallback_authority: "HIGH", generator_default_likelihood: "HIGH", family_knowledge_authority: "NONE", engine_range_authority: "NONE", decision: "POLISHED_SURFACE_REPRESENTATION_CONVENTION"}
+representation_analysis:
+  - feature: "Rutile needles"
+    material: "Golden Rutilated Quartz"
+    source_representation: "Material-specific BaseColor, Normal, and ORM surface UV textures on the shared bead mesh"
+    surface: true
+    normal: true
+    geometry: false
+    volume: false
+    true_depth_explicit: false
+    parallax_authority: "NONE"
+    host_refraction_authority: "ATTENUATION_SCALAR_ONLY; no explicit inclusion refraction"
+    multi_view_authority: "NOT_EVALUATED_NO_RENDER"
+    physical_certification_authority: "NONE"
+  - feature: "Rabbit-hair fibers"
+    material: "White Rabbit Hair Quartz"
+    source_representation: "Material-specific BaseColor, Normal, and ORM surface UV textures on the shared bead mesh"
+    surface: true
+    normal: true
+    geometry: false
+    volume: false
+    true_depth_explicit: false
+    parallax_authority: "NONE"
+    host_refraction_authority: "ATTENUATION_SCALAR_ONLY; no explicit fiber refraction"
+    multi_view_authority: "NOT_EVALUATED_NO_RENDER"
+    physical_certification_authority: "NONE"
+  - feature: "Malachite banding"
+    material: "Malachite"
+    source_representation: "Opaque BaseColor banding with Normal and ORM surface modulation; no Transmission or Volume extension"
+    surface: true
+    normal: true
+    geometry: false
+    volume: false
+    true_depth_explicit: false
+    parallax_authority: "NOT_APPLICABLE_TO_SOURCE_ENCODING"
+    host_refraction_authority: "NONE"
+    multi_view_authority: "NOT_EVALUATED_NO_RENDER"
+    physical_certification_authority: "NONE"
+  - feature: "Black Onyx polish/body"
+    material: "Black Onyx"
+    source_representation: "Very dark BaseColor texture, near-flat Normal/ORM textures, transmissionFactor 0.02, dark attenuation color, and Clearcoat"
+    surface: true
+    normal: true
+    geometry: false
+    volume: "SCALAR_ATTENUATION_ONLY"
+    true_depth_explicit: false
+    parallax_authority: "NONE"
+    host_refraction_authority: "NO_INDEPENDENT_PHYSICAL_VALIDATION"
+    multi_view_authority: "NOT_EVALUATED_NO_RENDER"
+    physical_certification_authority: "NONE"
+duplicate_search:
+  - {candidate: "KC-1", existing_match: null, relation: "NEW_CLAIM", scope_difference: "NOT_APPLICABLE", authority_difference: "External comparative support only", create_new: true, link: true, why: "No existing separable polish/body Knowledge Unit found."}
+  - {candidate: "KC-2", existing_match: null, relation: "NEW_CLAIM", scope_difference: "NOT_APPLICABLE", authority_difference: "External comparative support only", create_new: true, link: true, why: "No existing lightweight glTF fallback Knowledge Unit found."}
+  - {candidate: "KC-3", existing_match: null, relation: "NEW_CLAIM", scope_difference: "NOT_APPLICABLE", authority_difference: "External comparative support only", create_new: true, link: true, why: "Engine artistic inclusion limitation is implementation observation, not this reusable surface-baked limitation Claim."}
+  - {candidate: "KC-4", existing_match: null, relation: "NEW_CLAIM", scope_difference: "NOT_APPLICABLE", authority_difference: "External comparative support only", create_new: true, link: true, why: "Evidence/Knowledge boundary exists but does not state the repeated-generator-constant decision rule."}
+  - {candidate: "Quartz IOR observation", existing_match: null, relation: "NEW_OBSERVATION_NO_NEW_KC", scope_difference: "Engine record only says IOR range UNKNOWN", authority_difference: "External preset observation cannot become physical truth", create_new: false, link: false, why: "Wave scope is KC-1 through KC-4 and no independent Knowledge Claim exists to refine."}
+conflict_analysis:
+  - {external_observation: "transmissionFactor values below 1", existing_fact: "Current Engine uses transmission path, Fresnel, and absorption", conflict_type: "REPRESENTATION_SEMANTIC_DIFFERENCE", actual_contradiction: false, authority_effect: "External values remain preset parameters", decision: "PRESERVE_SEPARATION"}
+  - {external_observation: "KHR_materials_clearcoat in all four", existing_fact: "No explicit current Engine Clearcoat module was discovered", conflict_type: "ENGINE_IMPLEMENTATION_DIFFERENCE", actual_contradiction: false, authority_effect: "Supports functional polish/body separation only", decision: "NO_CAPABILITY_CHANGE"}
+  - {external_observation: "surface-texture inclusion approximation", existing_fact: "Current Engine has artistic inclusion approximation without validated scattering", conflict_type: "SCOPE_DIFFERENCE", actual_contradiction: false, authority_effect: "Both remain uncertified approximations of different kinds", decision: "NO_ENGINE_CHANGE"}
+  - {external_observation: "fixed thickness 0.01", existing_fact: "M01 emphasizes path-length-dependent absorption", conflict_type: "REPRESENTATION_SEMANTIC_DIFFERENCE", actual_contradiction: false, authority_effect: "Thickness is portable approximation, not ray path truth", decision: "NO_FAMILY_DEFAULT"}
+material_observations:
+  malachite: "No Transmission or Volume extension is present. Strong BaseColor variation, Normal modulation, ORM roughness, and Clearcoat encode an opaque banded polished preset. Comparative representation evidence only."
+  black_onyx: "BaseColor luminance is very low, transmissionFactor is 0.02, attenuation color is near black, ORM roughness mean is about 0.1177, and clearcoat roughness is 0.0408. This supports dark body plus sharper polished surface as comparative evidence only."
+source_fact_inference_boundary:
+  source_facts: ["extensions and scalar values", "embedded texture roles/hashes/channel statistics", "shared geometry payload", "repeated values"]
+  candidate_inferences: ["separable polish/body control may help", "standard glTF can provide a lightweight approximation", "surface-baked inclusions lack explicit volume depth", "repetition warns of generator defaults"]
+  not_validated: ["physical correctness", "multi-view appearance", "Family defaults", "Engine ranges", "Golden certification"]
+

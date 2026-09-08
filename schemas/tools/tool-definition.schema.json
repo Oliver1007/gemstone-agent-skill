@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:tool-definition:1.0.0",
+  "type": "object",
+  "required": ["tool_id", "tool_class", "read_only", "implementation", "authorized_operations"],
+  "properties": {
+    "tool_id": {"type": "string"},
+    "tool_class": {"enum": ["ENGINE_DIAGNOSTIC_WITH_SKILL_ADAPTER", "SKILL_DIAGNOSTIC"]},
+    "read_only": {"const": true},
+    "implementation": {
+      "type": "object",
+      "required": ["locator", "sha256"],
+      "properties": {
+        "locator": {"type": "string"},
+        "sha256": {"type": "string", "pattern": "^[A-Fa-f0-9]{64}$"}
+      }
+    },
+    "authorized_operations": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+  },
+  "additionalProperties": true
+}

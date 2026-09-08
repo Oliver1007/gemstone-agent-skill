@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:profile-field-provenance-map:1.0.0",
+  "type": "object",
+  "required": ["schema_version", "map_id", "case_id", "fields", "stable_material_field_count", "candidate_scoped_field_count", "run_context_only_field_count", "unresolved_conflict_count"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "map_id": {"type": "string"},
+    "case_id": {"const": "case:citrine"},
+    "fields": {"type": "array", "minItems": 1},
+    "stable_material_field_count": {"type": "integer", "minimum": 0},
+    "candidate_scoped_field_count": {"type": "integer", "minimum": 0},
+    "run_context_only_field_count": {"type": "integer", "minimum": 0},
+    "unresolved_conflict_count": {"type": "integer", "minimum": 0}
+  },
+  "additionalProperties": true
+}

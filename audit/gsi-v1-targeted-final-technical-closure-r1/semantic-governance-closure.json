@@ -1,0 +1,8 @@
+{
+  "canonicalSemanticProtocolV2": "FROZEN",
+  "outcomeOnlyAdjudicationV1_1": "FROZEN",
+  "ambiguity": "RESOLVED_AT_OUTCOME_LEVEL",
+  "fieldLevelGroupAlignment": "UNRECONSTRUCTABLE",
+  "protocolMutation": 0,
+  "scope": "Retains existing adjudication; no new official invocation."
+}

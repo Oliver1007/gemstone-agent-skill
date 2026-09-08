@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gemstone-material-agent:schema:failure-package:1.0.0",
+  "type": "object",
+  "required": ["schema_version", "package_id", "object_revision", "entries"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "package_id": {"type": "string"},
+    "object_revision": {"type": "string"},
+    "entries": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["failure_id", "claim_state", "failure_validation_level", "confidence", "symptom", "scope", "provenance", "engine_dependency", "does_not_prove"],
+        "properties": {
+          "failure_id": {"type": "string"},
+          "claim_state": {"$ref": "urn:gemstone-material-agent:schema:state-axes:1.0.0#/$defs/knowledge_claim_state"},
+          "failure_validation_level": {"$ref": "urn:gemstone-material-agent:schema:state-axes:1.0.0#/$defs/failure_validation_level"},
+          "confidence": {"enum": ["LOW", "MEDIUM", "HIGH"]},
+          "symptom": {"type": "string"},
+          "scope": {"type": "object", "minProperties": 1},
+          "source_case_refs": {"type": "array"},
+          "provenance": {"type": "array", "minItems": 1},
+          "engine_dependency": {"type": "object"},
+          "does_not_prove": {"type": "array", "minItems": 1}
+        },
+        "not": {
+          "properties": {
+            "failure_validation_level": {"const": "PROTOTYPE"}
+          },
+          "required": ["failure_validation_level"]
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

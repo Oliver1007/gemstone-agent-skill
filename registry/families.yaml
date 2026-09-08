@@ -1,0 +1,11 @@
+schema_version: "1.0.0"
+registry_id: "registry:families"
+object_revision: "2"
+authority_role: "DISCOVERY_NOT_KNOWLEDGE_TRUTH"
+entries:
+  - family_id: "family:m01-transparent-crystal"
+    name: "M01 Transparent Crystal"
+    manifest: "knowledge/families/m01-transparent-crystal/manifest.yaml"
+    claim_state: "SUPPORTED"
+    family_maturity: "PROTOTYPE"
+    maturity_basis: "Minimum bootstrap package; no production-family claim"

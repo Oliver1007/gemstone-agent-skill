@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema:reference-analysis-output:1.0.0",
+  "title": "Governed Reference Analysis Output V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_ref", "analysis_ref", "analysis_status", "reference_set_ref", "reference_assets", "runtime_provenance", "provider_provenance", "analysis_scope", "direct_observations", "supported_inferences", "working_hypotheses", "unresolved_ambiguities", "camera_cues", "lighting_environment_cues", "geometry_cues", "material_body_cues", "surface_cues", "background_cues", "color_cues", "transparency_depth_cues", "hole_cavity_cues", "internal_structure_cues", "limitations", "confidence_summary", "claim_scope"],
+  "properties": {
+    "schema_ref": {"const": "schema:reference-analysis-output:1.0.0"},
+    "analysis_ref": {"type": "string", "pattern": "^reference-analysis:[a-z0-9][a-z0-9._:-]*$"},
+    "analysis_status": {"enum": ["ANALYSIS_COMPLETE", "ANALYSIS_COMPLETE_WITH_LIMITATIONS"]},
+    "reference_set_ref": {"type": "string", "minLength": 1},
+    "reference_assets": {"type": "array", "minItems": 1, "items": {"type": "object", "additionalProperties": false, "required": ["reference_ref", "sha256", "media_type"], "properties": {"reference_ref": {"type": "string"}, "sha256": {"type": "string", "pattern": "^[A-F0-9]{64}$"}, "media_type": {"enum": ["image/jpeg", "image/png"]}}}},
+    "runtime_provenance": {"type": "object", "additionalProperties": false, "required": ["runtime_id", "runtime_sha256", "contract_ref"], "properties": {"runtime_id": {"const": "runtime:reference-analysis:1.0.0"}, "runtime_sha256": {"type": "string", "pattern": "^[A-F0-9]{64}$"}, "contract_ref": {"const": "contract:reference-analysis-runtime:1.0.0"}}},
+    "provider_provenance": {"type": "object", "additionalProperties": false, "required": ["provider", "api_family", "requested_model", "returned_model", "response_id", "response_status", "reasoning_effort", "image_detail", "store", "provider_request_ref", "adapter_id", "adapter_sha256"], "properties": {"provider": {"const": "openai"}, "api_family": {"const": "responses"}, "requested_model": {"const": "gpt-5.6-sol"}, "returned_model": {"type": "string", "minLength": 1}, "response_id": {"type": "string", "minLength": 1}, "response_created_at": {"type": ["number", "null"]}, "response_status": {"const": "completed"}, "reasoning_effort": {"const": "medium"}, "image_detail": {"const": "high"}, "store": {"const": false}, "provider_request_ref": {"type": "string", "minLength": 1}, "adapter_id": {"const": "adapter:openai-responses-vision:1.0.0"}, "adapter_sha256": {"type": "string", "pattern": "^[A-F0-9]{64}$"}}},
+    "analysis_scope": {"type": "array"}, "direct_observations": {"type": "array"}, "supported_inferences": {"type": "array"}, "working_hypotheses": {"type": "array"}, "unresolved_ambiguities": {"type": "array"}, "camera_cues": {"type": "array"}, "lighting_environment_cues": {"type": "array"}, "geometry_cues": {"type": "array"}, "material_body_cues": {"type": "array"}, "surface_cues": {"type": "array"}, "background_cues": {"type": "array"}, "color_cues": {"type": "array"}, "transparency_depth_cues": {"type": "array"}, "hole_cavity_cues": {"type": "array"}, "internal_structure_cues": {"type": "array"}, "limitations": {"type": "array"}, "confidence_summary": {"type": "object"}, "claim_scope": {"type": "object"}
+  }
+}
